@@ -18,3 +18,5 @@ copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDs,]
 asoc_R1 <- asocialOnly[asocialOnly$round ==1,]
 asoc_R1_score <- tapply(asoc_R1$score, list(asoc_R1$Origin),sum)                   
 asoc_R1_score
+
+#checking if this commits
