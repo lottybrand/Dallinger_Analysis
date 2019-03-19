@@ -20,3 +20,5 @@ asoc_R1_score <- tapply(asoc_R1$score, list(asoc_R1$Origin),sum)
 asoc_R1_score
 
 #checking if this commits
+
+#I'm showing alice how this works 
