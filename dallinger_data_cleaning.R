@@ -1,10 +1,11 @@
 #Data cleaning for Dallinger experiment
 
-#setwd("~/Desktop/Postdoc/Dallinger_planning/pilot3/e40d133d-2d19-d31e-9b4b-cefb5deec1cc-data/data")
+#setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
 
 # libraries
-#library(jsonlite)
-#library(data.table)
+library(jsonlite)
+library(data.table)
+library(dplyr)
 
 infos<- read.csv("info.csv", stringsAsFactors = FALSE)
 infos <- infos[order(infos$id),]
@@ -55,12 +56,40 @@ asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$Origin, FUN=cumsum)
 a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number), max)
 asocialOnly$maxScore <- a$x[match(asocialOnly$number, a$Group.1)]
 
+#a subset of copying only:
+copyOnly <- clean_df[clean_df$copying=="TRUE",]
+
 #trying to then say which ppt (origin) was the highest scoring, BUT
 #don't know what to do about ties:
 #should probably write a function....
-asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$Origin,0)
+asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$Origin,NA)
 
-#a subset of copying only:
-copyOnly <- clean_df[clean_df$copying=="TRUE",]
-#this doesn't work as just picks the first out of the three rows for each question(I think)
-copyOnly$highest <- asocialOnly$isMax[match(copyOnly$number, asocialOnly$number)]
+topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
+topScorers <- subset(topScorers, select =c("number","isMax"))
+
+#steve's code:
+for(g in unique(asocialOnly$number))
+{
+  for(r in unique(public.df$rnd))
+  {
+    # dataframe of public grids for group and round
+    publicGrids <- public.df[public.df$grp==g & public.df$rnd==r-1,]
+    publicUsers <- tp[tp$grp==g & tp$rnd==r-1 & tp$pid %in% publicGrids$pid,]
+    if(length(publicUsers$pid) >= 1)
+    {
+      # Approach 1 : Only give highest scorer
+      #hiScorers <- list(publicUsers[which(publicUsers$score == max(publicUsers$score)),]$pid) # Only high scorers
+      
+      # Approach 2 : Give ordered list of id's by score - but ties resolved by id
+      #hiScorers <- list(publicUsers[order(publicUsers$score,decreasing=T),]$pid) # list of scorers, by rank
+      #HiScore[HiScore$grp==g & HiScore$rnd==r,]$HiScore <- hiScorers
+      
+      # Approach 3 : List of ids and list of ranks
+      hiScorers <- list(publicUsers$pid)
+      HiScore[HiScore$grp==g & HiScore$rnd==r,]$HiScore <- hiScorers
+      HiScore[HiScore$grp==g & HiScore$rnd==r,]$Ranks <- list(rank(-publicUsers$score,ties.method = 'min'))
+      
+    }
+  }
+}
+
