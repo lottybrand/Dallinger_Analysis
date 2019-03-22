@@ -45,6 +45,8 @@ clean_df <- clean_df[!clean_df$round==0,]
 
 #a subset for asocial answers only: 
 asocialOnly <- clean_df[clean_df$copying=="FALSE",]
+#a subset of copying only:
+copyOnly <- clean_df[clean_df$copying=="TRUE",]
 
 #create cumulative (asocial) score for each ppt? 
 #using ave and cumsum
@@ -52,44 +54,33 @@ asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$Origin, FUN=cumsum)
 
 #max scorer per question?
 #trying aggregate (bit convoluted, have to then use match, then create isMax)
-
 a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number), max)
 asocialOnly$maxScore <- a$x[match(asocialOnly$number, a$Group.1)]
 
-#a subset of copying only:
-copyOnly <- clean_df[clean_df$copying=="TRUE",]
-
 #trying to then say which ppt (origin) was the highest scoring, BUT
-#don't know what to do about ties:
+#don't know what to do about ties, this keeps ties right now. 
 #should probably write a function....
 asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$Origin,NA)
-
 topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
 topScorers <- subset(topScorers, select =c("number","isMax"))
 
+nodeIDs <- (unique(asocialOnly$Origin))
+copyOnlyContents <- copyOnly[!copyOnly$Contents%in%nodeIDs,]
+copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDs,]
+
 #steve's code:
-for(g in unique(asocialOnly$number))
-{
-  for(r in unique(public.df$rnd))
-  {
-    # dataframe of public grids for group and round
-    publicGrids <- public.df[public.df$grp==g & public.df$rnd==r-1,]
-    publicUsers <- tp[tp$grp==g & tp$rnd==r-1 & tp$pid %in% publicGrids$pid,]
-    if(length(publicUsers$pid) >= 1)
-    {
-      # Approach 1 : Only give highest scorer
-      #hiScorers <- list(publicUsers[which(publicUsers$score == max(publicUsers$score)),]$pid) # Only high scorers
-      
-      # Approach 2 : Give ordered list of id's by score - but ties resolved by id
-      #hiScorers <- list(publicUsers[order(publicUsers$score,decreasing=T),]$pid) # list of scorers, by rank
-      #HiScore[HiScore$grp==g & HiScore$rnd==r,]$HiScore <- hiScorers
-      
-      # Approach 3 : List of ids and list of ranks
-      hiScorers <- list(publicUsers$pid)
-      HiScore[HiScore$grp==g & HiScore$rnd==r,]$HiScore <- hiScorers
-      HiScore[HiScore$grp==g & HiScore$rnd==r,]$Ranks <- list(rank(-publicUsers$score,ties.method = 'min'))
-      
-    }
-  }
+#make a new variable:
+copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
+
+
+# Check the copyOnlyIds ' contents column to see if it's in the topscorers$isMax column, For That Number
+# Give a 1 to topcopy if the target is on the list
+
+#copyOnlyIds$topCopy <- if((copyOnlyIds[(copyOnlyIds$Contents %in% topScorers$isMax),]$number), 1, 0) 
+#try to merge this with above to make an ifelse inside the for loop. 
+numbers <- unique(topScorers$number)
+for (n in numbers) {
+  copyOnlyIds$topCopy[topScorers$number == n] <- copyOnlyIds$Contents[topScorers$number == n] %in% topScorers$isMax[topScorers$number == n]
 }
+
 
