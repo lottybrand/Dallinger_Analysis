@@ -1,4 +1,7 @@
+
 #### inputting the data from Dallinger per Condition ####
+#### should really use a loop to do all of this for each condition.... 
+
 #setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
 
 # libraries
@@ -44,7 +47,7 @@ my_data <- clean_df
 clean_df <- NULL
 rm(json_dfs)
 
-# use match to add in the other useful variables frmo the info table
+# use match to add in the other useful variables from the info table
 my_data$Contents <- infos$contents[match(my_data$id, infos$id)]
 my_data$Origin <- infos$origin_id[match(my_data$id, infos$id)]
 my_data$Network <- infos$network_id[match(my_data$id, infos$id)]
@@ -91,7 +94,7 @@ my_data_a <-
 #cleanup
 rm(json_dfs)
 
-# use match to add in the other useful variables frmo the info table
+# use match to add in the other useful variables from the info table
 my_data_a$Contents <- infosA$contents[match(my_data_a$id, infosA$id)]
 my_data_a$Origin <- infosA$origin_id[match(my_data_a$id, infosA$id)]
 my_data_a$Network <- infosA$network_id[match(my_data_a$id, infosA$id)]

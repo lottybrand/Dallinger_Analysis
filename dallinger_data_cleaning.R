@@ -3,21 +3,52 @@
 
 source('data_inputting.R')
 
-##### Merge data from all conditions
-
+##### Merge data from all conditions after data_unputting.R
 full_data <- bind_rows(my_data,my_data_a,my_data_c)
 
-#####
-#####
-##### NEED TO GO BACK OVER THIS to account for duplicate Origin_ids between networks/conditions #####
-#####
-#####
+#because the info 'Origin' is repeated each time we run it, we need to renumber participants based on their condition and network
+#start by ordering according to condition, network and number(question)
+full_data <- full_data[order(condition,Network,number),]
+
+#because we ran the two networks within condition A, their Origin Ids are already independent, so only need to account for 
+#condition right now, but in full run might need to account for network too:
+
+# This is getting close but it's not treating new conditions as new sets...
+#full_data$num <- with(full_data, ave(Origin, condition, FUN=function(x) match(x, unique(Origin))))
+
+#this just starts at 1 and keeps iterating up. some combo of this and above..?
+#full_data$num <- ave(full_data$Origin, full_data$condition, FUN = seq_along)
+
+# don't know what this thinks it's doing: 
+#for (i in unique(full_data$Origin)) full_data$num[full_data$Origin == i] <- seq_len(sum(full_data$Origin == i))
+
+#tom houslay's doesn't work either:
+#df_index <- full_data %>% distinct(Origin, condition) %>% mutate(num = row_number())
+#full_data <- left_join(full_data, df_index)
+
+#time for a bodge job for now:
+full_data$num <- with(full_data, ave(Origin, condition, FUN=function(x) match(x, unique(x))))
+pptsA <- length(unique(my_data_a$Origin))
+
+full_data$num <- ifelse(full_data$condition=="B", full_data$num+pptsA,full_data$num)
+
+pptsB <- length(unique(my_data$Origin))
+full_data$num <- ifelse(full_data$condition=="C", full_data$num+pptsA+pptsB,full_data$num)
+
+colnames(full_data)[12] <- "ppt"
 
 
-# a subset for asocial answers only: 
+#####
+##### Need to do the same for Contents when it is a copying decision.... how do we match the content ID with the Origin id throughout...?
+#####
+
+#####
+##### Subsets for different analyses:
+#####
+
+#####
+##### Subset for ASOCIAL ONLY : 
 asocialOnly <- my_data[my_data$copying=="FALSE",]
-# a subset of copying only:
-copyOnly <- my_data[my_data$copying=="TRUE",]
 
 # create cumulative (asocial) score for each ppt? 
 # using ave and cumsum
@@ -37,9 +68,25 @@ asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asoc
 topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
 topScorers <- subset(topScorers, select =c("number","isMax"))
 
-nodeIDs <- (unique(asocialOnly$Origin))
-copyOnlyContents <- copyOnly[!copyOnly$Contents%in%nodeIDs,]
-copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDs,]
+#####
+##### SUBSET OF COPYING ONLY:
+
+copyOnly <-full_data[full_data$copying=="TRUE",]
+
+#copyOnly <- my_data[my_data$copying=="TRUE",]
+
+#splitting the copying into who they copied and what they copied:
+#nodeIDs <- (unique(asocialOnly$Origin))
+nodeIDS <- (unique(full_data$Origin))
+nodeIDS
+copyOnlyContents <- copyOnly[!copyOnly$Contents%in%nodeIDS,]
+#copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDs,]
+
+infoChosen <- copyOnlyContents[copyOnlyContents$round==2,]
+infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Round 1",1,0)
+
+infoChosen$CondA <- ifelse(infoChosen$condition =="A", 1, 0)
+infoChosen$CondC <- ifelse(infoChosen$condition =="C", 1, 0)
 
 # make a new variable:
 copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
@@ -55,7 +102,9 @@ for (n in numbers) {
 }
 copyOnlyIds$topCopy <- copyOnlyIds$topCopy*1
 
-#subset for seeing score info
+#####
+##### subset for seeing score info
+#####
 scoreChoice <-copyOnlyIds[copyOnlyIds$round==1,]
 
 #in full dataset it will be:
@@ -69,7 +118,12 @@ setDT(ncopies, keep.rownames = "copied")
 #what if there are more than one maximums?
 maxCopied <- which.max(ncopies$ncopies)
 
-#subset for seeing prestige info:
+
+#####
+#####
+##### subset for seeing prestige info:
+#####
+
 prestigeChoice <- copyOnlyIds[copyOnlyIds$info_chosen =="Times chosen in Round 1",]
 prestigeChoice$presCopy <- ifelse((prestigeChoice$Contents %in% maxCopied),1,0)
 
@@ -79,7 +133,10 @@ prestigeChoice$presCopy <- ifelse((prestigeChoice$Contents %in% maxCopied),1,0)
 #  ifelse((prestigeChoice$Contents=maxCopied),1,0)
 #}
 
+#####
+#####
+##### for info_chosen analyses
 
-# for info_chosen analyses
-infoChoice <- copyOnlyContents[copyOnlyContents$round==2,]
-infoChoice$Condition <- "B"
+#infoChoice <- copyOnlyContents[copyOnlyContents$round==2,]
+
+
