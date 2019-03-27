@@ -11,9 +11,13 @@ library(rethinking)
 #####
 #####
 
+# data frame is whenever a copying event happened && score information was available 
+# (Round 1 in Condition B & C, Round 2 in Condition C depending on Choice.)
+# dataframe is made in dallinger_data_cleaning.R file
+
 scoreChoice<- as.data.frame(scoreChoice)
 
-#make index contiguous for varying effects:
+#make index contiguous for participant varying effect:
 NOrigins = length(unique(scoreChoice$Origin))
 OldOrigin <- scoreChoice$Origin
 OriginIndex <- array(0,length(scoreChoice$Origin))
@@ -22,6 +26,8 @@ for (index in 1:NOrigins){
 }
 scoreChoice$OriginIndex <- OriginIndex
 
+#make index contiguous for group varying effect too:
+#(This will be 'network' in full_data)
 
 model1 <- map2stan(
   alist(
@@ -46,7 +52,7 @@ precis(model1)
 
 prestigeChoice<- as.data.frame(prestigeChoice)
 
-#make index contiguous for varying effects:
+#make index contiguous for participant varying effects:
 NOrigins = length(unique(prestigeChoice$Origin))
 OldOrigin <- prestigeChoice$Origin
 OriginIndex <- array(0,length(prestigeChoice$Origin))
@@ -54,6 +60,8 @@ for (index in 1:NOrigins){
   OriginIndex[OldOrigin == unique(OldOrigin)[index]] = index
 }
 prestigeChoice$OriginIndex <- OriginIndex
+
+#make index contiguous for group varying effect in full data:
 
 model2 <- map2stan(
   alist(
@@ -119,4 +127,15 @@ null_model3 <- map2stan(
 #####
 ##### Prediction 4: Copying rate is higher in Conditions B & C compared to Condition A because copying is only based on success in Conditions B & C
 #####
+#####
+
+### add variable for counting how many 'ask someone else's there are
+
+
+
+
+
+#####
+#####
+##### Prediction 5: Participants perform best on the quiz in Condition B & C compared to Condition A because copying is only based on success in Conditions B & C
 #####

@@ -43,14 +43,16 @@ colnames(full_data)[12] <- "ppt"
 #####
 
 #####
-##### Subsets for different analyses:
+##### Subsets for different analyses (So far this is done just for my_data not full_data as need to account for new ppt numbers):
 #####
 
 #####
 ##### Subset for ASOCIAL ONLY : 
+#####
+
 asocialOnly <- my_data[my_data$copying=="FALSE",]
 
-# create cumulative (asocial) score for each ppt? 
+# create cumulative (asocial) score for each ppt? need to check this for full_data 
 # using ave and cumsum
 asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$Origin, FUN=cumsum)
 
@@ -61,15 +63,15 @@ asocialOnly$maxScore <- a$x[match(asocialOnly$number, a$Group.1)]
 #cleanup
 rm(a)
 
-# trying to then say which ppt (origin) was the highest scoring, BUT
+# Make a list ("topScorers") of which ppt (origin) was the highest scoring per question, BUT
 # don't know what to do about ties, this keeps ties right now. 
-# should probably write a function....
 asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$Origin,NA)
 topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
 topScorers <- subset(topScorers, select =c("number","isMax"))
 
 #####
 ##### SUBSET OF COPYING ONLY:
+#####
 
 copyOnly <-full_data[full_data$copying=="TRUE",]
 
@@ -82,12 +84,8 @@ nodeIDS
 copyOnlyContents <- copyOnly[!copyOnly$Contents%in%nodeIDS,]
 #copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDs,]
 
-infoChosen <- copyOnlyContents[copyOnlyContents$round==2,]
-infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Round 1",1,0)
 
-infoChosen$CondA <- ifelse(infoChosen$condition =="A", 1, 0)
-infoChosen$CondC <- ifelse(infoChosen$condition =="C", 1, 0)
-
+##### Make variable for if they copied highest scorer:
 # make a new variable:
 copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
 
@@ -95,7 +93,10 @@ copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
 # Give a 1 to topcopy if the target is on the list
 
 # copyOnlyIds$topCopy <- if((copyOnlyIds[(copyOnlyIds$Contents %in% topScorers$isMax),]$number), 1, 0) 
-# try to merge the following with above to make an ifelse inside the for loop. 
+# try to merge the following with above to make an ifelse inside the for loop
+# also want to fix this to be "out of those available to copy at the time, was it the maximum. As need to account for
+# if the person copying is the maximum themself etc
+# so need to write a fancy function that I'm struggling with....
 numbers <- unique(topScorers$number)
 for (n in numbers) {
   copyOnlyIds$topCopy[topScorers$number == n] <- copyOnlyIds$Contents[topScorers$number == n] %in% topScorers$isMax[topScorers$number == n]
@@ -103,8 +104,9 @@ for (n in numbers) {
 copyOnlyIds$topCopy <- copyOnlyIds$topCopy*1
 
 #####
-##### subset for seeing score info
+##### Subset for seeing score info (Prediction 1)
 #####
+
 scoreChoice <-copyOnlyIds[copyOnlyIds$round==1,]
 
 #in full dataset it will be:
@@ -121,7 +123,7 @@ maxCopied <- which.max(ncopies$ncopies)
 
 #####
 #####
-##### subset for seeing prestige info:
+##### Subset for seeing prestige info (Prediction 2)
 #####
 
 prestigeChoice <- copyOnlyIds[copyOnlyIds$info_chosen =="Times chosen in Round 1",]
@@ -133,10 +135,20 @@ prestigeChoice$presCopy <- ifelse((prestigeChoice$Contents %in% maxCopied),1,0)
 #  ifelse((prestigeChoice$Contents=maxCopied),1,0)
 #}
 
-#####
-#####
-##### for info_chosen analyses
 
-#infoChoice <- copyOnlyContents[copyOnlyContents$round==2,]
+#####
+##### Subset of info chosen subset for Prediction 3:
+
+infoChosen <- copyOnlyContents[copyOnlyContents$round==2,]
+infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Round 1",1,0)
+
+# make Condition B the baseline:
+
+infoChosen$CondA <- ifelse(infoChosen$condition =="A", 1, 0)
+infoChosen$CondC <- ifelse(infoChosen$condition =="C", 1, 0)
+
+
+
+
 
 
