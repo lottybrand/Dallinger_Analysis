@@ -12,7 +12,7 @@ library(rethinking)
 #####
 
 # data frame is whenever a copying event happened && score information was available 
-# (Round 1 in Condition B & C, Round 2 in Condition C depending on Choice.)
+# =(Round 1 in Condition B & C, Round 2 in Condition C depending on Choice.)
 # dataframe is made in dallinger_data_cleaning.R file
 
 scoreChoice<- as.data.frame(scoreChoice)

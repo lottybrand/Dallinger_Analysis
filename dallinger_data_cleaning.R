@@ -1,5 +1,5 @@
 
-#Data cleaning for Dallinger experiment
+#Data prep for Dallinger analysis
 
 source('data_inputting.R')
 
@@ -8,6 +8,7 @@ full_data <- bind_rows(my_data,my_data_a,my_data_c)
 
 #because the info 'Origin' is repeated each time we run it, we need to renumber participants based on their condition and network
 #start by ordering according to condition, network and number(question)
+full_data$number <- as.integer(full_data$number)
 full_data <- full_data[order(condition,Network,number),]
 
 #because we ran the two networks within condition A, their Origin Ids are already independent, so only need to account for 
@@ -37,37 +38,51 @@ full_data$num <- ifelse(full_data$condition=="C", full_data$num+pptsA+pptsB,full
 
 colnames(full_data)[12] <- "ppt"
 
+# manually reindex network too, as in full run they will be individual (at least per condition):
+full_data$group <- ifelse((full_data$condition=="B"),3,
+                          ifelse((full_data$condition=="C" & full_data$Network==1),4,
+                            ifelse((full_data$condition=="C" & full_data$Network==2), 5, full_data$Network)))
+
 
 #####
 ##### Need to do the same for Contents when it is a copying decision.... how do we match the content ID with the Origin id throughout...?
 #####
 
 #####
-##### Subsets for different analyses (So far this is done just for my_data not full_data as need to account for new ppt numbers):
+##### Subsets for different analyses 
 #####
 
 #####
 ##### Subset for ASOCIAL ONLY : 
 #####
 
-asocialOnly <- my_data[my_data$copying=="FALSE",]
+asocialOnly <- full_data[full_data$copying=="FALSE",]
+#asocialOnly <- my_data[my_data$copying=="FALSE",]
 
 # create cumulative (asocial) score for each ppt? need to check this for full_data 
 # using ave and cumsum
-asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$Origin, FUN=cumsum)
+# will this work for the new ppt column..?!?!
+asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$ppt, FUN=cumsum)
 
-# max scorer per question?
+#asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$Origin, FUN=cumsum)
+
+# max scorer per question, per group 
 # trying aggregate (bit convoluted, have to then use match, then create isMax)
-a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number), max)
-asocialOnly$maxScore <- a$x[match(asocialOnly$number, a$Group.1)]
+a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number, asocialOnly$group), max)
+
+#need to match according to both groups:
+asocialOnly <- merge(asocialOnly, a, by.x=c("number", "group"), by.y=c("Group.1", "Group.2"), all.x=TRUE, all.y=FALSE)
+asocialOnly <- asocialOnly[order(condition,Network,number),]
+names(asocialOnly)[names(asocialOnly) == 'x'] <- 'maxScore'
+
 #cleanup
 rm(a)
 
 # Make a list ("topScorers") of which ppt (origin) was the highest scoring per question, BUT
 # don't know what to do about ties, this keeps ties right now. 
-asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$Origin,NA)
+asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$ppt,NA)
 topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
-topScorers <- subset(topScorers, select =c("number","isMax"))
+topScorers <- subset(topScorers, select =c("number","isMax","group","condition"))
 
 #####
 ##### SUBSET OF COPYING ONLY:
@@ -79,29 +94,48 @@ copyOnly <-full_data[full_data$copying=="TRUE",]
 
 #splitting the copying into who they copied and what they copied:
 #nodeIDs <- (unique(asocialOnly$Origin))
+
+# need to figure out how to link the copied nodes to their ppt ids......
+# first make reference dataframe:
+node_index <- subset(full_data, select =c(Origin,ppt,group,condition))
+node_index <-unique(node_index)
+
+#just select the Ids:
 nodeIDS <- (unique(full_data$Origin))
 nodeIDS
-copyOnlyContents <- copyOnly[!copyOnly$Contents%in%nodeIDS,]
-#copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDs,]
+#copyOnlyContents <- copyOnly[!copyOnly$Contents%in%nodeIDS,]
+copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDS,]
 
+for (n in copyOnlyIds$Contents) {
+  copyOnlyIds$copied_node <- node_index$ppt[match(copyOnlyIds$Contents, node_index$Origin)]
+}
 
 ##### Make variable for if they copied highest scorer:
 # make a new variable:
 copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
 
-# Check the copyOnlyIds' contents column to see if it's in the topscorers$isMax column, For That Number
+# Check the copyOnlyIds' contents column to see if it's in the topscorers$isMax column, For That Number & Group
 # Give a 1 to topcopy if the target is on the list
 
 # copyOnlyIds$topCopy <- if((copyOnlyIds[(copyOnlyIds$Contents %in% topScorers$isMax),]$number), 1, 0) 
 # try to merge the following with above to make an ifelse inside the for loop
 # also want to fix this to be "out of those available to copy at the time, was it the maximum. As need to account for
 # if the person copying is the maximum themself etc
-# so need to write a fancy function that I'm struggling with....
+# so just need to add in some if statements into this for loop I guess.... 
+
 numbers <- unique(topScorers$number)
-for (n in numbers) {
-  copyOnlyIds$topCopy[topScorers$number == n] <- copyOnlyIds$Contents[topScorers$number == n] %in% topScorers$isMax[topScorers$number == n]
+groups <- unique(topScorers$group)
+
+for (n in numbers) 
+  {
+  for (g in groups) 
+    {
+  copyOnlyIds$topCopy[topScorers$number == n & topScorers$group ==g] <- copyOnlyIds$copied_node[topScorers$number == n & topScorers$group == g] %in% topScorers$isMax[topScorers$number == n & topScorers$group ==g]
+  }
 }
+
 copyOnlyIds$topCopy <- copyOnlyIds$topCopy*1
+
 
 #####
 ##### Subset for seeing score info (Prediction 1)
@@ -110,21 +144,20 @@ copyOnlyIds$topCopy <- copyOnlyIds$topCopy*1
 scoreChoice <-copyOnlyIds[copyOnlyIds$round==1,]
 
 #in full dataset it will be:
-#scoreChoice <-copyOnlyIds[(copyOnlyIds$round==1 & copyOnlyIds$Condition!="A") | (copyOnlyIds$info_chosen="Total Score in Round 1"),]
-
-#get ncopies for each node
-
-ncopies <- tapply(copyOnlyIds$copying, list(copyOnlyIds$Contents),sum)
-ncopies <- as.data.frame(ncopies)
-setDT(ncopies, keep.rownames = "copied")
-#what if there are more than one maximums?
-maxCopied <- which.max(ncopies$ncopies)
+scoreChoice <-copyOnlyIds[((copyOnlyIds$round==1 && copyOnlyIds$condition!="A") || (copyOnlyIds$info_chosen="Total Score in Round 1")),]
 
 
 #####
 #####
 ##### Subset for seeing prestige info (Prediction 2)
 #####
+
+#get ncopies for each node
+ncopies <- tapply(copyOnlyIds$copying, list(copyOnlyIds$Contents),sum)
+ncopies <- as.data.frame(ncopies)
+setDT(ncopies, keep.rownames = "copied")
+#what if there are more than one maximums?
+maxCopied <- which.max(ncopies$ncopies)
 
 prestigeChoice <- copyOnlyIds[copyOnlyIds$info_chosen =="Times chosen in Round 1",]
 prestigeChoice$presCopy <- ifelse((prestigeChoice$Contents %in% maxCopied),1,0)
@@ -137,7 +170,8 @@ prestigeChoice$presCopy <- ifelse((prestigeChoice$Contents %in% maxCopied),1,0)
 
 
 #####
-##### Subset of info chosen subset for Prediction 3:
+##### Subset of info chosen for Prediction 3:
+#####
 
 infoChosen <- copyOnlyContents[copyOnlyContents$round==2,]
 infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Round 1",1,0)
