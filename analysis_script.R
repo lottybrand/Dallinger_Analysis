@@ -27,7 +27,7 @@ for (index in 1:NOrigins){
 scoreChoice$OriginIndex <- OriginIndex
 
 #make index contiguous for group varying effect too:
-#(This will be 'network' in full_data)
+
 
 model1 <- map2stan(
   alist(
@@ -97,6 +97,7 @@ for (index in 1:Nppts){
 }
 infoChosen$pptIndex <- pptIndex
 
+#and for group: 
 
 model3 <- map2stan(
   alist(
@@ -129,7 +130,7 @@ null_model3 <- map2stan(
 #####
 #####
 
-### add variable for counting how many 'ask someone else's there are
+### add variable for counting how many 'ask someone else's there are in asocial? e.g. binary 0/1?
 
 
 
@@ -139,3 +140,5 @@ null_model3 <- map2stan(
 #####
 ##### Prediction 5: Participants perform best on the quiz in Condition B & C compared to Condition A because copying is only based on success in Conditions B & C
 #####
+
+#participants' total score? or probability of getting each Q right... 0/1 ...?? 

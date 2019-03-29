@@ -141,10 +141,11 @@ copyOnlyIds$topCopy <- copyOnlyIds$topCopy*1
 ##### Subset for seeing score info (Prediction 1)
 #####
 
-scoreChoice <-copyOnlyIds[copyOnlyIds$round==1,]
+#scoreChoice <-copyOnlyIds[copyOnlyIds$round==1,]
 
 #in full dataset it will be:
-scoreChoice <-copyOnlyIds[((copyOnlyIds$round==1 && copyOnlyIds$condition!="A") || (copyOnlyIds$info_chosen="Total Score in Round 1")),]
+#maybe need to resort to grepl??? 
+scoreChoice <-copyOnlyIds[((copyOnlyIds$round==1 & (copyOnlyIds$condition="A" | copyOnlyIds$condition="C")) | (copyOnlyIds$info_chosen="Total Score in Round 1")),]
 
 
 #####
@@ -172,6 +173,7 @@ prestigeChoice$presCopy <- ifelse((prestigeChoice$Contents %in% maxCopied),1,0)
 #####
 ##### Subset of info chosen for Prediction 3:
 #####
+
 
 infoChosen <- copyOnlyContents[copyOnlyContents$round==2,]
 infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Round 1",1,0)
