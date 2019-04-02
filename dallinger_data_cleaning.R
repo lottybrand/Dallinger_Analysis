@@ -144,9 +144,7 @@ copyOnlyIds$topCopy <- copyOnlyIds$topCopy*1
 #scoreChoice <-copyOnlyIds[copyOnlyIds$round==1,]
 
 #in full dataset it will be:
-#maybe need to resort to grepl??? 
-scoreChoice <-copyOnlyIds[((copyOnlyIds$round==1 & (copyOnlyIds$condition="A" | copyOnlyIds$condition="C")) | (copyOnlyIds$info_chosen="Total Score in Round 1")),]
-
+scoreChoice <- copyOnlyIds[((!copyOnlyIds$condition=="A")&(copyOnlyIds$round==1))|(copyOnlyIds$info_chosen=="Total Score in Round 1"),]                                     
 
 #####
 #####
