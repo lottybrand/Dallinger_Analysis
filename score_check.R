@@ -1,4 +1,4 @@
-#subset to check score: 
+#subset to check score info from dallinger output: 
 
 scoreCheck <- subset(asocialOnly, select = c(number, score, Origin, c_a_score))
 
@@ -21,7 +21,3 @@ ncopies
 asoc_R1 <- asocialOnly[asocialOnly$round ==1,]
 asoc_R1_score <- tapply(asoc_R1$score, list(asoc_R1$Origin),sum)                   
 asoc_R1_score
-
-#checking if this commits
-
-#I'm showing alice how this works 

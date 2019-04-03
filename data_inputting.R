@@ -9,17 +9,16 @@ library(jsonlite)
 library(data.table)
 library(dplyr)
 
-####
-#### CONDITION B First (this was the pilot data) ####
-####
-####
-####
+#####
+##### Condition B First (just because this was the full pilot data) ####
+#####
+
 
 infos<- read.csv("info.csv", stringsAsFactors = FALSE)
 infos <- infos[order(infos$id),]
 
-# trying to parse JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
-# second option (non-tidyverse): 
+# parse the JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
+# using the second option (non-tidyverse): 
 
 # delete when the origin is the source (we only want participants' data):
 infos<- infos[infos$type=="lotty_info",]
@@ -58,11 +57,10 @@ my_data <- my_data[!my_data$round==0,]
 # add Condition Column: 
 my_data$condition <- "B"
 
-####
-#### CONDITION A Next ####
-####
-####
-####
+#####
+##### REPEAT FOR CONDITION A DATA ####
+#####
+
 
 infosA<- read.csv("infoA_twoNetwork.csv", stringsAsFactors = FALSE)
 infosA <- infosA[order(infosA$id),]
@@ -104,11 +102,11 @@ my_data_a <- my_data_a[!my_data_a$round==0,]
 # add Condition Column: 
 my_data_a$condition <- "A"
 
-####
-####
-#### NOW FOR CONDITION C ####
-####
-####
+
+#####
+##### Finally repeat for condition c ####
+#####
+
 
 infosC<- read.csv("infoC_twoNetwork.csv", stringsAsFactors = FALSE)
 infosC <- infosC[order(infosC$id),]

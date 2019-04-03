@@ -4,6 +4,8 @@
 
 library(rethinking)
 
+source('dallinger_data_cleaning.R') 
+
 #####
 #####
 ##### Prediction 1: Participants copy the highest scoring participant out of those available in Conditions B & C
@@ -18,24 +20,33 @@ library(rethinking)
 scoreChoice<- as.data.frame(scoreChoice)
 
 #make index contiguous for participant varying effect:
-NOrigins = length(unique(scoreChoice$Origin))
-OldOrigin <- scoreChoice$Origin
-OriginIndex <- array(0,length(scoreChoice$Origin))
-for (index in 1:NOrigins){
-  OriginIndex[OldOrigin == unique(OldOrigin)[index]] = index
+Nppts = length(unique(scoreChoice$ppt))
+Oldppt <- scoreChoice$ppt
+pptIndex <- array(0,length(scoreChoice$ppt))
+for (index in 1:Nppts){
+  pptIndex[Oldppt == unique(Oldppt)[index]] = index
 }
-scoreChoice$OriginIndex <- OriginIndex
+scoreChoice$pptIndex <- pptIndex
 
-#make index contiguous for group varying effect too:
+#make index contiguous for group varying effect:
+Ngroups = length(unique(scoreChoice$group))
+Oldgroup <- scoreChoice$group
+groupIndex <- array(0,length(scoreChoice$group))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+scoreChoice$groupIndex <- groupIndex
 
 
 model1 <- map2stan(
   alist(
     topCopy ~ dbinom(1, p),
-    logit(p) <- a + a_p[OriginIndex]*sigma_p,
+    logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
     a ~ dnorm(0,10),
-    a_p[OriginIndex] ~ dnorm(0,1),
-    sigma_p ~ dcauchy(0,1)
+    a_p[pptIndex] ~ dnorm(0,1),
+    a_g[groupIndex] ~ dnorm(0,1),
+    sigma_p ~ dcauchy(0,1),
+    sigma_g ~ dcauchy(0,1)
   ),
   data=scoreChoice, constraints=list(sigma_p="lower=0"), 
   warmup=1000, iter=1000, chains=1, cores=1 )
@@ -50,26 +61,38 @@ precis(model1)
 #####
 #####
 
+## Dataframe is whenever someone chose to view prestige information, made in dallinger_data_cleaning.R 
+
 prestigeChoice<- as.data.frame(prestigeChoice)
 
-#make index contiguous for participant varying effects:
-NOrigins = length(unique(prestigeChoice$Origin))
-OldOrigin <- prestigeChoice$Origin
-OriginIndex <- array(0,length(prestigeChoice$Origin))
-for (index in 1:NOrigins){
-  OriginIndex[OldOrigin == unique(OldOrigin)[index]] = index
+#make ppt index contiguous:
+Nppts = length(unique(prestigeChoice$ppt))
+Oldppt <- prestigeChoice$ppt
+pptIndex <- array(0,length(prestigeChoice$ppt))
+for (index in 1:Nppts){
+  pptIndex[Oldppt == unique(Oldppt)[index]] = index
 }
-prestigeChoice$OriginIndex <- OriginIndex
+prestigeChoice$pptIndex <- pptIndex
 
-#make index contiguous for group varying effect in full data:
+#make group index contiguous:
+Ngroups = length(unique(prestigeChoice$group))
+Oldgroup <- prestigeChoice$group
+groupIndex <- array(0,length(prestigeChoice$group))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+prestigeChoice$groupIndex <- groupIndex
+
 
 model2 <- map2stan(
   alist(
     presCopy ~ dbinom(1, p),
-    logit(p) <- a + a_p[OriginIndex]*sigma_p,
+    logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
     a ~ dnorm(0,10),
-    a_p[OriginIndex] ~ dnorm(0,1),
-    sigma_p ~ dcauchy(0,1)
+    a_p[pptIndex] ~ dnorm(0,1),
+    a_g[groupIndex] ~ dnorm(0,1),
+    sigma_p ~ dcauchy(0,1),
+    sigma_g ~ dcauchy(0,1)
   ),
   data=prestigeChoice, constraints=list(sigma_p="lower=0"), 
   warmup=1000, iter=1000, chains=1, cores=1 )
@@ -85,6 +108,9 @@ precis(model2)
 #####
 #####
 
+# Dataframe is whenever a copying decision was made in round 2 in all conditions 
+# made in dallinger_data_cleaning.R
+
 #make index contiguous for varying effects:
 
 infoChosen <- as.data.frame(infoChosen)
@@ -97,16 +123,24 @@ for (index in 1:Nppts){
 }
 infoChosen$pptIndex <- pptIndex
 
-#and for group: 
+Ngroups = length(unique(infoChosen$group))
+Oldgroup <- infoChosen$group
+groupIndex <- array(0,length(infoChosen$group))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+infoChosen$groupIndex <- groupIndex
 
 model3 <- map2stan(
   alist(
     chosePrestige ~ dbinom(1, p),
-    logit(p) <- a + a_p[pptIndex]*sigma_p + b_a*CondA + b_c*CondC,
+    logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g + b_a*CondA + b_c*CondC,
     a ~ dnorm(0,10),
     c(b_a,b_c) ~ dnorm(0,4),
     a_p[pptIndex] ~ dnorm(0,1),
-    sigma_p ~ dcauchy(0,1)
+    a_g[groupIndex] ~ dnorm(0,1),
+    sigma_p ~ dcauchy(0,1),
+    sigma_g ~ dcauchy(0,1)
   ),
   data=infoChosen, constraints=list(sigma_p="lower=0"), 
   warmup=1000, iter=1000, chains=1, cores=1 )
@@ -116,10 +150,12 @@ precis(model3)
 null_model3 <- map2stan(
   alist(
     chosePrestige ~ dbinom(1, p),
-    logit(p) <- a + a_p[pptIndex]*sigma_p,
+    logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
     a ~ dnorm(0,10),
     a_p[pptIndex] ~ dnorm(0,1),
-    sigma_p ~ dcauchy(0,1)
+    a_g[groupIndex] ~ dnorm(0,1),
+    sigma_p ~ dcauchy(0,1),
+    sigma_g ~ dcauchy(0,1)
   ),
   data=infoChosen, constraints=list(sigma_p="lower=0"), 
   warmup=1000, iter=1000, chains=1, cores=1 )
@@ -130,10 +166,43 @@ null_model3 <- map2stan(
 #####
 #####
 
-### add variable for counting how many 'ask someone else's there are in asocial? e.g. binary 0/1?
+## Data frame is all individual answers to each question (asocialOnly) 
+## which includes a column for if they chose "ask someone else" made in dallinger_data_cleaning.R
+
+asocialOnly <- as.data.frame(asocialOnly)
+
+Nppts = length(unique(asocialOnly$ppt))
+Oldppt <- asocialOnly$ppt
+pptIndex <- array(0,length(asocialOnly$ppt))
+for (index in 1:Nppts){
+  pptIndex[Oldppt == unique(Oldppt)[index]] = index
+}
+asocialOnly$pptIndex <- pptIndex
+
+Ngroups = length(unique(asocialOnly$group))
+Oldgroup <- asocialOnly$group
+groupIndex <- array(0,length(asocialOnly$group))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+asocialOnly$groupIndex <- groupIndex
 
 
+model4 <- map2stan(
+  alist(
+    copied ~ dbinom(1, p),
+    logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g + b_b*condB + b_c*condC,
+    a ~ dnorm(0,10),
+    c(b_b,b_c) ~ dnorm(0,4),
+    a_p[pptIndex] ~ dnorm(0,1),
+    a_g[groupIndex] ~ dnorm(0,1),
+    sigma_p ~ dcauchy(0,1),
+    sigma_g ~ dcauchy(0,1)
+  ),
+  data=asocialOnly, constraints=list(sigma_p="lower=0"), 
+  warmup=1000, iter=1000, chains=1, cores=1 )
 
+precis(model4)
 
 
 #####
@@ -141,4 +210,39 @@ null_model3 <- map2stan(
 ##### Prediction 5: Participants perform best on the quiz in Condition B & C compared to Condition A because copying is only based on success in Conditions B & C
 #####
 
-#participants' total score? or probability of getting each Q right... 0/1 ...?? 
+## Data frame consists of accumulated scores (including copied score) on final question
+## made in dallinger_data_cleaning.R 
+
+finalScore <- as.data.frame(finalScore)
+
+Nppts = length(unique(finalScore$ppt))
+Oldppt <- finalScore$ppt
+pptIndex <- array(0,length(finalScore$ppt))
+for (index in 1:Nppts){
+  pptIndex[Oldppt == unique(Oldppt)[index]] = index
+}
+finalScore$pptIndex <- pptIndex
+
+Ngroups = length(unique(finalScore$group))
+Oldgroup <- finalScore$group
+groupIndex <- array(0,length(finalScore$group))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+finalScore$groupIndex <- groupIndex
+
+model5 <- map2stan(
+  alist(
+    c_a_score ~ dnorm(mu, sigma),
+    mu <- a + b_b*condB + b_c*condC +
+      a_p[pptIndex]*pptIndex + a_g[groupIndex]*groupIndex,
+    a ~ dnorm(0,10),
+    c(b_b,b_c) ~ dnorm(0,4),
+    a_p[pptIndex] ~ dnorm(0,1),
+    a_g[groupIndex] ~ dnorm(0,1),
+    sigma ~ dunif(0,10),
+    sigma_p ~ dcauchy(0,1),
+    sigma_g ~ dcauchy(0,1)
+  ),
+  data=finalScore, constraints=list(sigma_p="lower=0"),
+  warmup = 1000, iter=2000, chains = 1, cores = 1)
