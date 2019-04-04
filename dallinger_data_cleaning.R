@@ -28,10 +28,10 @@ full_data <- full_data[order(condition,Network,number),]
 full_data$ppt <- with(full_data, ave(Origin, condition, FUN=function(x) match(x, unique(x))))
 pptsA <- length(unique(my_data_a$Origin))
 
-full_data$ppt <- ifelse(full_data$condition=="B", full_data$num+pptsA,full_data$num)
+full_data$ppt <- ifelse(full_data$condition=="B", full_data$ppt+pptsA,full_data$ppt)
 
 pptsB <- length(unique(my_data$Origin))
-full_data$ppt <- ifelse(full_data$condition=="C", full_data$num+pptsA+pptsB,full_data$num)
+full_data$ppt <- ifelse(full_data$condition=="C", full_data$ppt+pptsA+pptsB,full_data$ppt)
 
 # manually reindex network too, as in full run they will be individual (at least per condition):
 full_data$group <- ifelse((full_data$condition=="B"),3,
@@ -86,11 +86,11 @@ nodeIDS <- (unique(full_data$Origin))
 nodeIDS
 copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDS,]
 
-# this isn't working how I thought....
-# maybe need to add 'for n in numbers' and 'for g in group' like the other function....
+#I think this is actually doing what we thought now, but need to double check 
 for (n in copyOnlyIds$Contents) {
   copyOnlyIds$copied_node <- node_index$ppt[match(copyOnlyIds$Contents, node_index$Origin)]
 }
+
 
 ##### Make variable for if they copied highest scorer:
 # make a new variable:
