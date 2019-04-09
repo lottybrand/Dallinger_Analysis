@@ -84,6 +84,8 @@ for (index in 1:Ngroups){
 }
 prestigeChoice$groupIndex <- groupIndex
 
+prestigeChoiceA <- prestigeChoice[prestigeChoice$condition=="A",]
+prestigeChoice <- prestigeChoice[!prestigeChoice$condition=="A",]
 
 model2 <- map2stan(
   alist(
@@ -169,7 +171,7 @@ infoChosen_list <- list(
   groupIndex = infoChosen$groupIndex,
   condsIndex = infoChosen$condsIndex )
 
-model3.1 <- ulam(
+model3 <- ulam(
   alist(
     chosePrestige ~ dbinom( 1 , p ) ,
     logit(p) <- a[pptIndex] + g[groupIndex] + b[condsIndex] ,
@@ -182,18 +184,18 @@ model3.1 <- ulam(
     sigma_b ~ dexp(1)
   ) , data=infoChosen_list , chains=4 , cores=4 , log_lik=TRUE )
 
-precis(model3.1)
+precis(model3)
 
 #plotting predictions based on conds: (pp 332 in 2nd edition )
-post <- extract.samples(model3.1)
+post <- extract.samples(model3)
 p_conds <- inv_logit( post$b )
 plot( precis( as.data.frame(p_conds) ) , xlim=c(0,1) )
 
 #plotting condition effects, (pp 333 in 2nd edition)
-plot( precis( model3.1 , depth=2 , pars="b" ))
+plot( precis( model3 , depth=2 , pars="b" ))
 
 #let's try condition as varying intercepts too, pp. 423 in Statistical Rethinking 2nd Edition:
-model3.2 <- ulam(
+model3.1 <- ulam(
   alist(
     chosePrestige ~ dbinom( 1 , p ) ,
     logit(p) <- a[pptIndex] + g[groupIndex] + b[condsIndex] ,
@@ -206,10 +208,10 @@ model3.2 <- ulam(
     sigma_b ~ dexp(1)
   ) , data=infoChosen_list , chains=4 , cores=4 , log_lik=TRUE )
 
-precis(model3.2, depth = 2)
+precis(model3.1, depth = 2)
 
 #plotting condition effects, (pp 333 in 2nd edition)
-plot( precis( model3.2 , depth=2 , pars="b" ))
+plot( precis( model3.1 , depth=2 , pars="b" ))
 
 
 #####
