@@ -4,6 +4,7 @@
 source('data_inputting.R')
 
 ##### Merge data from all conditions after data_unputting.R
+#### this shouldn't be needed anymore 
 full_data <- bind_rows(my_data,my_data_a,my_data_c)
 
 #because the info 'Origin' is repeated each time we run it, we need to renumber participants based on their condition and network
@@ -33,7 +34,8 @@ full_data$ppt <- ifelse(full_data$condition=="B", full_data$ppt+pptsA,full_data$
 pptsB <- length(unique(my_data$Origin))
 full_data$ppt <- ifelse(full_data$condition=="C", full_data$ppt+pptsA+pptsB,full_data$ppt)
 
-# manually reindex network too, as in full run they will be individual (at least per condition):
+# manually reindex network too for now, as in full run they will be individual (at least per condition)
+# need to automate this for the real thing, maybe like the above?
 full_data$group <- ifelse((full_data$condition=="B"),3,
                           ifelse((full_data$condition=="C" & full_data$Network==1),4,
                             ifelse((full_data$condition=="C" & full_data$Network==2), 5, full_data$Network)))
@@ -52,18 +54,21 @@ asocialOnly <- full_data[full_data$copying=="FALSE",]
 # using ave and cumsum
 asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$ppt, FUN=cumsum)
 
+#probably this whole section (63-76) should instead rank the score of each participant on each question, so that topScorers is an index of their rank, not just a list of the top scorers
+# so it could be 
+# if asocialOnly$contents !== "Ask Someone Else"
+#   for (n in question) 
+#      topScorers <- rank(asocialOnly$c_a_score)
+
 # max scorer per question, per group 
 # trying aggregate (bit convoluted, have to then use match, then create isMax)
 a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number, asocialOnly$group), max)
-
 #need to match according to both groups:
 asocialOnly <- merge(asocialOnly, a, by.x=c("number", "group"), by.y=c("Group.1", "Group.2"), all.x=TRUE, all.y=FALSE)
 asocialOnly <- asocialOnly[order(condition,Network,number),]
 names(asocialOnly)[names(asocialOnly) == 'x'] <- 'maxScore'
-
 #cleanup
 rm(a)
-
 # Make a list ("topScorers") of which ppt (origin) was the highest scoring per question, BUT
 # don't know what to do about ties, this keeps ties right now, which is fine, but what if ALL are tied for a given question? 
 asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$ppt,NA)
@@ -86,7 +91,7 @@ nodeIDS <- (unique(full_data$Origin))
 nodeIDS
 copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDS,]
 
-#I think this is actually doing what we thought now, but need to double check 
+#make sure the copied node represents the unique ppts ID not the origin ID.  
 for (n in copyOnlyIds$Contents) {
   copyOnlyIds$copied_node <- node_index$ppt[match(copyOnlyIds$Contents, node_index$Origin)]
 }
@@ -96,9 +101,13 @@ for (n in copyOnlyIds$Contents) {
 # make a new variable:
 copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
 
-# need to fix this to be "out of those available to copy at the time, was it the maximum. As need to account for
-# if the person copying is the maximum themself etc
-# so just need to add in some if statements into this for loop I guess.... 
+# so if topScorers is now a list of ranks of those who answered themselves, we can say something like the below but need to use 'match' here:
+# for (n in numbers)
+#  for (g in groups)
+#    copyOnlyIds$topCopy <- ifelse (copyOnlyIds$copied_node == min(topScorers$rank)),1,0)
+#        
+
+
 
 numbers <- unique(topScorers$number)
 groups <- unique(topScorers$group)
@@ -130,7 +139,7 @@ scoreChoice <- copyOnlyIds[((!copyOnlyIds$condition=="A")&(copyOnlyIds$round==1)
 ncopies <- tapply(copyOnlyIds$copying, list(copyOnlyIds$copied_node),sum)
 ncopies <- as.data.frame(ncopies)
 setDT(ncopies, keep.rownames = "copied")
-#what if there are more than one maximums, again?
+#what if there are more than one maximums, again, does this pick one at random?
 maxCopied <- which.max(ncopies$ncopies)
 
 prestigeChoice <- copyOnlyIds[copyOnlyIds$info_chosen =="Times chosen in Round 1",]
@@ -141,7 +150,8 @@ prestigeChoice$presCopy <- ifelse((prestigeChoice$copied_node %in% maxCopied),1,
 #prestigeChoice$presCopy <- if(prestigeChoice$ppt! %in% maxCopied) {
 #  ifelse((prestigeChoice$Contents=maxCopied),1,0)
 #}
-# but still what if the top two scorers are both copying... etc etc 
+# but still what if the top two scorers are both copying... etc etc
+# so do we need to do the same for topScorers and create a table of rankings?
 
 
 #####

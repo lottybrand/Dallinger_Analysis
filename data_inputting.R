@@ -11,7 +11,7 @@ library(dplyr)
 
 #####
 ##### Condition B First (just because this was the full pilot data) ####
-#####
+##### Should only need to do this once in the full run with multiple conditions
 
 
 infos<- read.csv("info.csv", stringsAsFactors = FALSE)
@@ -53,8 +53,6 @@ my_data$Network <- infos$network_id[match(my_data$id, infos$id)]
 
 # delete practice round data
 my_data <- my_data[!my_data$round==0,]
-
-# add Condition Column: 
 my_data$condition <- "B"
 
 #####
@@ -98,10 +96,7 @@ my_data_a$Origin <- infosA$origin_id[match(my_data_a$id, infosA$id)]
 my_data_a$Network <- infosA$network_id[match(my_data_a$id, infosA$id)]
 # delete practice round data
 my_data_a <- my_data_a[!my_data_a$round==0,]
-
-# add Condition Column: 
 my_data_a$condition <- "A"
-
 
 #####
 ##### Finally repeat for condition c ####
@@ -145,7 +140,5 @@ my_data_c$Network <- infosC$network_id[match(my_data_c$id, infosC$id)]
 
 # delete practice round data
 my_data_c <- my_data_c[!my_data_c$round==0,]
-
-# add Condition Column: 
 my_data_c$condition <- "C"
 
