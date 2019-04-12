@@ -60,20 +60,37 @@ asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$ppt, FUN=cumsum)
 #   for (n in question) 
 #      topScorers <- rank(asocialOnly$c_a_score)
 
+
+answeredRanks <- asocialOnly[asocialOnly$Contents!="Ask Someone Else",]
+answeredRanks <- subset(answeredRanks, select = c("number","group","c_a_score","ppt","rank"))
+
+numbers <- unique(answeredRanks$number)
+groups <- unique(answeredRanks$group)
+
+for (n in numbers) 
+{
+  for (g in groups) 
+  {
+    answeredRanks$rank[answeredRanks$number == n & answeredRanks$group ==g] <- rank(answeredRanks$c_a_score[answeredRanks$number == n & answeredRanks$group ==g],)
+  }
+}
+
+#this seems to do it, but note 1 is lowest rank and higher rank = higher score. 
+
 # max scorer per question, per group 
 # trying aggregate (bit convoluted, have to then use match, then create isMax)
-a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number, asocialOnly$group), max)
+#a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number, asocialOnly$group), max)
 #need to match according to both groups:
-asocialOnly <- merge(asocialOnly, a, by.x=c("number", "group"), by.y=c("Group.1", "Group.2"), all.x=TRUE, all.y=FALSE)
-asocialOnly <- asocialOnly[order(condition,Network,number),]
-names(asocialOnly)[names(asocialOnly) == 'x'] <- 'maxScore'
+#asocialOnly <- merge(asocialOnly, a, by.x=c("number", "group"), by.y=c("Group.1", "Group.2"), all.x=TRUE, all.y=FALSE)
+#asocialOnly <- asocialOnly[order(condition,Network,number),]
+#names(asocialOnly)[names(asocialOnly) == 'x'] <- 'maxScore'
 #cleanup
-rm(a)
+#rm(a)
 # Make a list ("topScorers") of which ppt (origin) was the highest scoring per question, BUT
 # don't know what to do about ties, this keeps ties right now, which is fine, but what if ALL are tied for a given question? 
-asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$ppt,NA)
-topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
-topScorers <- subset(topScorers, select =c("number","isMax","group","condition"))
+#asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$ppt,NA)
+#topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
+#topScorers <- subset(topScorers, select =c("number","isMax","group","condition"))
 
 #####
 ##### SUBSET OF COPYING ONLY:
