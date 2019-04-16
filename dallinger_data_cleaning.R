@@ -127,15 +127,15 @@ copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
 #        
 
 
-
-numbers <- unique(topScorers$number)
-groups <- unique(topScorers$group)
+#need to fix below... doesn't appear to be doing what we want right now:
+numbers <- unique(answeredRanks$number)
+groups <- unique(answeredRanks$group)
 
 for (n in numbers) 
   {
   for (g in groups) 
     {
-  copyOnlyIds$topCopy[topScorers$number == n & topScorers$group ==g] <- copyOnlyIds$copied_node[topScorers$number == n & topScorers$group == g] %in% topScorers$isMax[topScorers$number == n & topScorers$group ==g]
+  copyOnlyIds$topCopy[answeredRanks$number == n & answeredRanks$group ==g] <- ifelse((copyOnlyIds$copied_node[answeredRanks$number == n & answeredRanks$group == g]) == max(answeredRanks$rank[answeredRanks$number == n & answeredRanks$group ==g]),1,0)
   }
 }
 
