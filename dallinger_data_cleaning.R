@@ -62,7 +62,6 @@ asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$ppt, FUN=cumsum)
 
 
 answeredRanks <- asocialOnly[asocialOnly$Contents!="Ask Someone Else",]
-answeredRanks <- subset(answeredRanks, select = c("number","group","c_a_score","ppt","rank"))
 
 numbers <- unique(answeredRanks$number)
 groups <- unique(answeredRanks$group)
@@ -75,7 +74,9 @@ for (n in numbers)
   }
 }
 
+answeredRanks <- subset(answeredRanks, select = c("number","group","c_a_score","ppt","rank"))
 #this seems to do it, but note 1 is lowest rank and higher rank = higher score. 
+#still need to address when everyone is on the same score (ie when all ppts' ranks = 1 for a given group for a given question)
 
 # max scorer per question, per group 
 # trying aggregate (bit convoluted, have to then use match, then create isMax)
@@ -119,9 +120,10 @@ for (n in copyOnlyIds$Contents) {
 copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
 
 # so if topScorers is now a list of ranks of those who answered themselves, we can say something like the below but need to use 'match' here:
+# also what does it do if there is no max? e.g. all the same? 
 # for (n in numbers)
 #  for (g in groups)
-#    copyOnlyIds$topCopy <- ifelse (copyOnlyIds$copied_node == min(topScorers$rank)),1,0)
+#    copyOnlyIds$topCopy <- ifelse (copyOnlyIds$copied_node == max(topScorers$rank)),1,0)
 #        
 
 
