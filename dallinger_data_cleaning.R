@@ -4,10 +4,9 @@
 source('data_inputting.R')
 
 ##### Merge data from all conditions after data_unputting.R
-#### this shouldn't be needed anymore 
 full_data <- bind_rows(my_data,my_data_a,my_data_c)
 
-#because the info 'Origin' is repeated each time we run it, we need to renumber participants based on their condition and network
+#because the info 'Origin' is repeated each time we run it, we need to reindex participants based on their condition and network
 #start by ordering according to condition, network and number(question)
 full_data$number <- as.integer(full_data$number)
 full_data <- full_data[order(condition,Network,number),]
@@ -21,11 +20,7 @@ full_data <- full_data[order(condition,Network,number),]
 # don't know what this thinks it's doing: 
 #for (i in unique(full_data$Origin)) full_data$num[full_data$Origin == i] <- seq_len(sum(full_data$Origin == i))
 
-#tom houslay's doesn't work either:
-#df_index <- full_data %>% distinct(Origin, condition) %>% mutate(num = row_number())
-#full_data <- left_join(full_data, df_index)
-
-#time for a bodge job for now:
+#my own hacky attempt for now:
 full_data$ppt <- with(full_data, ave(Origin, condition, FUN=function(x) match(x, unique(x))))
 pptsA <- length(unique(my_data_a$Origin))
 
@@ -35,7 +30,7 @@ pptsB <- length(unique(my_data$Origin))
 full_data$ppt <- ifelse(full_data$condition=="C", full_data$ppt+pptsA+pptsB,full_data$ppt)
 
 # manually reindex network too for now, as in full run they will be individual (at least per condition)
-# need to automate this for the real thing, maybe like the above?
+# will need to automate this for the real thing, maybe like the above?
 full_data$group <- ifelse((full_data$condition=="B"),3,
                           ifelse((full_data$condition=="C" & full_data$Network==1),4,
                             ifelse((full_data$condition=="C" & full_data$Network==2), 5, full_data$Network)))
@@ -54,15 +49,10 @@ asocialOnly <- full_data[full_data$copying=="FALSE",]
 # using ave and cumsum
 asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$ppt, FUN=cumsum)
 
-#probably this whole section (63-76) should instead rank the score of each participant on each question, so that topScorers is an index of their rank, not just a list of the top scorers
-# so it could be 
-# if asocialOnly$contents !== "Ask Someone Else"
-#   for (n in question) 
-#      topScorers <- rank(asocialOnly$c_a_score)
-
-
+#create database of those who actually answered asocially for each question
 answeredRanks <- asocialOnly[asocialOnly$Contents!="Ask Someone Else",]
 
+#rank them according to their accumulated score on that question, per question, per group:
 numbers <- unique(answeredRanks$number)
 groups <- unique(answeredRanks$group)
 
@@ -74,24 +64,11 @@ for (n in numbers)
   }
 }
 
+#clean it up
 answeredRanks <- subset(answeredRanks, select = c("number","group","c_a_score","ppt","rank"))
 #this seems to do it, but note 1 is lowest rank and higher rank = higher score. 
 #still need to address when everyone is on the same score (ie when all ppts' ranks = 1 for a given group for a given question)
 
-# max scorer per question, per group 
-# trying aggregate (bit convoluted, have to then use match, then create isMax)
-#a <- aggregate(asocialOnly$c_a_score, by = list(asocialOnly$number, asocialOnly$group), max)
-#need to match according to both groups:
-#asocialOnly <- merge(asocialOnly, a, by.x=c("number", "group"), by.y=c("Group.1", "Group.2"), all.x=TRUE, all.y=FALSE)
-#asocialOnly <- asocialOnly[order(condition,Network,number),]
-#names(asocialOnly)[names(asocialOnly) == 'x'] <- 'maxScore'
-#cleanup
-#rm(a)
-# Make a list ("topScorers") of which ppt (origin) was the highest scoring per question, BUT
-# don't know what to do about ties, this keeps ties right now, which is fine, but what if ALL are tied for a given question? 
-#asocialOnly$isMax <- ifelse((asocialOnly$maxScore == asocialOnly$c_a_score),asocialOnly$ppt,NA)
-#topScorers <- asocialOnly[!is.na(asocialOnly$isMax),]
-#topScorers <- subset(topScorers, select =c("number","isMax","group","condition"))
 
 #####
 ##### SUBSET OF COPYING ONLY:
@@ -110,8 +87,12 @@ nodeIDS
 copyOnlyIds <- copyOnly[copyOnly$Contents%in%nodeIDS,]
 
 #make sure the copied node represents the unique ppts ID not the origin ID.  
-for (n in copyOnlyIds$Contents) {
-  copyOnlyIds$copied_node <- node_index$ppt[match(copyOnlyIds$Contents, node_index$Origin)]
+# this does not appear to work right now: 
+
+groups <- unique(node_index$group)
+
+for (g in groups) {
+  copyOnlyIds$copied_node[node_index$group==g] <- node_index$ppt[match(copyOnlyIds$Contents[node_index$group==g], node_index$Origin[node_index$group==g])]
 }
 
 
@@ -119,15 +100,11 @@ for (n in copyOnlyIds$Contents) {
 # make a new variable:
 copyOnlyIds$topCopy <- rep(NA, length(copyOnlyIds$Contents))
 
-# so if topScorers is now a list of ranks of those who answered themselves, we can say something like the below but need to use 'match' here:
-# also what does it do if there is no max? e.g. all the same? 
-# for (n in numbers)
-#  for (g in groups)
-#    copyOnlyIds$topCopy <- ifelse (copyOnlyIds$copied_node == max(topScorers$rank)),1,0)
-#        
+# so we now have a list of ranks of those who answered themselves
+# also what does it do if there is no max? e.g. all the same, or two maximums?
 
 
-#need to fix below... doesn't appear to be doing what we want right now:
+#this should be working, but need to fix above first:
 numbers <- unique(answeredRanks$number)
 groups <- unique(answeredRanks$group)
 
