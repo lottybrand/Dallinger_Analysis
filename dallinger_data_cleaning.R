@@ -3,13 +3,29 @@
 
 source('data_inputting.R')
 
+data_tables <- list(my_data, my_data_a, my_data_c)
+
+my_data$uid <- my_data$id
+my_data$u_origin <- my_data$Origin
+my_data$u_network <- my_data$Network
+
+full_data <- my_data
+
+for (i in 2:length(data_tables)) {
+  this_table <- data_tables[[i]]
+  this_table$uid <- this_table$id + max(full_data$uid)
+  this_table$u_origin <- this_table$Origin + max(full_data$u_origin)
+  this_table$u_network <- this_table$Network + max(full_data$u_network)
+  full_data <- bind_rows(full_data, this_table)
+}
+
 ##### Merge data from all conditions after data_unputting.R
-full_data <- bind_rows(my_data,my_data_a,my_data_c)
+#full_data <- bind_rows(my_data,my_data_a,my_data_c)
 
 #because the info 'Origin' is repeated each time we run it, we need to reindex participants based on their condition and network
 #start by ordering according to condition, network and number(question)
 full_data$number <- as.integer(full_data$number)
-full_data <- full_data[order(condition,Network,number),]
+# full_data <- full_data[order(condition,Network,number),]
 
 # This is getting close but it's not treating new conditions as new sets...
 #full_data$num <- with(full_data, ave(Origin, condition, FUN=function(x) match(x, unique(Origin))))
@@ -21,19 +37,19 @@ full_data <- full_data[order(condition,Network,number),]
 #for (i in unique(full_data$Origin)) full_data$num[full_data$Origin == i] <- seq_len(sum(full_data$Origin == i))
 
 #my own hacky attempt for now:
-full_data$ppt <- with(full_data, ave(Origin, condition, FUN=function(x) match(x, unique(x))))
-pptsA <- length(unique(my_data_a$Origin))
-
-full_data$ppt <- ifelse(full_data$condition=="B", full_data$ppt+pptsA,full_data$ppt)
-
-pptsB <- length(unique(my_data$Origin))
-full_data$ppt <- ifelse(full_data$condition=="C", full_data$ppt+pptsA+pptsB,full_data$ppt)
-
-# manually reindex network too for now, as in full run they will be individual (at least per condition)
-# will need to automate this for the real thing, maybe like the above?
-full_data$group <- ifelse((full_data$condition=="B"),3,
-                          ifelse((full_data$condition=="C" & full_data$Network==1),4,
-                            ifelse((full_data$condition=="C" & full_data$Network==2), 5, full_data$Network)))
+# full_data$ppt <- with(full_data, ave(Origin, condition, FUN=function(x) match(x, unique(x))))
+# pptsA <- length(unique(my_data_a$Origin))
+# 
+# full_data$ppt <- ifelse(full_data$condition=="B", full_data$ppt+pptsA,full_data$ppt)
+# 
+# pptsB <- length(unique(my_data$Origin))
+# full_data$ppt <- ifelse(full_data$condition=="C", full_data$ppt+pptsA+pptsB,full_data$ppt)
+# 
+# # manually reindex network too for now, as in full run they will be individual (at least per condition)
+# # will need to automate this for the real thing, maybe like the above?
+# full_data$group <- ifelse((full_data$condition=="B"),3,
+#                           ifelse((full_data$condition=="C" & full_data$Network==1),4,
+#                             ifelse((full_data$condition=="C" & full_data$Network==2), 5, full_data$Network)))
 
 #####
 ##### Subsets for the different analyses: 
@@ -43,29 +59,69 @@ full_data$group <- ifelse((full_data$condition=="B"),3,
 ##### Subset for 'ASOCIAL ONLY' : 
 #####
 
-asocialOnly <- full_data[full_data$copying=="FALSE",]
+full_data$c_a_score <- rep(-666, nrow(full_data))
+for (i in 1:nrow(full_data)) {
+  c_a_score <- sum(full_data[1:i,]$score[full_data$copying == FALSE & full_data$u_origin == full_data$u_origin[i]])
+  if (is.na(c_a_score)) {
+    c_a_score <- 0
+  }
+  full_data$c_a_score[i] <- c_a_score
+}
 
-# create cumulative (asocial) score for each ppt
-# using ave and cumsum
-asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$ppt, FUN=cumsum)
+full_data$c_copies <- rep(-666, nrow(full_data))
+all_node_ids <- unique(full_data$Origin)
+full_data$is_model_id <- (full_data$copying == TRUE & full_data$Contents %in% all_node_ids)
+for (i in 1:nrow(full_data)) {
+  full_data$c_copies[i] <- nrow(full_data[
+    full_data$uid < full_data$uid[i] & 
+    full_data$is_model_id == TRUE &
+    full_data$u_network == full_data$u_network[i] &
+    full_data$Contents == as.character(full_data$Origin[i])
+  ,])
+}
 
-#create database of those who actually answered asocially for each question
-answeredRanks <- asocialOnly[asocialOnly$Contents!="Ask Someone Else",]
-
-#rank them according to their accumulated score on that question, per question, per group:
-numbers <- unique(answeredRanks$number)
-groups <- unique(answeredRanks$group)
-
-for (n in numbers) 
-{
-  for (g in groups) 
-  {
-    answeredRanks$rank[answeredRanks$number == n & answeredRanks$group ==g] <- rank(answeredRanks$c_a_score[answeredRanks$number == n & answeredRanks$group ==g],)
+full_data$copied_winner <- rep("-666", nrow(full_data))
+for (i in 1:nrow(full_data)) {
+  if (full_data$is_model_id[i] == FALSE) {
+    full_data$copied_winner[i] <- NA
+  } else {
+    models <- full_data[full_data$number == full_data$number[i] & full_data$u_network == full_data$u_network[i] & full_data$copying == FALSE,]
+    model <- models[as.character(models$Origin) == full_data$Contents[i],]
+    if (nrow(models) <= 1) {
+      full_data$copied_winner[i] <- NA
+    } else {
+      if (length(unique(models$c_a_score)) == 1) {
+        full_data$copied_winner[i] <- NA
+      } else {
+        full_data$copied_winner[i] <- (model$c_a_score == max(models$c_a_score))
+      }
+    }
   }
 }
 
+#asocialOnly <- full_data[full_data$copying=="FALSE",]
+
+# create cumulative (asocial) score for each ppt
+# using ave and cumsum
+#asocialOnly$c_a_score <- ave(asocialOnly$score, asocialOnly$ppt, FUN=cumsum)
+
+#create database of those who actually answered asocially for each question
+#answeredRanks <- asocialOnly[asocialOnly$Contents!="Ask Someone Else",]
+
+#rank them according to their accumulated score on that question, per question, per group:
+#numbers <- unique(answeredRanks$number)
+#groups <- unique(answeredRanks$group)
+
+#for (n in numbers) 
+#{
+#  for (g in groups) 
+#  {
+#    answeredRanks$rank[answeredRanks$number == n & answeredRanks$group ==g] <- rank(answeredRanks$c_a_score[answeredRanks$number == n & answeredRanks$group ==g],)
+#  }
+#}
+
 #clean it up
-answeredRanks <- subset(answeredRanks, select = c("number","group","c_a_score","ppt","rank"))
+#answeredRanks <- subset(answeredRanks, select = c("number","group","c_a_score","ppt","rank"))
 #this seems to do it, but note 1 is lowest rank and higher rank = higher score. 
 #still need to address when everyone is on the same score (ie when all ppts' ranks = 1 for a given group for a given question)
 
