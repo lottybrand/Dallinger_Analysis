@@ -40,7 +40,7 @@ scoreChoice$groupIndex <- groupIndex
 
 model1 <- map2stan(
   alist(
-    topCopy ~ dbinom(1, p),
+    copied_successful ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
     a ~ dnorm(0,1.5),
     a_p[pptIndex] ~ dnorm(0,1),
@@ -89,7 +89,7 @@ prestigeChoice <- prestigeChoice[!prestigeChoice$condition=="A",]
 
 model2 <- map2stan(
   alist(
-    presCopy ~ dbinom(1, p),
+    copied_prestigious ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
     a ~ dnorm(0,10),
     a_p[pptIndex] ~ dnorm(0,1),
@@ -105,7 +105,7 @@ precis(model2)
 #for Condition A prestige-copying only, if any occurs:
 model2.1 <- map2stan(
   alist(
-    presCopy ~ dbinom(1, p),
+    copied_prestigious ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
     a ~ dnorm(0,10),
     a_p[pptIndex] ~ dnorm(0,1),

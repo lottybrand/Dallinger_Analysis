@@ -1,0 +1,1248 @@
+id,creation_time,property1,property2,property3,property4,property5,failed,time_of_death,details,type,origin_id,network_id,contents
+1,27:13.8,,,,,,f,,{},info,1,1,"{""question"": ""What is the capital city of France?"", ""number"": ""practice 1"", ""round"": 0, ""topic"": ""Practice"", ""Wwer"": ""Barcelona"", ""Rwer"": ""Paris"", ""pic"": false}"
+2,27:18.7,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,10,1,Paris
+3,27:19.6,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,4,1,Paris
+4,27:19.8,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,9,1,Paris
+5,27:21.2,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,7,1,Paris
+6,27:23.3,"{""number"":""practice 1"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,8,1,Barcelona
+7,27:23.4,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,12,1,Paris
+8,27:24.6,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,Paris
+9,27:27.7,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,6,1,Paris
+10,27:27.7,"{""number"":""practice 1"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,3,1,Paris
+11,27:27.9,,,,,,f,,{},info,1,1,"{""question"": ""How much does an average chimpanzee weigh?"", ""number"": ""practice 2"", ""round"": 0, ""topic"": ""Practice"", ""Wwer"": ""500kg"", ""Rwer"": ""50kg"", ""pic"": false}"
+12,27:31.2,"{""number"":""practice 2"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,50kg
+13,27:31.9,"{""number"":""practice 2"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,4,1,50kg
+14,27:32.2,"{""number"":""practice 2"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,7,1,500kg
+15,27:32.4,"{""number"":""practice 2"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,3,1,50kg
+16,27:33.0,"{""number"":""practice 2"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,12,1,50kg
+17,27:33.8,"{""number"":""practice 2"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,6,1,500kg
+18,27:35.7,"{""number"":""practice 2"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,10,1,50kg
+19,27:35.8,"{""number"":""practice 2"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,27:40.2,{},lotty_info,9,1,Ask Someone Else
+20,27:40.0,"{""number"":""practice 2"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,8,1,50kg
+21,27:40.2,,,,,,f,,{},info,1,1,Good Luck
+22,27:45.6,"{""number"":""practice 2"",""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":0,""human"":true}",,,,,t,27:45.6,{},lotty_info,9,1,12
+23,27:45.6,"{""number"": ""practice 2"", ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 0, ""human"": true}",,,,,f,,{},lotty_info,9,1,50kg
+24,27:45.8,,,,,,f,,{},info,1,1,"{""question"": ""\""Pepino\"" means \""cucumber\"" in which language?"", ""number"": ""practice 3"", ""round"": 0, ""topic"": ""Practice"", ""Wwer"": ""Italian"", ""Rwer"": ""Spanish"", ""pic"": false}"
+25,27:49.7,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,Italian
+26,27:51.0,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,3,1,Italian
+27,27:51.1,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,6,1,Italian
+28,27:52.1,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,7,1,Italian
+29,27:52.9,"{""number"":""practice 3"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,12,1,Spanish
+30,27:53.3,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,4,1,Italian
+31,27:53.9,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,27:57.8,{},lotty_info,9,1,Ask Someone Else
+32,27:56.4,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,27:57.9,{},lotty_info,10,1,Ask Someone Else
+33,27:57.6,"{""number"":""practice 3"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,8,1,Italian
+34,27:57.8,,,,,,f,,{},info,1,1,Good Luck
+35,28:00.4,"{""number"":""practice 3"",""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":0,""human"":true}",,,,,t,28:00.5,{},lotty_info,9,1,8
+36,28:00.5,"{""number"": ""practice 3"", ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 0, ""human"": true}",,,,,f,,{},lotty_info,9,1,Italian
+37,28:04.9,"{""number"":""practice 3"",""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":0,""human"":true}",,,,,t,28:04.9,{},lotty_info,10,1,3
+38,28:04.9,"{""number"": ""practice 3"", ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 0, ""human"": true}",,,,,f,,{},lotty_info,10,1,Italian
+39,28:05.1,,,,,,f,,{},info,1,1,"{""question"": ""Vincent van Gogh died in which year?"", ""number"": ""practice 4"", ""round"": 0, ""topic"": ""Practice"", ""Wwer"": ""1880"", ""Rwer"": ""1890"", ""pic"": false}"
+40,28:09.1,"{""number"":""practice 4"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,28:21.6,{},lotty_info,4,1,Ask Someone Else
+41,28:10.5,"{""number"":""practice 4"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,1880
+42,28:11.4,"{""number"":""practice 4"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,3,1,1880
+43,28:11.5,"{""number"":""practice 4"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,8,1,1880
+44,28:11.7,"{""number"":""practice 4"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,7,1,1880
+45,28:14.8,"{""number"":""practice 4"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,9,1,1890
+46,28:15.6,"{""number"":""practice 4"",""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,12,1,1880
+47,28:17.4,"{""number"":""practice 4"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,10,1,1890
+48,28:21.4,"{""number"":""practice 4"",""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":0,""human"":true}",,,,,f,,{},lotty_info,6,1,1890
+49,28:21.6,,,,,,f,,{},info,1,1,Good Luck
+50,28:28.4,"{""number"":""practice 4"",""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":0,""human"":true}",,,,,t,28:28.4,{},lotty_info,4,1,12
+51,28:28.5,"{""number"": ""practice 4"", ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 0, ""human"": true}",,,,,f,,{},lotty_info,4,1,1880
+52,28:28.7,,,,,,f,,{},info,1,1,"{""question"": ""In which country is the red dot located?"", ""number"": 1, ""round"": 1, ""topic"": ""Geography"", ""Wwer"": ""Guatemala"", ""Rwer"": ""Belize"", ""pic"": true}"
+53,28:42.0,"{""number"":1,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Guatemala
+54,28:42.7,"{""number"":1,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Guatemala
+55,28:43.2,"{""number"":1,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Guatemala
+56,28:43.8,"{""number"":1,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,29:07.4,{},lotty_info,9,1,Ask Someone Else
+57,28:48.7,"{""number"":1,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Belize
+58,28:49.2,"{""number"":1,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Belize
+59,28:49.4,"{""number"":1,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":false}",,,,,f,,{},lotty_info,10,1,Guatemala
+60,28:51.6,"{""number"":1,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Guatemala
+61,29:07.2,"{""number"":1,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Guatemala
+62,29:07.4,,,,,,f,,{},info,1,1,Good Luck
+63,29:11.6,"{""number"":1,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,29:11.6,{},lotty_info,9,1,7
+64,29:11.7,"{""number"": 1, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Belize
+65,29:11.8,,,,,,f,,{},info,1,1,"{""question"": ""In which country is the red dot located?"", ""number"": 2, ""round"": 1, ""topic"": ""Geography"", ""Wwer"": ""Nigeria"", ""Rwer"": ""The Ivory Coast"", ""pic"": true}"
+66,29:18.3,"{""number"":2,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,29:26.2,{},lotty_info,9,1,Ask Someone Else
+67,29:20.4,"{""number"":2,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Nigeria
+68,29:20.9,"{""number"":2,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Nigeria
+69,29:20.9,"{""number"":2,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,The Ivory Coast
+70,29:21.2,"{""number"":2,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Nigeria
+71,29:21.5,"{""number"":2,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,The Ivory Coast
+72,29:22.5,"{""number"":2,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,The Ivory Coast
+73,29:24.8,"{""number"":2,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Nigeria
+74,29:25.9,"{""number"":2,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,The Ivory Coast
+75,29:26.2,,,,,,f,,{},info,1,1,Good Luck
+76,29:29.3,"{""number"":2,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,29:29.4,{},lotty_info,9,1,11
+77,29:29.4,"{""number"": 2, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Nigeria
+78,29:29.6,,,,,,f,,{},info,1,1,"{""question"": ""The capital of Hawaii is"", ""number"": 3, ""round"": 1, ""topic"": ""Geography"", ""Wwer"": ""Waikiki"", ""Rwer"": ""Honolulu"", ""pic"": false}"
+79,29:33.5,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Honolulu
+80,29:34.1,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Honolulu
+81,29:34.2,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Honolulu
+82,29:36.1,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Honolulu
+83,29:36.2,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Honolulu
+84,29:36.3,"{""number"":3,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,29:41.3,{},lotty_info,9,1,Ask Someone Else
+85,29:36.5,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Honolulu
+86,29:39.0,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Honolulu
+87,29:41.0,"{""number"":3,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Honolulu
+88,29:41.3,,,,,,f,,{},info,1,1,Good Luck
+89,29:44.2,"{""number"":3,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,29:44.3,{},lotty_info,9,1,3
+90,29:44.3,"{""number"": 3, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Honolulu
+91,29:44.5,,,,,,f,,{},info,1,1,"{""question"": ""Saint Helena is an island in"", ""number"": 4, ""round"": 1, ""topic"": ""Georgraphy"", ""Wwer"": ""The Indian Ocean"", ""Rwer"": ""The South Atlantic Ocean"", ""pic"": false}"
+92,29:50.5,"{""number"":4,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,The Indian Ocean
+93,29:52.1,"{""number"":4,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,The South Atlantic Ocean
+94,29:52.3,"{""number"":4,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,The South Atlantic Ocean
+95,29:54.8,"{""number"":4,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,The South Atlantic Ocean
+96,29:55.2,"{""number"":4,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,The South Atlantic Ocean
+97,29:55.3,"{""number"":4,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,The Indian Ocean
+98,29:56.9,"{""number"":4,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,30:00.6,{},lotty_info,7,1,Ask Someone Else
+99,29:58.6,"{""number"":4,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,The South Atlantic Ocean
+100,30:00.3,"{""number"":4,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,The Indian Ocean
+101,30:00.5,,,,,,f,,{},info,1,1,Good Luck
+102,30:07.3,"{""number"":4,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,30:07.4,{},lotty_info,7,1,10
+103,30:07.4,"{""number"": 4, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,7,1,The South Atlantic Ocean
+104,30:07.6,,,,,,f,,{},info,1,1,"{""question"": ""Which country shares a border with El Salvador?"", ""number"": 5, ""round"": 1, ""topic"": ""Georgraphy"", ""Wwer"": ""Paraguay"", ""Rwer"": ""Honduras"", ""pic"": false}"
+105,30:11.9,"{""number"":5,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,30:22.7,{},lotty_info,9,1,Ask Someone Else
+106,30:12.6,"{""number"":5,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,Honduras
+107,30:13.9,"{""number"":5,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,30:22.7,{},lotty_info,4,1,Ask Someone Else
+108,30:14.3,"{""number"":5,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Honduras
+109,30:15.6,"{""number"":5,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Honduras
+110,30:16.9,"{""number"":5,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Paraguay
+111,30:17.8,"{""number"":5,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,30:22.7,{},lotty_info,12,1,Ask Someone Else
+112,30:19.6,"{""number"":5,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Honduras
+113,30:22.4,"{""number"":5,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Honduras
+114,30:22.7,,,,,,f,,{},info,1,1,Good Luck
+115,30:25.2,"{""number"":5,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,30:25.2,{},lotty_info,4,1,11
+116,30:25.3,"{""number"": 5, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,4,1,Honduras
+117,30:26.1,"{""number"":5,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,30:26.1,{},lotty_info,9,1,11
+118,30:26.2,"{""number"": 5, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Honduras
+119,30:30.2,"{""number"":5,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,30:30.3,{},lotty_info,12,1,11
+120,30:30.3,"{""number"": 5, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,12,1,Honduras
+121,30:30.5,,,,,,f,,{},info,1,1,"{""question"": ""The capital of the Philippines is?"", ""number"": 6, ""round"": 1, ""topic"": ""Georgraphy"", ""Wwer"": ""Davao"", ""Rwer"": ""Manila"", ""pic"": false}"
+122,30:33.1,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,Manila
+123,30:33.7,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Manila
+124,30:35.0,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Manila
+125,30:35.9,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Manila
+126,30:35.9,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Manila
+127,30:36.0,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Manila
+128,30:37.5,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Manila
+129,30:40.8,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Manila
+130,30:43.8,"{""number"":6,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Manila
+131,30:44.0,,,,,,f,,{},info,1,1,"{""question"": ""Which is closest to Finland?"", ""number"": 7, ""round"": 1, ""topic"": ""Georgraphy"", ""Wwer"": ""Moscow"", ""Rwer"": ""St Petersburg"", ""pic"": false}"
+132,30:48.0,"{""number"":7,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,31:00.1,{},lotty_info,9,1,Ask Someone Else
+133,30:50.8,"{""number"":7,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,St Petersburg
+134,30:51.0,"{""number"":7,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,St Petersburg
+135,30:51.4,"{""number"":7,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,St Petersburg
+136,30:51.4,"{""number"":7,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Moscow
+137,30:51.5,"{""number"":7,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Moscow
+138,30:52.1,"{""number"":7,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,St Petersburg
+139,30:56.6,"{""number"":7,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,St Petersburg
+140,30:59.8,"{""number"":7,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,St Petersburg
+141,31:00.1,,,,,,f,,{},info,1,1,Good Luck
+142,31:04.8,"{""number"":7,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,31:04.9,{},lotty_info,9,1,3
+143,31:04.9,"{""number"": 7, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,St Petersburg
+144,31:05.1,,,,,,f,,{},info,1,1,"{""question"": ""Which is the largest of The Canary Islands?"", ""number"": 8, ""round"": 1, ""topic"": ""Georgraphy"", ""Wwer"": ""Gran Canaria"", ""Rwer"": ""Tenerife"", ""pic"": false}"
+145,31:09.8,"{""number"":8,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,Gran Canaria
+146,31:11.1,"{""number"":8,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Gran Canaria
+147,31:11.6,"{""number"":8,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,31:20.2,{},lotty_info,12,1,Ask Someone Else
+148,31:14.9,"{""number"":8,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Tenerife
+149,31:15.0,"{""number"":8,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Gran Canaria
+150,31:15.1,"{""number"":8,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Gran Canaria
+151,31:19.7,"{""number"":8,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Gran Canaria
+152,31:19.7,"{""number"":8,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Gran Canaria
+153,31:19.9,"{""number"":8,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Tenerife
+154,31:20.2,,,,,,f,,{},info,1,1,Good Luck
+155,31:26.0,"{""number"":8,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,31:26.0,{},lotty_info,12,1,10
+156,31:26.0,"{""number"": 8, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,12,1,Tenerife
+157,31:26.3,,,,,,f,,{},info,1,1,"{""question"": ""Oklahoma state shares a border with?"", ""number"": 9, ""round"": 1, ""topic"": ""Georgraphy"", ""Wwer"": ""Arizona"", ""Rwer"": ""New Mexico"", ""pic"": false}"
+158,31:30.3,"{""number"":9,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,31:41.7,{},lotty_info,9,1,Ask Someone Else
+159,31:33.1,"{""number"":9,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,New Mexico
+160,31:33.6,"{""number"":9,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Arizona
+161,31:35.5,"{""number"":9,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Arizona
+162,31:35.6,"{""number"":9,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Arizona
+163,31:38.3,"{""number"":9,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Arizona
+164,31:39.0,"{""number"":9,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,New Mexico
+165,31:40.0,"{""number"":9,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,31:41.7,{},lotty_info,12,1,Ask Someone Else
+166,31:41.3,"{""number"":9,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Arizona
+167,31:41.7,,,,,,f,,{},info,1,1,Good Luck
+168,31:45.8,"{""number"":9,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,31:45.9,{},lotty_info,9,1,10
+169,31:45.9,"{""number"": 9, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,New Mexico
+170,31:46.3,"{""number"":9,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,31:46.3,{},lotty_info,12,1,11
+171,31:46.3,"{""number"": 9, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,12,1,New Mexico
+172,31:46.6,,,,,,f,,{},info,1,1,"{""question"": ""Amsterdam is nearer to?"", ""number"": 10, ""round"": 1, ""topic"": ""Georgraphy"", ""Wwer"": ""Antwerp"", ""Rwer"": ""Rotterdam"", ""pic"": false}"
+173,31:51.4,"{""number"":10,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:01.5,{},lotty_info,9,1,Ask Someone Else
+174,31:52.0,"{""number"":10,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Rotterdam
+175,31:52.1,"{""number"":10,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,Rotterdam
+176,31:52.1,"{""number"":10,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:01.5,{},lotty_info,10,1,Ask Someone Else
+177,31:52.8,"{""number"":10,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Rotterdam
+178,31:53.6,"{""number"":10,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Rotterdam
+179,31:53.9,"{""number"":10,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Rotterdam
+180,31:59.1,"{""number"":10,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:01.5,{},lotty_info,7,1,Ask Someone Else
+181,32:01.2,"{""number"":10,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Antwerp
+182,32:01.5,,,,,,f,,{},info,1,1,Good Luck
+183,32:04.6,"{""number"":10,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:04.6,{},lotty_info,7,1,3
+184,32:04.7,"{""number"": 10, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,7,1,Rotterdam
+185,32:05.0,"{""number"":10,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:05.0,{},lotty_info,9,1,11
+186,32:05.1,"{""number"": 10, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Rotterdam
+187,32:05.5,"{""number"":10,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:05.6,{},lotty_info,10,1,11
+188,32:05.6,"{""number"": 10, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,10,1,Rotterdam
+189,32:05.9,,,,,,f,,{},info,1,1,"{""question"": ""A pot of nail varnish weighs?"", ""number"": 11, ""round"": 1, ""topic"": ""Weight estimation"", ""Wwer"": ""162g"", ""Rwer"": ""62g"", ""pic"": true}"
+190,32:11.2,"{""number"":11,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:17.1,{},lotty_info,9,1,Ask Someone Else
+191,32:13.3,"{""number"":11,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,62g
+192,32:13.7,"{""number"":11,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,62g
+193,32:13.8,"{""number"":11,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,62g
+194,32:14.4,"{""number"":11,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,62g
+195,32:15.1,"{""number"":11,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:17.1,{},lotty_info,10,1,Ask Someone Else
+196,32:15.3,"{""number"":11,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,62g
+197,32:16.2,"{""number"":11,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,62g
+198,32:16.9,"{""number"":11,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,62g
+199,32:17.1,,,,,,f,,{},info,1,1,Good Luck
+200,32:20.3,"{""number"":11,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:20.3,{},lotty_info,10,1,11
+201,32:20.3,"{""number"": 11, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,10,1,62g
+202,32:20.9,"{""number"":11,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:21.0,{},lotty_info,9,1,11
+203,32:21.0,"{""number"": 11, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,62g
+204,32:21.2,,,,,,f,,{},info,1,1,"{""question"": ""A Rubiks cube weighs?"", ""number"": 12, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""1.4kg"", ""Rwer"": ""0.14kg"", ""pic"": true}"
+205,32:24.3,"{""number"":12,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,0.14kg
+206,32:24.5,"{""number"":12,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:36.7,{},lotty_info,10,1,Ask Someone Else
+207,32:27.2,"{""number"":12,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,1.4kg
+208,32:27.2,"{""number"":12,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:36.7,{},lotty_info,9,1,Ask Someone Else
+209,32:27.3,"{""number"":12,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,0.14kg
+210,32:27.7,"{""number"":12,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,0.14kg
+211,32:30.6,"{""number"":12,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,1.4kg
+212,32:36.2,"{""number"":12,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,0.14kg
+213,32:36.4,"{""number"":12,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,1.4kg
+214,32:36.6,,,,,,f,,{},info,1,1,Good Luck
+215,32:39.3,"{""number"":12,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:39.3,{},lotty_info,10,1,11
+216,32:39.4,"{""number"": 12, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,10,1,0.14kg
+217,32:40.3,"{""number"":12,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:40.3,{},lotty_info,9,1,11
+218,32:40.3,"{""number"": 12, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,0.14kg
+219,32:40.5,,,,,,f,,{},info,1,1,"{""question"": ""A blue whale weighs?"", ""number"": 13, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""1,400kg"", ""Rwer"": ""140,000kg"", ""pic"": false}"
+220,32:44.1,"{""number"":13,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,"140,000kg"
+221,32:45.0,"{""number"":13,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,"140,000kg"
+222,32:45.9,"{""number"":13,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:52.8,{},lotty_info,10,1,Ask Someone Else
+223,32:46.0,"{""number"":13,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,"1,400kg"
+224,32:46.3,"{""number"":13,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:52.7,{},lotty_info,9,1,Ask Someone Else
+225,32:47.2,"{""number"":13,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,"140,000kg"
+226,32:50.0,"{""number"":13,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,"140,000kg"
+227,32:50.3,"{""number"":13,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,"140,000kg"
+228,32:52.5,"{""number"":13,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,32:52.8,{},lotty_info,12,1,Ask Someone Else
+229,32:52.7,,,,,,f,,{},info,1,1,Good Luck
+230,32:54.6,"{""number"":13,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:54.7,{},lotty_info,10,1,11
+231,32:54.7,"{""number"": 13, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,10,1,"140,000kg"
+232,32:56.6,"{""number"":13,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:56.7,{},lotty_info,9,1,11
+233,32:56.7,"{""number"": 13, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,"140,000kg"
+234,32:58.5,"{""number"":13,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,32:58.6,{},lotty_info,12,1,11
+235,32:58.6,"{""number"": 13, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,12,1,"140,000kg"
+236,32:58.9,,,,,,f,,{},info,1,1,"{""question"": ""A tennis ball weighs?"", ""number"": 14, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""5.85g"", ""Rwer"": ""58.5g"", ""pic"": false}"
+237,33:01.7,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,33:15.0,{},lotty_info,10,1,Ask Someone Else
+238,33:02.2,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,5.85g
+239,33:03.3,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,5.85g
+240,33:04.9,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,5.85g
+241,33:05.7,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,5.85g
+242,33:06.3,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,5.85g
+243,33:11.1,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,5.85g
+244,33:14.1,"{""number"":14,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,58.5g
+245,33:14.8,"{""number"":14,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,5.85g
+246,33:15.0,,,,,,f,,{},info,1,1,Good Luck
+247,33:19.1,"{""number"":14,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,33:19.1,{},lotty_info,10,1,11
+248,33:19.2,"{""number"": 14, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,10,1,5.85g
+249,33:19.3,,,,,,f,,{},info,1,1,"{""question"": ""Which weighs more, on average?"", ""number"": 15, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""A wood pigeon"", ""Rwer"": ""A seagull"", ""pic"": false}"
+250,33:24.2,"{""number"":15,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,A wood pigeon
+251,33:24.3,"{""number"":15,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,33:32.0,{},lotty_info,10,1,Ask Someone Else
+252,33:24.8,"{""number"":15,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,A wood pigeon
+253,33:24.9,"{""number"":15,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,A seagull
+254,33:25.9,"{""number"":15,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,A wood pigeon
+255,33:26.7,"{""number"":15,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,A wood pigeon
+256,33:27.2,"{""number"":15,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,33:32.0,{},lotty_info,9,1,Ask Someone Else
+257,33:28.0,"{""number"":15,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,A seagull
+258,33:31.8,"{""number"":15,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,A seagull
+259,33:32.0,,,,,,f,,{},info,1,1,Good Luck
+260,33:34.9,"{""number"":15,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,33:35.0,{},lotty_info,10,1,8
+261,33:35.0,"{""number"": 15, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,10,1,A seagull
+262,33:35.8,"{""number"":15,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,33:35.9,{},lotty_info,9,1,11
+263,33:35.9,"{""number"": 15, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,A wood pigeon
+264,33:36.2,,,,,,f,,{},info,1,1,"{""question"": ""A Boeing 747 (on take-off) weighs?"", ""number"": 16, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""40,000kg"", ""Rwer"": ""400,000kg"", ""pic"": false}"
+265,33:41.0,"{""number"":16,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,"400,000kg"
+266,33:42.0,"{""number"":16,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,"400,000kg"
+267,33:42.0,"{""number"":16,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,"400,000kg"
+268,33:43.3,"{""number"":16,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,"400,000kg"
+269,33:43.8,"{""number"":16,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,33:52.0,{},lotty_info,9,1,Ask Someone Else
+270,33:45.7,"{""number"":16,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,"400,000kg"
+271,33:46.7,"{""number"":16,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,"40,000kg"
+272,33:47.2,"{""number"":16,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,"400,000kg"
+273,33:51.7,"{""number"":16,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":false}",,,,,f,,{},lotty_info,8,1,"40,000kg"
+274,33:52.0,,,,,,f,,{},info,1,1,Good Luck
+275,33:56.6,"{""number"":16,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,33:56.6,{},lotty_info,9,1,11
+276,33:56.7,"{""number"": 16, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,"400,000kg"
+277,33:56.9,,,,,,f,,{},info,1,1,"{""question"": ""A skateboard weighs?"", ""number"": 17, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""34kg"", ""Rwer"": ""3.4kg"", ""pic"": false}"
+278,33:59.9,"{""number"":17,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,34kg
+279,34:01.1,"{""number"":17,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,3.4kg
+280,34:01.5,"{""number"":17,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,3.4kg
+281,34:01.6,"{""number"":17,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,3.4kg
+282,34:01.8,"{""number"":17,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,3.4kg
+283,34:01.8,"{""number"":17,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,3.4kg
+284,34:05.9,"{""number"":17,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,34kg
+285,34:10.5,"{""number"":17,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,34:11.6,{},lotty_info,9,1,Ask Someone Else
+286,34:11.4,"{""number"":17,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,3.4kg
+287,34:11.6,,,,,,f,,{},info,1,1,Good Luck
+288,34:15.9,"{""number"":17,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,34:15.9,{},lotty_info,9,1,11
+289,34:15.9,"{""number"": 17, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,3.4kg
+290,34:16.2,,,,,,f,,{},info,1,1,"{""question"": ""A newborn baby weighs?"", ""number"": 18, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""34kg"", ""Rwer"": ""3.5kg"", ""pic"": false}"
+291,34:19.5,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,3.5kg
+292,34:19.7,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,3.5kg
+293,34:20.0,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,3.5kg
+294,34:20.2,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,3.5kg
+295,34:20.3,"{""number"":18,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,34:24.4,{},lotty_info,9,1,Ask Someone Else
+296,34:20.8,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,3.5kg
+297,34:22.8,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,3.5kg
+298,34:23.2,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,3.5kg
+299,34:24.2,"{""number"":18,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,3.5kg
+300,34:24.4,,,,,,f,,{},info,1,1,Good Luck
+301,34:29.1,"{""number"":18,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,34:29.2,{},lotty_info,9,1,11
+302,34:29.2,"{""number"": 18, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,3.5kg
+303,34:29.5,,,,,,f,,{},info,1,1,"{""question"": ""A female giraffe weighs?"", ""number"": 19, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""83kg"", ""Rwer"": ""830kg"", ""pic"": false}"
+304,34:33.0,"{""number"":19,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,34:41.2,{},lotty_info,9,1,Ask Someone Else
+305,34:33.1,"{""number"":19,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,830kg
+306,34:33.6,"{""number"":19,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,830kg
+307,34:34.6,"{""number"":19,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,83kg
+308,34:35.3,"{""number"":19,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,830kg
+309,34:36.6,"{""number"":19,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,830kg
+310,34:37.3,"{""number"":19,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,830kg
+311,34:40.1,"{""number"":19,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,34:41.2,{},lotty_info,8,1,Ask Someone Else
+312,34:40.9,"{""number"":19,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,830kg
+313,34:41.2,,,,,,f,,{},info,1,1,Good Luck
+314,34:45.2,"{""number"":19,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,34:45.3,{},lotty_info,8,1,11
+315,34:45.3,"{""number"": 19, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,8,1,830kg
+316,34:45.5,"{""number"":19,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,34:45.6,{},lotty_info,9,1,11
+317,34:45.6,"{""number"": 19, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,830kg
+318,34:45.8,,,,,,f,,{},info,1,1,"{""question"": ""Which weighs more?"", ""number"": 20, ""round"": 1, ""topic"": ""Weight"", ""Wwer"": ""The London Eye"", ""Rwer"": ""The Eiffel Tower"", ""pic"": false}"
+319,34:50.4,"{""number"":20,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,The Eiffel Tower
+320,34:50.8,"{""number"":20,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,35:00.2,{},lotty_info,9,1,Ask Someone Else
+321,34:51.0,"{""number"":20,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,The Eiffel Tower
+322,34:52.3,"{""number"":20,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,The Eiffel Tower
+323,34:53.0,"{""number"":20,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,The London Eye
+324,34:56.3,"{""number"":20,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,The Eiffel Tower
+325,34:56.6,"{""number"":20,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,The London Eye
+326,34:58.1,"{""number"":20,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,The London Eye
+327,35:00.0,"{""number"":20,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,The Eiffel Tower
+328,35:00.2,,,,,,f,,{},info,1,1,Good Luck
+329,35:04.5,"{""number"":20,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,35:04.6,{},lotty_info,9,1,11
+330,35:04.6,"{""number"": 20, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,The Eiffel Tower
+331,35:04.9,,,,,,f,,{},info,1,1,"{""question"": ""\""Cal\"" means \""horse\"" in which language?"", ""number"": 21, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Hungarian"", ""Rwer"": ""Romanian"", ""pic"": false}"
+332,35:10.1,"{""number"":21,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Romanian
+333,35:13.0,"{""number"":21,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Hungarian
+334,35:17.3,"{""number"":21,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,35:21.6,{},lotty_info,9,1,Ask Someone Else
+335,35:17.5,"{""number"":21,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Romanian
+336,35:18.7,"{""number"":21,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Hungarian
+337,35:19.0,"{""number"":21,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Romanian
+338,35:19.0,"{""number"":21,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Romanian
+339,35:20.6,"{""number"":21,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Hungarian
+340,35:21.4,"{""number"":21,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Romanian
+341,35:21.6,,,,,,f,,{},info,1,1,Good Luck
+342,35:24.7,"{""number"":21,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,35:24.7,{},lotty_info,9,1,11
+343,35:24.7,"{""number"": 21, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Romanian
+344,35:24.9,,,,,,f,,{},info,1,1,"{""question"": ""\""Kieselstein\"" means \""pebbles\"" in which language?"", ""number"": 22, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Russian"", ""Rwer"": ""German"", ""pic"": false}"
+345,35:29.2,"{""number"":22,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,German
+346,35:29.3,"{""number"":22,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,German
+347,35:30.7,"{""number"":22,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,German
+348,35:30.8,"{""number"":22,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Russian
+349,35:36.4,"{""number"":22,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,German
+350,35:37.0,"{""number"":22,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,German
+351,35:37.9,"{""number"":22,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,German
+352,35:39.0,"{""number"":22,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,35:40.5,{},lotty_info,9,1,Ask Someone Else
+353,35:40.3,"{""number"":22,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,German
+354,35:40.5,,,,,,f,,{},info,1,1,Good Luck
+355,35:45.9,"{""number"":22,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,35:46.0,{},lotty_info,9,1,11
+356,35:46.0,"{""number"": 22, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,German
+357,35:46.3,,,,,,f,,{},info,1,1,"{""question"": ""\""Gobierno\"" means \""government\"" in which language?"", ""number"": 23, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Portugese"", ""Rwer"": ""Spanish"", ""pic"": false}"
+358,35:51.2,"{""number"":23,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,Portugese
+359,35:53.7,"{""number"":23,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Portugese
+360,35:54.4,"{""number"":23,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Portugese
+361,35:57.6,"{""number"":23,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Spanish
+362,35:57.8,"{""number"":23,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Portugese
+363,35:58.4,"{""number"":23,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Spanish
+364,35:58.9,"{""number"":23,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,36:02.8,{},lotty_info,9,1,Ask Someone Else
+365,35:59.4,"{""number"":23,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Portugese
+366,36:02.5,"{""number"":23,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":false}",,,,,f,,{},lotty_info,7,1,Portugese
+367,36:02.7,,,,,,f,,{},info,1,1,Good Luck
+368,36:06.9,"{""number"":23,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,36:06.9,{},lotty_info,9,1,11
+369,36:07.0,"{""number"": 23, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Portugese
+370,36:07.2,,,,,,f,,{},info,1,1,"{""question"": ""\""Verre\"" means \""glass\"" in which language?"", ""number"": 24, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Italian"", ""Rwer"": ""French"", ""pic"": false}"
+371,36:10.7,"{""number"":24,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,French
+372,36:12.7,"{""number"":24,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Italian
+373,36:12.9,"{""number"":24,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,Italian
+374,36:14.7,"{""number"":24,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,French
+375,36:16.3,"{""number"":24,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,French
+376,36:17.8,"{""number"":24,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,French
+377,36:19.4,"{""number"":24,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,French
+378,36:21.0,"{""number"":24,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,French
+379,36:21.3,"{""number"":24,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,French
+380,36:21.5,,,,,,f,,{},info,1,1,"{""question"": ""\""Bere\"" means \""drink\"" in which language?"", ""number"": 25, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""German"", ""Rwer"": ""Italian"", ""pic"": false}"
+381,36:26.2,"{""number"":25,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,German
+382,36:27.3,"{""number"":25,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,German
+383,36:30.6,"{""number"":25,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,Italian
+384,36:32.6,"{""number"":25,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,German
+385,36:32.8,"{""number"":25,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,German
+386,36:33.1,"{""number"":25,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,German
+387,36:34.4,"{""number"":25,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,German
+388,36:35.0,"{""number"":25,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,36:37.0,{},lotty_info,9,1,Ask Someone Else
+389,36:36.8,"{""number"":25,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Italian
+390,36:37.0,,,,,,f,,{},info,1,1,Good Luck
+391,36:42.1,"{""number"":25,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,36:42.1,{},lotty_info,9,1,11
+392,36:42.2,"{""number"": 25, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Italian
+393,36:42.4,,,,,,f,,{},info,1,1,"{""question"": ""\""Kabaha\"" means \""shoes\"" in which language?"", ""number"": 26, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Swahili"", ""Rwer"": ""Somali"", ""pic"": false}"
+394,36:47.2,"{""number"":26,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,Swahili
+395,36:47.8,"{""number"":26,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,36:57.2,{},lotty_info,8,1,Ask Someone Else
+396,36:49.3,"{""number"":26,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Somali
+397,36:52.9,"{""number"":26,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Swahili
+398,36:53.2,"{""number"":26,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Swahili
+399,36:54.1,"{""number"":26,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Somali
+400,36:55.1,"{""number"":26,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Somali
+401,36:56.6,"{""number"":26,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Swahili
+402,36:57.0,"{""number"":26,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Swahili
+403,36:57.2,,,,,,f,,{},info,1,1,Good Luck
+404,37:04.1,"{""number"":26,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,37:04.2,{},lotty_info,8,1,11
+405,37:04.2,"{""number"": 26, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,8,1,Swahili
+406,37:04.4,,,,,,f,,{},info,1,1,"{""question"": ""\""Bocadillo\"" means \""snack\"" in which language?"", ""number"": 27, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""French"", ""Rwer"": ""Spanish"", ""pic"": false}"
+407,37:07.5,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,Spanish
+408,37:09.4,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Spanish
+409,37:09.4,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Spanish
+410,37:09.6,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Spanish
+411,37:12.8,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Spanish
+412,37:13.8,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Spanish
+413,37:14.6,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Spanish
+414,37:16.3,"{""number"":27,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,37:18.6,{},lotty_info,12,1,Ask Someone Else
+415,37:18.3,"{""number"":27,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Spanish
+416,37:18.6,,,,,,f,,{},info,1,1,Good Luck
+417,37:23.2,"{""number"":27,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,37:23.2,{},lotty_info,12,1,11
+418,37:23.2,"{""number"": 27, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,12,1,Spanish
+419,37:23.5,,,,,,f,,{},info,1,1,"{""question"": ""\""Rzeka\"" means \""river\"" in which language?"", ""number"": 28, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Latvian"", ""Rwer"": ""Polish"", ""pic"": false}"
+420,37:29.0,"{""number"":28,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Polish
+421,37:29.6,"{""number"":28,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,Polish
+422,37:32.4,"{""number"":28,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Polish
+423,37:32.5,"{""number"":28,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Latvian
+424,37:37.9,"{""number"":28,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Polish
+425,37:38.3,"{""number"":28,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Polish
+426,37:38.6,"{""number"":28,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Polish
+427,37:39.2,"{""number"":28,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Latvian
+428,37:39.3,"{""number"":28,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Latvian
+429,37:39.6,,,,,,f,,{},info,1,1,"{""question"": ""The above means \""fire\"" in which language?"", ""number"": 29, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Bulgarian"", ""Rwer"": ""Russian"", ""pic"": true}"
+430,37:44.7,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Russian
+431,37:45.3,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Russian
+432,37:45.5,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Russian
+433,37:45.7,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Russian
+434,37:46.0,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Russian
+435,37:49.4,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Russian
+436,37:50.6,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Russian
+437,37:53.9,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Russian
+438,37:54.0,"{""number"":29,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Russian
+439,37:54.2,,,,,,f,,{},info,1,1,"{""question"": ""The above means \""soul\"" in which language?"", ""number"": 30, ""round"": 1, ""topic"": ""Language"", ""Wwer"": ""Armenian"", ""Rwer"": ""Arabic"", ""pic"": true}"
+440,37:59.0,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Arabic
+441,37:59.1,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Arabic
+442,37:59.4,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Arabic
+443,37:59.4,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,Arabic
+444,37:59.7,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Arabic
+445,38:00.0,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Arabic
+446,38:00.4,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Arabic
+447,38:01.1,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Arabic
+448,38:05.0,"{""number"":30,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Arabic
+449,38:05.3,,,,,,f,,{},info,1,1,"{""question"": ""The above is an image of a painting by which artist?"", ""number"": 31, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Edouard Manet"", ""Rwer"": ""Claude Monet"", ""pic"": true}"
+450,38:11.1,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Claude Monet
+451,38:11.4,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Claude Monet
+452,38:11.5,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,Claude Monet
+453,38:11.5,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Claude Monet
+454,38:12.5,"{""number"":31,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,38:17.7,{},lotty_info,9,1,Ask Someone Else
+455,38:14.3,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Claude Monet
+456,38:15.6,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Claude Monet
+457,38:16.4,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Claude Monet
+458,38:17.4,"{""number"":31,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Claude Monet
+459,38:17.7,,,,,,f,,{},info,1,1,Good Luck
+460,38:21.6,"{""number"":31,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,38:21.7,{},lotty_info,9,1,11
+461,38:21.7,"{""number"": 31, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Claude Monet
+462,38:21.9,,,,,,f,,{},info,1,1,"{""question"": ""The above is an image of a painting by which artist?"", ""number"": 32, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Rudolf Hausner"", ""Rwer"": ""Gustav Klimt"", ""pic"": true}"
+463,38:25.9,"{""number"":32,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,Rudolf Hausner
+464,38:26.5,"{""number"":32,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Gustav Klimt
+465,38:30.3,"{""number"":32,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Gustav Klimt
+466,38:30.4,"{""number"":32,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Rudolf Hausner
+467,38:30.5,"{""number"":32,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Gustav Klimt
+468,38:31.2,"{""number"":32,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Rudolf Hausner
+469,38:31.8,"{""number"":32,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,38:33.2,{},lotty_info,7,1,Ask Someone Else
+470,38:32.0,"{""number"":32,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Gustav Klimt
+471,38:32.9,"{""number"":32,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Gustav Klimt
+472,38:33.2,,,,,,f,,{},info,1,1,Good Luck
+473,38:36.2,"{""number"":32,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,38:36.2,{},lotty_info,7,1,11
+474,38:36.3,"{""number"": 32, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,7,1,Rudolf Hausner
+475,38:36.6,,,,,,f,,{},info,1,1,"{""question"": ""Edouard Manet died in"", ""number"": 33, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""1663"", ""Rwer"": ""1883"", ""pic"": false}"
+476,38:40.8,"{""number"":33,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.4,{},lotty_info,11,1,1663
+477,38:41.1,"{""number"":33,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,1883
+478,38:41.8,"{""number"":33,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,1663
+479,38:42.4,"{""number"":33,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,38:51.5,{},lotty_info,8,1,Ask Someone Else
+480,38:43.1,"{""number"":33,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,1883
+481,38:46.5,"{""number"":33,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,1883
+482,38:48.3,"{""number"":33,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,1883
+483,38:48.8,"{""number"":33,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,1883
+484,38:51.2,"{""number"":33,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,1883
+485,38:51.5,,,,,,f,,{},info,1,1,Good Luck
+486,38:59.0,"{""number"":33,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,38:59.0,{},lotty_info,8,1,11
+487,38:59.0,"{""number"": 33, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,8,1,1663
+488,38:59.3,,,,,,f,,{},info,1,1,"{""question"": ""\""The starry night\"" is a famous painting by"", ""number"": 34, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Jackson Pollock"", ""Rwer"": ""Vincent van Gogh"", ""pic"": false}"
+489,39:02.2,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Vincent van Gogh
+490,39:02.9,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Vincent van Gogh
+491,39:02.9,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Vincent van Gogh
+492,39:03.1,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Vincent van Gogh
+493,39:03.5,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Vincent van Gogh
+494,39:03.8,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Vincent van Gogh
+495,39:04.0,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Vincent van Gogh
+496,39:07.0,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Vincent van Gogh
+497,39:12.5,"{""number"":34,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Vincent van Gogh
+498,39:12.8,,,,,,f,,{},info,1,1,"{""question"": ""\""The singing butler\"" is a painting by the Scottish painter:"", ""number"": 35, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Andrew Geddes"", ""Rwer"": ""Jack Vettriano"", ""pic"": false}"
+499,39:15.7,"{""number"":35,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,Andrew Geddes
+500,39:18.2,"{""number"":35,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Jack Vettriano
+501,39:18.6,"{""number"":35,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Andrew Geddes
+502,39:21.8,"{""number"":35,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Jack Vettriano
+503,39:22.4,"{""number"":35,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Jack Vettriano
+504,39:23.2,"{""number"":35,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Jack Vettriano
+505,39:24.1,"{""number"":35,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Jack Vettriano
+506,39:26.1,"{""number"":35,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Jack Vettriano
+507,39:27.9,"{""number"":35,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Jack Vettriano
+508,39:28.2,,,,,,f,,{},info,1,1,"{""question"": ""Antoni Gaudi was a Spanish:"", ""number"": 36, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Poet"", ""Rwer"": ""Architect"", ""pic"": false}"
+509,39:33.8,"{""number"":36,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,Architect
+510,39:35.0,"{""number"":36,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Architect
+511,39:36.5,"{""number"":36,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Architect
+512,39:37.2,"{""number"":36,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Architect
+513,39:37.4,"{""number"":36,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Architect
+514,39:38.5,"{""number"":36,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Poet
+515,39:40.6,"{""number"":36,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Architect
+516,39:42.2,"{""number"":36,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,Architect
+517,39:44.7,"{""number"":36,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":false}",,,,,f,,{},lotty_info,6,1,Poet
+518,39:45.0,,,,,,f,,{},info,1,1,"{""question"": ""Auguste Rodin was a French:"", ""number"": 37, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Architect"", ""Rwer"": ""Sculptor"", ""pic"": false}"
+519,39:48.7,"{""number"":37,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,Sculptor
+520,39:49.3,"{""number"":37,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Sculptor
+521,39:49.5,"{""number"":37,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Architect
+522,39:50.4,"{""number"":37,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Sculptor
+523,39:52.8,"{""number"":37,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,39:59.0,{},lotty_info,9,1,Ask Someone Else
+524,39:54.3,"{""number"":37,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Sculptor
+525,39:55.2,"{""number"":37,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Sculptor
+526,39:57.0,"{""number"":37,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Sculptor
+527,39:58.7,"{""number"":37,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Sculptor
+528,39:59.0,,,,,,f,,{},info,1,1,Good Luck
+529,40:03.5,"{""number"":37,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,40:03.5,{},lotty_info,9,1,11
+530,40:03.6,"{""number"": 37, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Sculptor
+531,40:03.8,,,,,,f,,{},info,1,1,"{""question"": ""Rembrandt was famous for which style of painting?"", ""number"": 38, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Surrealism"", ""Rwer"": ""Baroque"", ""pic"": false}"
+532,40:08.7,"{""number"":38,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,Baroque
+533,40:09.2,"{""number"":38,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,Baroque
+534,40:10.7,"{""number"":38,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,Surrealism
+535,40:10.8,"{""number"":38,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,Baroque
+536,40:13.1,"{""number"":38,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,Baroque
+537,40:14.7,"{""number"":38,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,Baroque
+538,40:15.1,"{""number"":38,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,Baroque
+539,40:18.4,"{""number"":38,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,40:19.2,{},lotty_info,9,1,Ask Someone Else
+540,40:18.9,"{""number"":38,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,Surrealism
+541,40:19.2,,,,,,f,,{},info,1,1,Good Luck
+542,40:23.4,"{""number"":38,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,40:23.4,{},lotty_info,9,1,11
+543,40:23.5,"{""number"": 38, ""copying"": true, ""score"": 1, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,Baroque
+544,40:23.7,,,,,,f,,{},info,1,1,"{""question"": ""Paul Gauguin was a famous post-impressionist artist from:"", ""number"": 39, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""Italy"", ""Rwer"": ""France"", ""pic"": false}"
+545,40:28.8,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,France
+546,40:28.9,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,France
+547,40:30.1,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,France
+548,40:30.3,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,France
+549,40:33.0,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,France
+550,40:35.7,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,France
+551,40:36.7,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,9,1,France
+552,40:37.0,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,France
+553,40:37.0,"{""number"":39,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,France
+554,40:37.3,,,,,,f,,{},info,1,1,"{""question"": ""Edgar Degas famously painted"", ""number"": 40, ""round"": 1, ""topic"": ""Art"", ""Wwer"": ""water lilies"", ""Rwer"": ""dancers"", ""pic"": false}"
+555,40:42.4,"{""number"":40,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,7,1,dancers
+556,40:43.2,"{""number"":40,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,water lilies
+557,40:43.4,"{""number"":40,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,3,1,water lilies
+558,40:44.7,"{""number"":40,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,12,1,water lilies
+559,40:46.5,"{""number"":40,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,10,1,dancers
+560,40:50.2,"{""number"":40,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,6,1,dancers
+561,40:50.4,"{""number"":40,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,4,1,dancers
+562,40:50.5,"{""number"":40,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,t,40:52.6,{},lotty_info,9,1,Ask Someone Else
+563,40:52.3,"{""number"":40,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":1,""human"":true}",,,,,f,,{},lotty_info,8,1,dancers
+564,40:52.6,,,,,,f,,{},info,1,1,Good Luck
+565,40:57.3,"{""number"":40,""copying"":true,""score"":0,""info_chosen"":""Total Score in Round 1"",""round"":1,""human"":true}",,,,,t,40:57.4,{},lotty_info,9,1,11
+566,40:57.4,"{""number"": 40, ""copying"": true, ""score"": 0, ""info_chosen"": ""Total Score in Round 1"", ""round"": 1, ""human"": true}",,,,,f,,{},lotty_info,9,1,water lilies
+567,40:57.7,,,,,,f,,{},info,1,1,"{""question"": ""In which city is the red dot located?"", ""number"": 41, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Seattle"", ""Rwer"": ""Philadelphia"", ""pic"": true}"
+568,41:19.4,"{""number"":41,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Philadelphia
+569,41:20.3,"{""number"":41,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Philadelphia
+570,41:22.7,"{""number"":41,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Seattle
+571,41:24.1,"{""number"":41,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Philadelphia
+572,41:24.9,"{""number"":41,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Philadelphia
+573,41:25.3,"{""number"":41,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Philadelphia
+574,41:25.9,"{""number"":41,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Philadelphia
+575,41:39.7,"{""number"":41,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,41:52.9,{},lotty_info,9,1,Ask Someone Else
+576,41:52.6,"{""number"":41,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,Philadelphia
+577,41:52.9,,,,,,f,,{},info,1,1,Good Luck
+578,42:01.5,"{""number"":41,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,42:01.5,{},lotty_info,9,1,11
+579,42:01.6,"{""number"": 41, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Philadelphia
+580,42:01.9,,,,,,f,,{},info,1,1,"{""question"": ""In which country is the red dot located?"", ""number"": 42, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Greece"", ""Rwer"": ""Bulgaria"", ""pic"": true}"
+581,42:07.0,"{""number"":42,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,42:16.1,{},lotty_info,9,1,Ask Someone Else
+582,42:07.7,"{""number"":42,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Bulgaria
+583,42:08.1,"{""number"":42,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Bulgaria
+584,42:09.5,"{""number"":42,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Bulgaria
+585,42:10.7,"{""number"":42,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Greece
+586,42:11.0,"{""number"":42,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,Bulgaria
+587,42:14.1,"{""number"":42,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Bulgaria
+588,42:14.2,"{""number"":42,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Greece
+589,42:15.8,"{""number"":42,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Bulgaria
+590,42:16.1,,,,,,f,,{},info,1,1,Good Luck
+591,42:28.6,"{""number"":42,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,42:28.6,{},lotty_info,9,1,11
+592,42:28.7,"{""number"": 42, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Bulgaria
+593,42:28.9,,,,,,f,,{},info,1,1,"{""question"": ""In which country is the red dot located?"", ""number"": 43, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Laos"", ""Rwer"": ""Vietnam"", ""pic"": true}"
+594,42:32.2,"{""number"":43,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Laos
+595,42:33.9,"{""number"":43,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,42:44.3,{},lotty_info,9,1,Ask Someone Else
+596,42:35.9,"{""number"":43,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Vietnam
+597,42:36.0,"{""number"":43,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Vietnam
+598,42:40.3,"{""number"":43,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Laos
+599,42:41.6,"{""number"":43,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Vietnam
+600,42:42.2,"{""number"":43,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Laos
+601,42:43.2,"{""number"":43,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Vietnam
+602,42:44.1,"{""number"":43,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Vietnam
+603,42:44.3,,,,,,f,,{},info,1,1,Good Luck
+604,42:49.6,"{""number"":43,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,42:49.6,{},lotty_info,9,1,11
+605,42:49.7,"{""number"": 43, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Laos
+606,42:50.0,,,,,,f,,{},info,1,1,"{""question"": ""Which city is closer to Rome?"", ""number"": 44, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Florence"", ""Rwer"": ""Naples"", ""pic"": false}"
+607,42:54.2,"{""number"":44,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,Florence
+608,42:54.5,"{""number"":44,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:04.9,{},lotty_info,9,1,Ask Someone Else
+609,42:55.3,"{""number"":44,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:04.9,{},lotty_info,8,1,Ask Someone Else
+610,42:55.9,"{""number"":44,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Naples
+611,42:56.5,"{""number"":44,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Naples
+612,42:58.1,"{""number"":44,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Naples
+613,42:59.9,"{""number"":44,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Florence
+614,43:03.1,"{""number"":44,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Naples
+615,43:04.6,"{""number"":44,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Florence
+616,43:04.9,,,,,,f,,{},info,1,1,Good Luck
+617,43:08.7,"{""number"":44,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,43:08.7,{},lotty_info,9,1,11
+618,43:08.8,"{""number"": 44, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Florence
+619,43:12.8,"{""number"":44,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,43:12.9,{},lotty_info,8,1,11
+620,43:12.9,"{""number"": 44, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,8,1,Florence
+621,43:13.2,,,,,,f,,{},info,1,1,"{""question"": ""Kazakhstan shares a border with?"", ""number"": 45, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Tajikistan"", ""Rwer"": ""Kyrgyzstan"", ""pic"": false}"
+622,43:16.0,"{""number"":45,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:27.9,{},lotty_info,9,1,Ask Someone Else
+623,43:17.8,"{""number"":45,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.5,{},lotty_info,11,1,Tajikistan
+624,43:18.2,"{""number"":45,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Tajikistan
+625,43:19.0,"{""number"":45,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:27.9,{},lotty_info,7,1,Ask Someone Else
+626,43:19.6,"{""number"":45,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Kyrgyzstan
+627,43:22.1,"{""number"":45,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:28.0,{},lotty_info,8,1,Ask Someone Else
+628,43:22.2,"{""number"":45,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:28.0,{},lotty_info,12,1,Ask Someone Else
+629,43:22.4,"{""number"":45,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:27.9,{},lotty_info,4,1,Ask Someone Else
+630,43:27.6,"{""number"":45,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Kyrgyzstan
+631,43:27.9,,,,,,f,,{},info,1,1,Good Luck
+632,43:32.1,"{""number"":45,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,43:32.1,{},lotty_info,9,1,11
+633,43:32.2,"{""number"": 45, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Tajikistan
+634,43:33.2,"{""number"":45,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,43:33.2,{},lotty_info,4,1,11
+635,43:33.3,"{""number"": 45, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,4,1,Tajikistan
+636,43:34.3,"{""number"":45,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,43:34.4,{},lotty_info,8,1,11
+637,43:34.4,"{""number"": 45, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,8,1,Tajikistan
+638,43:36.9,"{""number"":45,""copying"":true,""score"":0,""info_chosen"":""Player ID"",""round"":2,""human"":true}",,,,,t,43:36.9,{},lotty_info,7,1,6
+639,43:36.9,"{""number"": 45, ""copying"": true, ""score"": 1, ""info_chosen"": ""Player ID"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,7,1,Kyrgyzstan
+640,43:39.2,"{""number"":45,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,43:39.3,{},lotty_info,12,1,11
+641,43:39.3,"{""number"": 45, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,12,1,Tajikistan
+642,43:39.6,,,,,,f,,{},info,1,1,"{""question"": ""The Virgin Islands are closer to:"", ""number"": 46, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""The Indian Ocean"", ""Rwer"": ""The Caribbean Sea"", ""pic"": false}"
+643,43:41.9,"{""number"":46,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,43:53.5,{},lotty_info,9,1,Ask Someone Else
+644,43:42.7,"{""number"":46,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,The Caribbean Sea
+645,43:44.0,"{""number"":46,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,The Caribbean Sea
+646,43:44.5,"{""number"":46,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,The Caribbean Sea
+647,43:45.5,"{""number"":46,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,The Caribbean Sea
+648,43:47.2,"{""number"":46,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,The Caribbean Sea
+649,43:49.0,"{""number"":46,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,The Caribbean Sea
+650,43:49.3,"{""number"":46,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,The Indian Ocean
+651,43:53.2,"{""number"":46,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,The Caribbean Sea
+652,43:53.5,,,,,,f,,{},info,1,1,Good Luck
+653,43:58.9,"{""number"":46,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,43:58.9,{},lotty_info,9,1,11
+654,43:59.0,"{""number"": 46, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,The Caribbean Sea
+655,43:59.2,,,,,,f,,{},info,1,1,"{""question"": ""Brussels is a city in:"", ""number"": 47, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Germany"", ""Rwer"": ""Belgium"", ""pic"": false}"
+656,44:02.8,"{""number"":47,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.7,{},lotty_info,11,1,Belgium
+657,44:02.9,"{""number"":47,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Belgium
+658,44:05.2,"{""number"":47,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Belgium
+659,44:07.6,"{""number"":47,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Germany
+660,44:08.8,"{""number"":47,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Belgium
+661,44:09.0,"{""number"":47,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Belgium
+662,44:12.7,"{""number"":47,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Belgium
+663,44:13.8,"{""number"":47,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Belgium
+664,44:14.3,"{""number"":47,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Germany
+665,44:14.5,,,,,,f,,{},info,1,1,"{""question"": ""Melbourne is a city in:"", ""number"": 48, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""New Zealand"", ""Rwer"": ""Australia"", ""pic"": false}"
+666,44:17.8,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,Australia
+667,44:17.9,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Australia
+668,44:18.0,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Australia
+669,44:18.4,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Australia
+670,44:19.4,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Australia
+671,44:19.6,"{""number"":48,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,New Zealand
+672,44:20.6,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Australia
+673,44:23.1,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Australia
+674,44:24.4,"{""number"":48,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Australia
+675,44:24.6,,,,,,f,,{},info,1,1,"{""question"": ""Paris is closer to:"", ""number"": 49, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Bordeaux"", ""Rwer"": ""Calais"", ""pic"": false}"
+676,44:28.2,"{""number"":49,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,44:36.6,{},lotty_info,9,1,Ask Someone Else
+677,44:30.0,"{""number"":49,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Bordeaux
+678,44:30.5,"{""number"":49,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,44:36.6,{},lotty_info,10,1,Ask Someone Else
+679,44:30.5,"{""number"":49,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Bordeaux
+680,44:31.0,"{""number"":49,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Calais
+681,44:31.8,"{""number"":49,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,Calais
+682,44:32.0,"{""number"":49,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,44:36.6,{},lotty_info,8,1,Ask Someone Else
+683,44:32.1,"{""number"":49,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Calais
+684,44:36.3,"{""number"":49,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Bordeaux
+685,44:36.6,,,,,,f,,{},info,1,1,Good Luck
+686,44:40.5,"{""number"":49,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,44:40.5,{},lotty_info,8,1,11
+687,44:40.5,"{""number"": 49, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,8,1,Calais
+688,44:41.7,"{""number"":49,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,44:41.7,{},lotty_info,9,1,11
+689,44:41.7,"{""number"": 49, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Calais
+690,44:44.5,"{""number"":49,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,44:44.5,{},lotty_info,10,1,11
+691,44:44.6,"{""number"": 49, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,10,1,Calais
+692,44:44.9,,,,,,f,,{},info,1,1,"{""question"": ""Sri Lanka is an island off the coast of:"", ""number"": 50, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Cambodia"", ""Rwer"": ""India"", ""pic"": false}"
+693,44:48.3,"{""number"":50,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,India
+694,44:48.9,"{""number"":50,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,44:59.4,{},lotty_info,9,1,Ask Someone Else
+695,44:48.9,"{""number"":50,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.8,{},lotty_info,11,1,Cambodia
+696,44:49.7,"{""number"":50,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,India
+697,44:51.1,"{""number"":50,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,India
+698,44:52.5,"{""number"":50,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,India
+699,44:54.3,"{""number"":50,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,44:59.4,{},lotty_info,10,1,Ask Someone Else
+700,44:55.5,"{""number"":50,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,India
+701,44:59.1,"{""number"":50,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Cambodia
+702,44:59.4,,,,,,f,,{},info,1,1,Good Luck
+703,45:04.8,"{""number"":50,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,45:04.8,{},lotty_info,10,1,11
+704,45:04.9,"{""number"": 50, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,10,1,Cambodia
+705,45:07.3,"{""number"":50,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,45:07.4,{},lotty_info,9,1,11
+706,45:07.4,"{""number"": 50, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Cambodia
+707,45:07.7,,,,,,f,,{},info,1,1,"{""question"": ""Liberia shares a border with:"", ""number"": 51, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Morocco"", ""Rwer"": ""Guinea"", ""pic"": false}"
+708,45:10.9,"{""number"":51,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,45:22.7,{},lotty_info,9,1,Ask Someone Else
+709,45:12.0,"{""number"":51,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Morocco
+710,45:12.5,"{""number"":51,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,Morocco
+711,45:14.4,"{""number"":51,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Guinea
+712,45:18.9,"{""number"":51,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Morocco
+713,45:19.6,"{""number"":51,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Morocco
+714,45:20.4,"{""number"":51,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Guinea
+715,45:20.7,"{""number"":51,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Morocco
+716,45:22.4,"{""number"":51,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Guinea
+717,45:22.7,,,,,,f,,{},info,1,1,Good Luck
+718,45:26.2,"{""number"":51,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,45:26.3,{},lotty_info,9,1,11
+719,45:26.3,"{""number"": 51, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Morocco
+720,45:26.6,,,,,,f,,{},info,1,1,"{""question"": ""Oman shares a border with"", ""number"": 52, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Kuwait"", ""Rwer"": ""Saudi Arabia"", ""pic"": false}"
+721,45:31.2,"{""number"":52,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,45:39.5,{},lotty_info,4,1,Ask Someone Else
+722,45:31.6,"{""number"":52,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Saudi Arabia
+723,45:31.8,"{""number"":52,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Kuwait
+724,45:31.9,"{""number"":52,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,45:39.5,{},lotty_info,9,1,Ask Someone Else
+725,45:32.3,"{""number"":52,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,45:39.5,{},lotty_info,12,1,Ask Someone Else
+726,45:32.8,"{""number"":52,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.9,{},lotty_info,11,1,Saudi Arabia
+727,45:36.1,"{""number"":52,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,45:39.5,{},lotty_info,8,1,Ask Someone Else
+728,45:37.5,"{""number"":52,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Saudi Arabia
+729,45:39.2,"{""number"":52,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Saudi Arabia
+730,45:39.5,,,,,,f,,{},info,1,1,Good Luck
+731,45:42.9,"{""number"":52,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,45:43.0,{},lotty_info,9,1,11
+732,45:43.0,"{""number"": 52, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Saudi Arabia
+733,45:44.9,"{""number"":52,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,45:44.9,{},lotty_info,4,1,11
+734,45:44.9,"{""number"": 52, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,4,1,Saudi Arabia
+735,45:45.6,"{""number"":52,""copying"":true,""score"":0,""info_chosen"":""Player ID"",""round"":2,""human"":true}",,,,,t,45:45.6,{},lotty_info,8,1,6
+736,45:45.6,"{""number"": 52, ""copying"": true, ""score"": 1, ""info_chosen"": ""Player ID"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,8,1,Saudi Arabia
+737,45:49.7,"{""number"":52,""copying"":true,""score"":0,""info_chosen"":""Player ID"",""round"":2,""human"":true}",,,,,t,45:49.7,{},lotty_info,12,1,10
+738,45:49.7,"{""number"": 52, ""copying"": true, ""score"": 1, ""info_chosen"": ""Player ID"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,12,1,Saudi Arabia
+739,45:50.1,,,,,,f,,{},info,1,1,"{""question"": ""Copenhagen is closer to:"", ""number"": 53, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Oslo"", ""Rwer"": ""Gothenburg"", ""pic"": false}"
+740,45:52.6,"{""number"":53,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,46:05.6,{},lotty_info,9,1,Ask Someone Else
+741,45:52.9,"{""number"":53,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:02.6,{},lotty_info,11,1,Oslo
+742,45:54.0,"{""number"":53,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,46:05.6,{},lotty_info,8,1,Ask Someone Else
+743,45:54.1,"{""number"":53,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Gothenburg
+744,45:55.2,"{""number"":53,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Oslo
+745,45:55.9,"{""number"":53,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Oslo
+746,45:56.2,"{""number"":53,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,46:05.6,{},lotty_info,10,1,Ask Someone Else
+747,45:56.7,"{""number"":53,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Oslo
+748,46:05.3,"{""number"":53,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Gothenburg
+749,46:05.6,,,,,,f,,{},info,1,1,Good Luck
+750,46:08.7,"{""number"":53,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,46:08.8,{},lotty_info,9,1,11
+751,46:08.8,"{""number"": 53, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Oslo
+752,46:09.4,"{""number"":53,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,46:09.4,{},lotty_info,8,1,11
+753,46:09.4,"{""number"":53,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,46:09.4,{},lotty_info,10,1,11
+754,46:09.4,"{""number"": 53, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,8,1,Oslo
+755,46:09.5,"{""number"": 53, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,10,1,Oslo
+756,50:03.3,,,,,,f,,{},info,1,1,"{""question"": ""The Shetland Islands are part of:"", ""number"": 54, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Iceland"", ""Rwer"": ""Scotland"", ""pic"": false}"
+757,50:06.5,"{""number"":54,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Iceland
+758,50:07.2,"{""number"":54,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:19.6,{},lotty_info,9,1,Ask Someone Else
+759,50:07.3,"{""number"":54,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Iceland
+760,50:07.5,"{""number"":54,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Scotland
+762,50:13.8,"{""number"":54,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Scotland
+763,50:17.6,"{""number"":54,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Scotland
+765,50:19.0,"{""number"":54,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Scotland
+766,50:19.4,"{""number"":54,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Iceland
+767,50:19.6,,,,,,f,,{},info,1,1,Good Luck
+770,50:27.8,"{""number"":54,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,50:27.9,{},lotty_info,9,1,8
+771,50:27.9,"{""number"": 54, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Iceland
+772,50:28.1,,,,,,f,,{},info,1,1,"{""question"": ""Tokyo is closer to:"", ""number"": 55, ""round"": 2, ""topic"": ""Geography"", ""Wwer"": ""Kyoto"", ""Rwer"": ""Hamamatsu"", ""pic"": false}"
+776,50:32.6,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:40.4,{},lotty_info,9,1,Ask Someone Else
+777,50:33.7,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Kyoto
+778,50:33.9,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:40.4,{},lotty_info,8,1,Ask Someone Else
+779,50:34.5,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Kyoto
+781,50:36.5,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Kyoto
+784,50:37.8,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,50:40.4,{},lotty_info,7,1,Ask Someone Else
+785,50:38.3,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Kyoto
+786,50:40.1,"{""number"":55,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Kyoto
+787,50:40.4,,,,,,f,,{},info,1,1,Good Luck
+791,50:45.0,"{""number"":55,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,50:45.0,{},lotty_info,9,1,3
+792,50:45.0,"{""number"": 55, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Kyoto
+793,50:48.8,"{""number"":55,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,50:48.9,{},lotty_info,8,1,3
+794,50:48.9,"{""number"": 55, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,8,1,Kyoto
+795,50:51.7,"{""number"":55,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,50:51.8,{},lotty_info,7,1,3
+796,50:51.8,"{""number"": 55, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,7,1,Kyoto
+797,50:52.1,,,,,,f,,{},info,1,1,"{""question"": ""Which dog weighs more, on average?"", ""number"": 56, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""Labrador"", ""Rwer"": ""Great dane"", ""pic"": false}"
+802,50:56.1,"{""number"":56,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Great dane
+803,50:56.5,"{""number"":56,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Great dane
+804,50:56.7,"{""number"":56,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Labrador
+805,50:57.6,"{""number"":56,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Great dane
+806,50:57.7,"{""number"":56,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Labrador
+807,50:57.8,"{""number"":56,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Great dane
+809,50:59.0,"{""number"":56,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Labrador
+811,51:03.9,"{""number"":56,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Labrador
+812,51:04.2,,,,,,f,,{},info,1,1,"{""question"": ""What is the average weight of a \""pink salmon\""?"", ""number"": 57, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""17kg"", ""Rwer"": ""1.7kg"", ""pic"": true}"
+813,51:08.4,"{""number"":57,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,17kg
+815,51:08.7,"{""number"":57,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,1.7kg
+818,51:11.5,"{""number"":57,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,17kg
+819,51:12.3,"{""number"":57,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,1.7kg
+821,51:13.2,"{""number"":57,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,1.7kg
+822,51:14.0,"{""number"":57,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,17kg
+824,51:16.0,"{""number"":57,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,17kg
+825,51:17.5,"{""number"":57,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,1.7kg
+826,51:17.8,,,,,,f,,{},info,1,1,"{""question"": ""A cricket bat weighs?"", ""number"": 58, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""14kg"", ""Rwer"": ""1.4kg"", ""pic"": true}"
+828,51:21.9,"{""number"":58,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,1.4kg
+829,51:22.7,"{""number"":58,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,1.4kg
+830,51:23.3,"{""number"":58,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,14kg
+831,51:23.6,"{""number"":58,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,1.4kg
+832,51:25.0,"{""number"":58,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,1.4kg
+836,51:25.5,"{""number"":58,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,1.4kg
+837,51:30.9,"{""number"":58,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,1.4kg
+838,51:31.9,"{""number"":58,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,1.4kg
+839,51:32.2,,,,,,f,,{},info,1,1,"{""question"": ""The average weight of a camel is:"", ""number"": 59, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""48kg"", ""Rwer"": ""480kg"", ""pic"": true}"
+840,51:35.2,"{""number"":59,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,480kg
+842,51:35.9,"{""number"":59,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,480kg
+843,51:36.2,"{""number"":59,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,480kg
+844,51:36.4,"{""number"":59,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,480kg
+845,51:37.7,"{""number"":59,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,480kg
+846,51:38.2,"{""number"":59,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,480kg
+847,51:40.3,"{""number"":59,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,48kg
+848,51:41.5,"{""number"":59,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,480kg
+849,51:41.8,,,,,,f,,{},info,1,1,"{""question"": ""What does a typical, office fire extinguisher weigh?"", ""number"": 60, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""115kg"", ""Rwer"": ""1.15kg"", ""pic"": false}"
+852,51:45.0,"{""number"":60,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,51:57.1,{},lotty_info,9,1,Ask Someone Else
+853,51:47.3,"{""number"":60,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,1.15kg
+854,51:47.8,"{""number"":60,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,1.15kg
+855,51:50.0,"{""number"":60,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,1.15kg
+856,51:50.6,"{""number"":60,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,1.15kg
+857,51:50.7,"{""number"":60,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,1.15kg
+858,51:52.5,"{""number"":60,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,1.15kg
+860,51:56.8,"{""number"":60,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,115kg
+861,51:57.1,,,,,,f,,{},info,1,1,Good Luck
+862,52:03.5,"{""number"":60,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,52:03.5,{},lotty_info,9,1,10
+863,52:03.5,"{""number"": 60, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,1.15kg
+864,52:03.8,,,,,,f,,{},info,1,1,"{""question"": ""What is the average weight of an oak tree?"", ""number"": 61, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""900kg"", ""Rwer"": ""9000kg"", ""pic"": false}"
+865,52:07.9,"{""number"":61,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,9000kg
+866,52:09.3,"{""number"":61,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,52:18.5,{},lotty_info,9,1,Ask Someone Else
+867,52:09.7,"{""number"":61,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,9000kg
+868,52:10.6,"{""number"":61,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,9000kg
+869,52:11.4,"{""number"":61,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,900kg
+870,52:15.6,"{""number"":61,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,900kg
+871,52:15.8,"{""number"":61,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,900kg
+872,52:18.2,"{""number"":61,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,9000kg
+873,52:18.5,,,,,,f,,{},info,1,1,Good Luck
+874,52:23.4,"{""number"":61,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,52:23.4,{},lotty_info,9,1,3
+875,52:23.4,"{""number"": 61, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,900kg
+876,52:23.7,,,,,,f,,{},info,1,1,"{""question"": ""What does a typical car tyre weigh?"", ""number"": 62, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""0.7kg"", ""Rwer"": ""7kg"", ""pic"": false}"
+878,52:28.3,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,7kg
+879,52:28.5,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,7kg
+880,52:28.8,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,7kg
+881,52:29.3,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,7kg
+882,52:29.9,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,7kg
+883,52:30.3,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,7kg
+884,52:30.6,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,7kg
+888,52:34.7,"{""number"":62,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,7kg
+889,52:35.0,,,,,,f,,{},info,1,1,"{""question"": ""Which weighs more, on average?"", ""number"": 63, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""A hen's egg"", ""Rwer"": ""An ostrich egg"", ""pic"": false}"
+892,52:39.4,"{""number"":63,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,An ostrich egg
+893,52:39.5,"{""number"":63,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,An ostrich egg
+894,52:39.5,"{""number"":63,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,An ostrich egg
+895,52:39.5,"{""number"":63,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,An ostrich egg
+899,52:40.0,"{""number"":63,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,An ostrich egg
+900,52:40.3,"{""number"":63,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,An ostrich egg
+901,52:40.8,"{""number"":63,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,A hen's egg
+905,52:43.5,"{""number"":63,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,An ostrich egg
+906,52:43.8,,,,,,f,,{},info,1,1,"{""question"": ""Which weighs more, on average?"", ""number"": 64, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""An olive"", ""Rwer"": ""A fig"", ""pic"": false}"
+908,52:47.4,"{""number"":64,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,A fig
+910,52:48.0,"{""number"":64,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,A fig
+911,52:48.0,"{""number"":64,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,A fig
+912,52:48.4,"{""number"":64,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,A fig
+914,52:51.3,"{""number"":64,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,A fig
+915,52:51.3,"{""number"":64,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,A fig
+916,52:51.6,"{""number"":64,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,An olive
+917,52:51.8,"{""number"":64,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,A fig
+918,52:52.1,,,,,,f,,{},info,1,1,"{""question"": ""How much does an average loaf of bread weigh?"", ""number"": 65, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""40g"", ""Rwer"": ""400g"", ""pic"": false}"
+921,52:55.9,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,40g
+922,52:56.3,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,53:07.2,{},lotty_info,9,1,Ask Someone Else
+923,52:57.4,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,40g
+924,52:58.6,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,40g
+925,53:00.9,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,40g
+928,53:02.9,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,40g
+930,53:05.7,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,40g
+931,53:06.9,"{""number"":65,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,40g
+932,53:07.2,,,,,,f,,{},info,1,1,Good Luck
+937,53:11.2,"{""number"":65,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,53:11.3,{},lotty_info,9,1,10
+938,53:11.3,"{""number"": 65, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,40g
+939,53:11.6,,,,,,f,,{},info,1,1,"{""question"": ""How much does a barrel of whisky weigh?"", ""number"": 66, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""2000kg"", ""Rwer"": ""200kg"", ""pic"": false}"
+945,53:15.0,"{""number"":66,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,200kg
+946,53:17.2,"{""number"":66,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,53:28.1,{},lotty_info,9,1,Ask Someone Else
+947,53:17.8,"{""number"":66,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,200kg
+949,53:19.2,"{""number"":66,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,200kg
+952,53:23.2,"{""number"":66,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,200kg
+953,53:25.3,"{""number"":66,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,200kg
+954,53:26.8,"{""number"":66,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,200kg
+955,53:27.7,"{""number"":66,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":false}",,,,,f,,{},lotty_info,7,1,2000kg
+956,53:28.1,,,,,,f,,{},info,1,1,Good Luck
+961,53:33.6,"{""number"":66,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,53:33.7,{},lotty_info,9,1,3
+962,53:33.7,"{""number"": 66, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,200kg
+963,53:34.0,,,,,,f,,{},info,1,1,"{""question"": ""How much does an average grizzly bear weigh?"", ""number"": 67, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""3,400kg"", ""Rwer"": ""340kg"", ""pic"": false}"
+964,53:38.2,"{""number"":67,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,"3,400kg"
+968,53:38.7,"{""number"":67,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,340kg
+969,53:38.8,"{""number"":67,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,"3,400kg"
+970,53:40.9,"{""number"":67,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,340kg
+973,53:44.9,"{""number"":67,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,340kg
+974,53:45.4,"{""number"":67,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,"3,400kg"
+976,53:46.7,"{""number"":67,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,340kg
+977,53:48.1,"{""number"":67,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,340kg
+978,53:48.4,,,,,,f,,{},info,1,1,"{""question"": ""How much does a typical jacket potato weigh?"", ""number"": 68, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""18g"", ""Rwer"": ""180g"", ""pic"": false}"
+981,53:52.3,"{""number"":68,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,54:00.6,{},lotty_info,9,1,Ask Someone Else
+984,53:56.4,"{""number"":68,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,18g
+985,53:56.7,"{""number"":68,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,18g
+986,53:57.3,"{""number"":68,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,18g
+987,53:57.5,"{""number"":68,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,180g
+988,53:58.2,"{""number"":68,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,180g
+990,53:58.5,"{""number"":68,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,18g
+991,54:00.2,"{""number"":68,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,180g
+992,54:00.6,,,,,,f,,{},info,1,1,Good Luck
+995,54:05.1,"{""number"":68,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,54:05.1,{},lotty_info,9,1,10
+996,54:05.1,"{""number"": 68, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,180g
+997,54:05.4,,,,,,f,,{},info,1,1,"{""question"": ""Which weighs more, on average?"", ""number"": 69, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""An apricot"", ""Rwer"": ""An avocado"", ""pic"": false}"
+999,54:09.5,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,An avocado
+1000,54:09.9,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,An avocado
+1001,54:10.6,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,An avocado
+1003,54:10.8,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,An avocado
+1004,54:11.1,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,An avocado
+1006,54:11.9,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,An avocado
+1009,54:14.6,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,An avocado
+1013,54:17.6,"{""number"":69,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,An avocado
+1014,54:17.8,,,,,,f,,{},info,1,1,"{""question"": ""Which weighs more, on average?"", ""number"": 70, ""round"": 2, ""topic"": ""Weight"", ""Wwer"": ""A coconut"", ""Rwer"": ""A watermelon"", ""pic"": false}"
+1018,54:21.5,"{""number"":70,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,A watermelon
+1019,54:22.3,"{""number"":70,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,A watermelon
+1020,54:22.4,"{""number"":70,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,A watermelon
+1021,54:23.1,"{""number"":70,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,A watermelon
+1023,54:23.6,"{""number"":70,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,A watermelon
+1025,54:25.0,"{""number"":70,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,A watermelon
+1026,54:26.2,"{""number"":70,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,A coconut
+1027,54:27.8,"{""number"":70,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,A watermelon
+1028,54:28.1,,,,,,f,,{},info,1,1,"{""question"": ""\""Chave\"" means \""key\"" in which language?"", ""number"": 71, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Spanish"", ""Rwer"": ""Portugese"", ""pic"": false}"
+1032,54:32.1,"{""number"":71,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Portugese
+1033,54:32.4,"{""number"":71,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Portugese
+1036,54:35.8,"{""number"":71,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Portugese
+1037,54:36.9,"{""number"":71,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Spanish
+1043,54:41.3,"{""number"":71,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Portugese
+1044,54:42.3,"{""number"":71,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Portugese
+1045,54:43.3,"{""number"":71,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Portugese
+1046,54:43.6,"{""number"":71,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":false}",,,,,f,,{},lotty_info,8,1,Spanish
+1047,54:43.9,,,,,,f,,{},info,1,1,"{""question"": ""\""Umut\"" means \""hope\"" in which language?"", ""number"": 72, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""German"", ""Rwer"": ""Turkish"", ""pic"": false}"
+1049,54:48.0,"{""number"":72,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,German
+1050,54:48.1,"{""number"":72,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Turkish
+1051,54:48.2,"{""number"":72,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,54:57.9,{},lotty_info,9,1,Ask Someone Else
+1053,54:49.8,"{""number"":72,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Turkish
+1057,54:54.9,"{""number"":72,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Turkish
+1058,54:55.8,"{""number"":72,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Turkish
+1059,54:56.8,"{""number"":72,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Turkish
+1060,54:57.6,"{""number"":72,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Turkish
+1063,54:57.9,,,,,,f,,{},info,1,1,Good Luck
+1065,55:01.6,"{""number"":72,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,55:01.6,{},lotty_info,9,1,10
+1066,55:01.7,"{""number"": 72, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Turkish
+1067,55:02.0,,,,,,f,,{},info,1,1,"{""question"": ""\""Nyugodt\"" means \""calm\"" in which language?"", ""number"": 73, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Polish"", ""Rwer"": ""Hungarian"", ""pic"": false}"
+1071,55:05.5,"{""number"":73,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Polish
+1074,55:09.2,"{""number"":73,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Hungarian
+1075,55:10.1,"{""number"":73,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Hungarian
+1077,55:12.1,"{""number"":73,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Hungarian
+1078,55:13.7,"{""number"":73,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Hungarian
+1080,55:14.8,"{""number"":73,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Hungarian
+1082,55:16.6,"{""number"":73,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Polish
+1083,55:17.3,"{""number"":73,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,55:17.6,{},lotty_info,9,1,Ask Someone Else
+1084,55:17.6,,,,,,f,,{},info,1,1,Good Luck
+1087,55:22.4,"{""number"":73,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,55:22.5,{},lotty_info,9,1,10
+1088,55:22.5,"{""number"": 73, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Hungarian
+1089,55:22.8,,,,,,f,,{},info,1,1,"{""question"": ""\""Bloem\"" means \""flower\"" in which language?"", ""number"": 74, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Danish"", ""Rwer"": ""Dutch"", ""pic"": false}"
+1092,55:24.9,"{""number"":74,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Danish
+1094,55:30.6,"{""number"":74,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Dutch
+1097,55:33.5,"{""number"":74,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Dutch
+1098,55:34.2,"{""number"":74,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Dutch
+1099,55:35.6,"{""number"":74,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,55:38.7,{},lotty_info,9,1,Ask Someone Else
+1101,55:35.9,"{""number"":74,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Dutch
+1103,55:37.5,"{""number"":74,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Dutch
+1105,55:38.4,"{""number"":74,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Dutch
+1106,55:38.7,,,,,,f,,{},info,1,1,Good Luck
+1109,55:43.4,"{""number"":74,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,55:43.5,{},lotty_info,9,1,10
+1110,55:43.5,"{""number"": 74, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Dutch
+1111,55:43.8,,,,,,f,,{},info,1,1,"{""question"": ""\""Sel\"" means \""salt\"" in which language?"", ""number"": 75, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""German"", ""Rwer"": ""French"", ""pic"": false}"
+1115,55:47.2,"{""number"":75,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,French
+1116,55:49.2,"{""number"":75,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,French
+1119,55:51.9,"{""number"":75,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,French
+1121,55:53.9,"{""number"":75,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,French
+1122,55:54.3,"{""number"":75,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,French
+1123,55:55.4,"{""number"":75,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,55:56.3,{},lotty_info,9,1,Ask Someone Else
+1124,55:55.6,"{""number"":75,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,German
+1125,55:55.9,"{""number"":75,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,French
+1127,55:56.3,,,,,,f,,{},info,1,1,Good Luck
+1131,56:01.1,"{""number"":75,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,56:01.1,{},lotty_info,9,1,3
+1132,56:01.2,"{""number"": 75, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,French
+1134,56:01.5,,,,,,f,,{},info,1,1,"{""question"": ""\""Schuh\"" means \""shoe\"" in which language?"", ""number"": 76, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Dutch"", ""Rwer"": ""German"", ""pic"": false}"
+1137,56:05.9,"{""number"":76,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Dutch
+1140,56:08.9,"{""number"":76,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,German
+1141,56:09.2,"{""number"":76,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,German
+1142,56:09.6,"{""number"":76,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,German
+1143,56:10.6,"{""number"":76,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Dutch
+1149,56:14.2,"{""number"":76,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Dutch
+1150,56:16.2,"{""number"":76,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,56:17.7,{},lotty_info,9,1,Ask Someone Else
+1154,56:17.4,"{""number"":76,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,German
+1155,56:17.7,,,,,,f,,{},info,1,1,Good Luck
+1158,56:22.0,"{""number"":76,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,56:22.0,{},lotty_info,9,1,10
+1159,56:22.1,"{""number"": 76, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,German
+1160,56:22.3,,,,,,f,,{},info,1,1,"{""question"": ""\""Strom\"" means \""tree\"" in which language?"", ""number"": 77, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Ukranian"", ""Rwer"": ""Slovak"", ""pic"": false}"
+1164,56:27.3,"{""number"":77,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Ukranian
+1170,56:31.2,"{""number"":77,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Ukranian
+1171,56:31.4,"{""number"":77,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Slovak
+1172,56:31.7,"{""number"":77,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Ukranian
+1173,56:32.9,"{""number"":77,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Ukranian
+1177,56:36.9,"{""number"":77,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Ukranian
+1180,56:37.8,"{""number"":77,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,56:38.5,{},lotty_info,9,1,Ask Someone Else
+1181,56:38.2,"{""number"":77,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Slovak
+1182,56:38.5,,,,,,f,,{},info,1,1,Good Luck
+1186,56:42.0,"{""number"":77,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,56:42.0,{},lotty_info,9,1,10
+1187,56:42.0,"{""number"": 77, ""copying"": true, ""score"": 0, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Ukranian
+1188,56:42.4,,,,,,f,,{},info,1,1,"{""question"": ""\""Hai\"" means \""shark\"" in which language?"", ""number"": 78, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Telugu"", ""Rwer"": ""Finnish"", ""pic"": false}"
+1193,56:49.3,"{""number"":78,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Telugu
+1195,56:49.4,"{""number"":78,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Telugu
+1196,56:49.7,"{""number"":78,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Finnish
+1200,56:56.2,"{""number"":78,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Finnish
+1201,56:56.4,"{""number"":78,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Finnish
+1202,56:56.5,"{""number"":78,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Telugu
+1203,56:58.0,"{""number"":78,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Telugu
+1204,56:58.1,"{""number"":78,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,56:58.4,{},lotty_info,9,1,Ask Someone Else
+1205,56:58.4,,,,,,f,,{},info,1,1,Good Luck
+1208,57:03.7,"{""number"":78,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,57:03.7,{},lotty_info,9,1,10
+1209,57:03.8,"{""number"": 78, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Finnish
+1210,57:04.1,,,,,,f,,{},info,1,1,"{""question"": ""\""Dronning\"" means \""queen\"" in which language?"", ""number"": 79, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Serbian"", ""Rwer"": ""Norwegian"", ""pic"": false}"
+1213,57:08.3,"{""number"":79,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Norwegian
+1215,57:09.9,"{""number"":79,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Norwegian
+1218,57:12.9,"{""number"":79,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Serbian
+1221,57:14.5,"{""number"":79,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Norwegian
+1223,57:15.7,"{""number"":79,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Serbian
+1224,57:16.3,"{""number"":79,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Norwegian
+1225,57:18.2,"{""number"":79,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Norwegian
+1226,57:18.2,"{""number"":79,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Norwegian
+1229,57:18.5,,,,,,f,,{},info,1,1,"{""question"": ""\""Pudel\"" means \""bottle\"" in which language?"", ""number"": 80, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Bulgarian"", ""Rwer"": ""Estonian"", ""pic"": false}"
+1230,57:21.4,"{""number"":80,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Bulgarian
+1233,57:22.4,"{""number"":80,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,57:32.4,{},lotty_info,12,1,Ask Someone Else
+1235,57:26.7,"{""number"":80,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Estonian
+1240,57:31.6,"{""number"":80,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Estonian
+1241,57:32.0,"{""number"":80,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Bulgarian
+1242,57:32.0,"{""number"":80,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,57:32.4,{},lotty_info,9,1,Ask Someone Else
+1243,57:32.0,"{""number"":80,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Bulgarian
+1245,57:32.1,"{""number"":80,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Estonian
+1248,57:32.4,,,,,,f,,{},info,1,1,Good Luck
+1251,57:38.4,"{""number"":80,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,57:38.4,{},lotty_info,9,1,10
+1252,57:38.5,"{""number"": 80, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Estonian
+1256,57:40.2,"{""number"":80,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,57:40.2,{},lotty_info,12,1,10
+1257,57:40.3,"{""number"": 80, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,12,1,Estonian
+1258,57:40.6,,,,,,f,,{},info,1,1,"{""question"": ""\""Tay\"" means \""hand\"" in which language?"", ""number"": 81, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Thai"", ""Rwer"": ""Vietnamese"", ""pic"": false}"
+1261,57:44.7,"{""number"":81,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Thai
+1263,57:47.9,"{""number"":81,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Vietnamese
+1264,57:48.4,"{""number"":81,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Thai
+1265,57:50.3,"{""number"":81,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Vietnamese
+1266,57:50.8,"{""number"":81,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Thai
+1269,57:53.1,"{""number"":81,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Vietnamese
+1270,57:54.3,"{""number"":81,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,57:56.9,{},lotty_info,9,1,Ask Someone Else
+1274,57:56.6,"{""number"":81,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":false}",,,,,f,,{},lotty_info,8,1,Thai
+1275,57:56.9,,,,,,f,,{},info,1,1,Good Luck
+1277,58:00.3,"{""number"":81,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,58:00.3,{},lotty_info,9,1,10
+1278,58:00.4,"{""number"": 81, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Vietnamese
+1279,58:00.6,,,,,,f,,{},info,1,1,"{""question"": ""\""Vinaka\"" means \""thank you\"" in which language?"", ""number"": 82, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Swedish"", ""Rwer"": ""Fijian"", ""pic"": false}"
+1282,58:04.3,"{""number"":82,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Swedish
+1283,58:06.8,"{""number"":82,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Swedish
+1286,58:09.3,"{""number"":82,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Swedish
+1287,58:09.4,"{""number"":82,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Fijian
+1288,58:11.1,"{""number"":82,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Fijian
+1289,58:11.3,"{""number"":82,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Fijian
+1293,58:13.7,"{""number"":82,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Fijian
+1294,58:17.0,"{""number"":82,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Fijian
+1295,58:17.4,,,,,,f,,{},info,1,1,"{""question"": ""The above means \""to eat\"" in which language?"", ""number"": 83, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Swedish"", ""Rwer"": ""Finnish"", ""pic"": true}"
+1299,58:23.1,"{""number"":83,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Finnish
+1300,58:24.9,"{""number"":83,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Finnish
+1303,58:26.6,"{""number"":83,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Finnish
+1304,58:27.2,"{""number"":83,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Swedish
+1305,58:27.5,"{""number"":83,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Finnish
+1306,58:28.7,"{""number"":83,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Swedish
+1307,58:29.9,"{""number"":83,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Finnish
+1308,58:31.1,"{""number"":83,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Finnish
+1309,58:31.5,,,,,,f,,{},info,1,1,"{""question"": ""The above means \""star\"" in which language?"", ""number"": 84, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Macedonian"", ""Rwer"": ""Greek"", ""pic"": true}"
+1312,58:35.3,"{""number"":84,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,58:46.4,{},lotty_info,8,1,Ask Someone Else
+1313,58:36.4,"{""number"":84,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Greek
+1314,58:37.9,"{""number"":84,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Greek
+1315,58:38.1,"{""number"":84,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Greek
+1316,58:38.5,"{""number"":84,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Greek
+1320,58:42.8,"{""number"":84,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Greek
+1321,58:45.7,"{""number"":84,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,58:46.3,{},lotty_info,9,1,Ask Someone Else
+1322,58:45.9,"{""number"":84,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Greek
+1324,58:46.3,,,,,,f,,{},info,1,1,Good Luck
+1327,58:49.9,"{""number"":84,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,58:49.9,{},lotty_info,9,1,10
+1328,58:50.0,"{""number"": 84, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Greek
+1331,58:53.0,"{""number"":84,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,58:53.0,{},lotty_info,8,1,3
+1332,58:53.0,"{""number"": 84, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,8,1,Greek
+1333,58:53.4,,,,,,f,,{},info,1,1,"{""question"": ""The above is \""festival\"" written in which language?"", ""number"": 85, ""round"": 2, ""topic"": ""Language"", ""Wwer"": ""Japanese"", ""Rwer"": ""Korean"", ""pic"": true}"
+1334,58:56.4,"{""number"":85,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,59:08.1,{},lotty_info,9,1,Ask Someone Else
+1335,58:57.8,"{""number"":85,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Korean
+1337,58:58.4,"{""number"":85,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Japanese
+1339,59:00.0,"{""number"":85,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Japanese
+1340,59:02.2,"{""number"":85,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Japanese
+1342,59:03.4,"{""number"":85,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Japanese
+1345,59:06.8,"{""number"":85,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Korean
+1346,59:07.7,"{""number"":85,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Korean
+1347,59:08.1,,,,,,f,,{},info,1,1,Good Luck
+1350,59:12.6,"{""number"":85,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,59:12.7,{},lotty_info,9,1,10
+1351,59:12.7,"{""number"": 85, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Korean
+1352,59:13.0,,,,,,f,,{},info,1,1,"{""question"": ""The above is an image of a painting by which artist?"", ""number"": 86, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Franz Kline"", ""Rwer"": ""Jackson Pollack"", ""pic"": true}"
+1356,59:16.8,"{""number"":86,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Jackson Pollack
+1357,59:18.4,"{""number"":86,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Jackson Pollack
+1358,59:18.4,"{""number"":86,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Jackson Pollack
+1359,59:18.5,"{""number"":86,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Jackson Pollack
+1361,59:19.3,"{""number"":86,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,59:21.6,{},lotty_info,9,1,Ask Someone Else
+1362,59:20.2,"{""number"":86,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Franz Kline
+1363,59:20.8,"{""number"":86,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Jackson Pollack
+1364,59:21.3,"{""number"":86,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Franz Kline
+1365,59:21.6,,,,,,f,,{},info,1,1,Good Luck
+1368,59:24.0,"{""number"":86,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,59:24.1,{},lotty_info,9,1,10
+1369,59:24.1,"{""number"": 86, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,9,1,Jackson Pollack
+1370,59:24.4,,,,,,f,,{},info,1,1,"{""question"": ""The above is an image of a painting by which artist?"", ""number"": 87, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Marcel Duchamp"", ""Rwer"": ""Salvador Dali"", ""pic"": true}"
+1371,59:27.3,"{""number"":87,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Salvador Dali
+1372,59:27.8,"{""number"":87,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Salvador Dali
+1375,59:28.2,"{""number"":87,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Salvador Dali
+1376,59:29.6,"{""number"":87,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Salvador Dali
+1377,59:29.9,"{""number"":87,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Salvador Dali
+1378,59:30.4,"{""number"":87,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Salvador Dali
+1379,59:32.2,"{""number"":87,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Marcel Duchamp
+1382,59:34.8,"{""number"":87,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Salvador Dali
+1384,59:35.1,,,,,,f,,{},info,1,1,"{""question"": ""The above is an image associated with which artist?"", ""number"": 88, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Roy Lichtenstein"", ""Rwer"": ""Andy Warhol"", ""pic"": true}"
+1385,59:39.3,"{""number"":88,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Andy Warhol
+1386,59:39.4,"{""number"":88,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Andy Warhol
+1387,59:39.9,"{""number"":88,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Andy Warhol
+1388,59:40.1,"{""number"":88,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Andy Warhol
+1391,59:42.2,"{""number"":88,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Andy Warhol
+1392,59:44.0,"{""number"":88,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Andy Warhol
+1393,59:44.4,"{""number"":88,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Roy Lichtenstein
+1394,59:45.7,"{""number"":88,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Andy Warhol
+1395,59:46.0,,,,,,f,,{},info,1,1,"{""question"": ""\""Flaming June\"" is a painting by:"", ""number"": 89, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Jan van Eyck"", ""Rwer"": ""Sir Frederic Leighton"", ""pic"": false}"
+1396,59:54.0,"{""number"":89,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Sir Frederic Leighton
+1398,59:55.1,"{""number"":89,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Sir Frederic Leighton
+1399,59:56.0,"{""number"":89,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Jan van Eyck
+1400,59:56.5,"{""number"":89,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Jan van Eyck
+1401,59:56.7,"{""number"":89,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Sir Frederic Leighton
+1402,59:56.7,"{""number"":89,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Jan van Eyck
+1403,59:59.3,"{""number"":89,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Sir Frederic Leighton
+1404,00:01.9,"{""number"":89,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Jan van Eyck
+1405,00:02.2,,,,,,f,,{},info,1,1,"{""question"": ""\""The Creation of Adam\"" is a painting by:"", ""number"": 90, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Leonardo da Vinci"", ""Rwer"": ""Michelangelo"", ""pic"": false}"
+1406,00:06.7,"{""number"":90,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Leonardo da Vinci
+1407,00:08.2,"{""number"":90,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Michelangelo
+1408,00:08.3,"{""number"":90,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Michelangelo
+1409,00:09.8,"{""number"":90,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Leonardo da Vinci
+1410,00:12.1,"{""number"":90,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Michelangelo
+1412,00:12.6,"{""number"":90,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Leonardo da Vinci
+1414,00:13.6,"{""number"":90,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Michelangelo
+1415,00:14.9,"{""number"":90,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Michelangelo
+1416,00:15.3,,,,,,f,,{},info,1,1,"{""question"": ""Henri Matisse was a French artist of the:"", ""number"": 91, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""15th Century"", ""Rwer"": ""20th Century"", ""pic"": false}"
+1417,00:18.5,"{""number"":91,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,15th Century
+1418,00:21.4,"{""number"":91,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,15th Century
+1419,00:25.1,"{""number"":91,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,20th Century
+1420,00:27.8,"{""number"":91,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,15th Century
+1421,00:27.9,"{""number"":91,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,20th Century
+1422,00:29.0,"{""number"":91,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,20th Century
+1423,00:29.8,"{""number"":91,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,20th Century
+1424,00:29.9,"{""number"":91,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,20th Century
+1425,00:30.3,,,,,,f,,{},info,1,1,"{""question"": ""\""The Scream\"" is a painting by:"", ""number"": 92, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Ernst Ludwig Kirchner"", ""Rwer"": ""Edvard Munch"", ""pic"": false}"
+1426,00:34.0,"{""number"":92,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Edvard Munch
+1427,00:34.3,"{""number"":92,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Edvard Munch
+1428,00:34.8,"{""number"":92,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Edvard Munch
+1429,00:37.5,"{""number"":92,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Edvard Munch
+1430,00:39.7,"{""number"":92,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Ernst Ludwig Kirchner
+1431,00:41.9,"{""number"":92,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Edvard Munch
+1433,00:44.1,"{""number"":92,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Edvard Munch
+1434,00:45.8,"{""number"":92,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Edvard Munch
+1435,00:46.1,,,,,,f,,{},info,1,1,"{""question"": ""\""Girl with a Pearl Earring\"" is a painting by:"", ""number"": 93, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Peter Paul Rubens"", ""Rwer"": ""Johannes Vermeer"", ""pic"": false}"
+1438,00:52.3,"{""number"":93,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Peter Paul Rubens
+1439,00:52.5,"{""number"":93,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Peter Paul Rubens
+1442,00:54.2,"{""number"":93,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Johannes Vermeer
+1443,00:56.5,"{""number"":93,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Johannes Vermeer
+1444,00:57.3,"{""number"":93,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Johannes Vermeer
+1445,00:58.1,"{""number"":93,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Johannes Vermeer
+1446,00:58.7,"{""number"":93,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Johannes Vermeer
+1448,01:01.8,"{""number"":93,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":false}",,,,,f,,{},lotty_info,8,1,Peter Paul Rubens
+1449,01:02.1,,,,,,f,,{},info,1,1,"{""question"": ""\""The Mona Lisa\"" is a painting by:"", ""number"": 94, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Vincent van Gogh"", ""Rwer"": ""Leonardo da Vinci"", ""pic"": false}"
+1453,01:05.3,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Leonardo da Vinci
+1454,01:05.4,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Leonardo da Vinci
+1455,01:05.9,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Leonardo da Vinci
+1456,01:06.5,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Leonardo da Vinci
+1457,01:07.2,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Leonardo da Vinci
+1462,01:11.9,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Leonardo da Vinci
+1463,01:12.7,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Leonardo da Vinci
+1464,01:13.9,"{""number"":94,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Leonardo da Vinci
+1465,01:14.2,,,,,,f,,{},info,1,1,"{""question"": ""Rene Magritte was famous for:"", ""number"": 95, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Impressionism"", ""Rwer"": ""Surrealism"", ""pic"": false}"
+1469,01:17.5,"{""number"":95,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Impressionism
+1472,01:21.2,"{""number"":95,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Impressionism
+1475,01:25.2,"{""number"":95,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Surrealism
+1476,01:25.6,"{""number"":95,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Surrealism
+1477,01:26.1,"{""number"":95,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Impressionism
+1480,01:27.7,"{""number"":95,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Surrealism
+1481,01:28.2,"{""number"":95,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Surrealism
+1484,01:29.7,"{""number"":95,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Surrealism
+1485,01:30.0,,,,,,f,,{},info,1,1,"{""question"": ""Frida Kahlo was a famous painter from:"", ""number"": 96, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""South Africa"", ""Rwer"": ""Mexico"", ""pic"": false}"
+1490,01:36.1,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Mexico
+1491,01:36.8,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Mexico
+1493,01:38.8,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Mexico
+1494,01:39.6,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Mexico
+1495,01:39.6,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Mexico
+1499,01:43.1,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Mexico
+1500,01:44.6,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Mexico
+1501,01:45.2,"{""number"":96,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Mexico
+1502,01:45.5,,,,,,f,,{},info,1,1,"{""question"": ""Georgia O'Keefe was a famous painter of the:"", ""number"": 97, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""16th Century"", ""Rwer"": ""20th Century"", ""pic"": false}"
+1507,01:48.5,"{""number"":97,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,16th Century
+1508,01:49.4,"{""number"":97,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,20th Century
+1509,01:49.9,"{""number"":97,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,20th Century
+1512,01:51.7,"{""number"":97,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,20th Century
+1519,01:57.6,"{""number"":97,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,20th Century
+1520,01:57.8,"{""number"":97,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,20th Century
+1521,01:59.4,"{""number"":97,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,20th Century
+1522,02:00.0,"{""number"":97,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,20th Century
+1523,02:00.3,,,,,,f,,{},info,1,1,"{""question"": ""Edward Hopper painted \""Nighthawks\"" in:"", ""number"": 98, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""1742"", ""Rwer"": ""1942"", ""pic"": false}"
+1526,02:04.2,"{""number"":98,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,1942
+1527,02:05.8,"{""number"":98,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,1942
+1528,02:07.0,"{""number"":98,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,t,02:16.9,{},lotty_info,4,1,Ask Someone Else
+1531,02:11.0,"{""number"":98,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,1942
+1532,02:11.4,"{""number"":98,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,1942
+1533,02:13.3,"{""number"":98,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,1942
+1536,02:15.7,"{""number"":98,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,1942
+1537,02:16.6,"{""number"":98,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,1942
+1538,02:16.9,,,,,,f,,{},info,1,1,Good Luck
+1543,02:28.3,"{""number"":98,""copying"":true,""score"":0,""info_chosen"":""Times chosen in Round 1"",""round"":2,""human"":true}",,,,,t,02:28.3,{},lotty_info,4,1,10
+1544,02:28.4,"{""number"": 98, ""copying"": true, ""score"": 1, ""info_chosen"": ""Times chosen in Round 1"", ""round"": 2, ""human"": true}",,,,,f,,{},lotty_info,4,1,1942
+1545,02:28.7,,,,,,f,,{},info,1,1,"{""question"": ""\""The Birth of Venus\"" is a painting by:"", ""number"": 99, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""Leonardo da Vinci"", ""Rwer"": ""Sandro Boticelli"", ""pic"": false}"
+1548,02:32.9,"{""number"":99,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,Sandro Boticelli
+1549,02:33.8,"{""number"":99,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,Sandro Boticelli
+1552,02:38.0,"{""number"":99,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,Sandro Boticelli
+1555,02:39.3,"{""number"":99,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,Sandro Boticelli
+1556,02:40.3,"{""number"":99,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,Sandro Boticelli
+1557,02:41.2,"{""number"":99,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,Sandro Boticelli
+1558,02:41.5,"{""number"":99,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,Leonardo da Vinci
+1559,02:41.6,"{""number"":99,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,Sandro Boticelli
+1560,02:41.9,,,,,,f,,{},info,1,1,"{""question"": ""James Abbott Mcneil Whistler painted \""Whistler's Mother\"" in:"", ""number"": 100, ""round"": 2, ""topic"": ""Art"", ""Wwer"": ""1571"", ""Rwer"": ""1871"", ""pic"": false}"
+1563,02:45.7,"{""number"":100,""copying"":false,""score"":0,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,3,1,1571
+1564,02:46.7,"{""number"":100,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,7,1,1871
+1567,02:49.6,"{""number"":100,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,4,1,1871
+1568,02:51.6,"{""number"":100,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,9,1,1871
+1569,02:53.3,"{""number"":100,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,8,1,1871
+1571,02:54.8,"{""number"":100,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,12,1,1871
+1572,02:55.7,"{""number"":100,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,10,1,1871
+1573,02:56.0,"{""number"":100,""copying"":false,""score"":1,""info_chosen"":""NA"",""round"":2,""human"":true}",,,,,f,,{},lotty_info,6,1,1871
+1574,02:56.3,,,,,,f,,{},info,1,1,"{""question"": ""This is a dummy question"", ""number"": 101, ""round"": 2, ""topic"": ""dummy"", ""Wwer"": ""dummy"", ""Rwer"": ""dummy"", ""pic"": false}"
