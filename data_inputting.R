@@ -9,50 +9,6 @@ library(jsonlite)
 library(data.table)
 library(dplyr)
 
-#####
-##### Using example info table from run of first network on 18th June
-##### 
-
-
-infos<- read.csv("info.csv", stringsAsFactors = FALSE)
-infos <- infos[order(infos$id),]
-
-# parse the JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
-# using the second option (non-tidyverse): 
-
-# delete when the origin is the source (we only want participants' data):
-infos<- infos[infos$type=="lotty_info",]
-
-# 1) First, make a transformation function that works for a single entry
-f <- function(json, id){
-  # transform json to list
-  tmp    <- jsonlite::fromJSON(json)
-  # transform list to data.frame
-  tmp    <- as.data.frame(tmp)
-  # add id
-  tmp$id <- id
-  # return
-  return(tmp)
-}
-# 2) apply it via mapply 
-json_dfs <- 
-  mapply(f, infos$property1, infos$id, SIMPLIFY = FALSE)
-# 3) combine the fragments via rbindlist
-clean_df <- 
-  data.table::rbindlist(json_dfs)
-
-#cleanup
-my_data <- clean_df
-clean_df <- NULL
-rm(json_dfs)
-
-# use match to add in the other useful variables from the info table
-my_data$Contents <- infos$contents[match(my_data$id, infos$id)]
-my_data$Origin <- infos$origin_id[match(my_data$id, infos$id)]
-my_data$Network <- infos$network_id[match(my_data$id, infos$id)]
-
-# delete practice round data
-my_data <- my_data[!my_data$round==0,]
 
 load_file <- function(file) {
   infos <- read.csv(file, stringsAsFactors = FALSE)
@@ -97,50 +53,9 @@ load_file <- function(file) {
   return(my_data)
 }
 
-file_names <- ["a", "b", "c"]
+file_names <- c("info.csv", "info_19.csv")
 loaded_files <- list()
 for (i in 1:length(file_names)) {
   loaded_files <- c(loaded_files, load_file(file_names[i]))
 }
 
-
-#####
-##### NEED to be able to REPEAT FOR OTHER RUNS.... 
-#####
-
-infosA<- read.csv("info_19.csv", stringsAsFactors = FALSE)
-infosA <- infosA[order(infosA$id),]
-
-# trying to parse JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
-# second option (non-tidyverse): 
-
-# delete when the origin is the source (we only want participants' data):
-infosA<- infosA[infosA$type=="lotty_info",]
-
-# 1) First, make a transformation function that works for a single entry
-f <- function(json, id){
-  # transform json to list
-  tmp    <- jsonlite::fromJSON(json)
-  # transform list to data.frame
-  tmp    <- as.data.frame(tmp)
-  # add id
-  tmp$id <- id
-  # return
-  return(tmp)
-}
-# 2) apply it via mapply 
-json_dfs <- 
-  mapply(f, infosA$property1, infosA$id, SIMPLIFY = FALSE)
-# 3) combine the fragments via rbindlist
-my_data_a <- 
-  data.table::rbindlist(json_dfs)
-
-#cleanup
-rm(json_dfs)
-
-# use match to add in the other useful variables from the info table
-my_data_a$Contents <- infosA$contents[match(my_data_a$id, infosA$id)]
-my_data_a$Origin <- infosA$origin_id[match(my_data_a$id, infosA$id)]
-my_data_a$Network <- infosA$network_id[match(my_data_a$id, infosA$id)]
-# delete practice round data
-my_data_a <- my_data_a[!my_data_a$round==0,]
