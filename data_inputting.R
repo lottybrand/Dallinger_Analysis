@@ -57,6 +57,6 @@ load_file <- function(file) {
 file_names <- c("info.csv", "info_19.csv")
 loaded_files <- list()
 for (i in 1:length(file_names)) {
-  loaded_files <- c(loaded_files, load_file(file_names[i]))
+  loaded_files[[i]] <- load_file(file_names[i])
 }
 
