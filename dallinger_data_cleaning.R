@@ -3,27 +3,29 @@
 
 source('data_inputting.R')
 
-#these are the separate runs of the experiment, made in 'data_inputting'
-data_tables <- list(my_data, my_data_a)
+#assign first dataset to full_data:
+full_data <- loaded_files[[1]]
 
-#assign first dataset unique ids, origin ids, and network ids: 
-my_data$uid <- my_data$id
-my_data$u_origin <- my_data$Origin
-my_data$u_network <- my_data$Network
+#assign first dataset unique origin ids as continguous integers 
+NewOrigin <- array(0,length(full_data$Origin))
+for (index in 1:length(unique(full_data$Origin))){
+  NewOrigin[full_data$Origin == unique(full_data$Origin)[index]] = index
+}
+full_data$u_origin <- NewOrigin
 
-full_data <- my_data
+#assign first dataset unique info ids and network ids
+full_data$uid <- full_data$id
+full_data$u_network <- full_data$Network
+
 
 #give unique ids to each subsequent datasets by adding the max of the previous id's 
-for (i in 2:length(data_tables)) {
-  this_table <- data_tables[[i]]
+for (i in 2:length(loaded_files)) {
+  this_table <- loaded_files[[i]]
   this_table$uid <- this_table$id + max(full_data$uid)
   this_table$u_origin <- this_table$Origin + max(full_data$u_origin)
   this_table$u_network <- this_table$Network + max(full_data$u_network)
   full_data <- bind_rows(full_data, this_table)
 }
-
-##### Merge data from all runs data_unputting.R
-full_data <- bind_rows(my_data,my_data_a)
 
 #not sure why this is necessary but must be ... 
 full_data$number <- as.integer(full_data$number)
