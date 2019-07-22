@@ -84,7 +84,7 @@ for (i in 1:nrow(full_data)) {
       if (length(unique(models$c_a_score)) == 1) {
         full_data$copied_successful[i] <- NA
       } else {
-        full_data$copied_successful[i] <- (model$c_a_score == max(models$c_a_score))
+        full_data$copied_successful[i] <- (model$c_a_score == max(models$c_a_score))*1
       }
     }
   }
@@ -102,9 +102,9 @@ for (i in 1:nrow(full_data)) {
       full_data$copied_prestigious[i] <- NA
     } else {
       if (length(unique(models$c_copies)) == 1) {
-        full_data$copied_winner[i] <- NA
+        full_data$copied_prestigious[i] <- NA
       } else {
-        full_data$copied_winner[i] <- (model$c_copies == max(models$c_copies))
+        full_data$copied_prestigious[i] <- (model$c_copies == max(models$c_copies))*1
       }
     }
   }

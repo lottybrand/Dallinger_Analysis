@@ -55,9 +55,10 @@ load_file <- function(file) {
 }
 
 file_names <- c("info_18_b.csv", "info_19_b.csv", "info_20_b.csv", "info_21_b.csv", "info_24_B.csv", "info_24_A.csv", "info_25_A.csv", "info_26_C.csv")
+condition <- c("b","b","b","b","b","a","a","c")
 loaded_files <- list()
-for (i in 1:length(file_names)) {
-  loaded_files[[i]] <- load_file(file_names[i])
+for (i in 1:length(file_names, condition)) {
+  loaded_files[[i]] <- load_file(file_names[i], condition[i])
 }
 
 
