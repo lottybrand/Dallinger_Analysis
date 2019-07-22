@@ -61,19 +61,13 @@ for (i in 1:nrow(full_data)) {
 }
 
 #figure out if they copied the highest scorer: 
-full_data$copied_successful <- rep(-666, nrow(full_data))
+full_data$copied_successful <- rep(NA, nrow(full_data))
 potential_models <- full_data[full_data$copying == FALSE]
 for (i in 1:nrow(full_data)) {
-  if (full_data$is_model_id[i] == FALSE) {
-    full_data$copied_successful[i] <- NA
-  } else {
+  if (full_data$is_model_id[i] == TRUE) {
     models <- potential_models[potential_models$number == full_data$number[i] & potential_models$u_network == full_data$u_network[i],]
-    if (nrow(models) <= 1) {
-      full_data$copied_successful[i] <- NA
-    } else {
-      if (length(unique(models$c_a_score)) == 1) {
-        full_data$copied_successful[i] <- NA
-      } else {
+    if (nrow(models) > 1) {
+      if (length(unique(models$c_a_score)) != 1) {
         model <- models[as.character(models$Origin) == full_data$Contents[i],]
         full_data$copied_successful[i] <- (model$c_a_score == max(models$c_a_score))*1
       }
@@ -82,19 +76,13 @@ for (i in 1:nrow(full_data)) {
 }
 
 #figure out if they copied the most copied:
-full_data$copied_prestigious <- rep(-666, nrow(full_data))
+full_data$copied_prestigious <- rep(NA, nrow(full_data))
 potential_models <- full_data[full_data$copying == FALSE]
 for (i in 1:nrow(full_data)) {
-  if (full_data$is_model_id[i] == FALSE) {
-    full_data$copied_prestigious[i] <- NA
-  } else {
+  if (full_data$is_model_id[i] == TRUE) {
     models <- full_data[full_data$number == full_data$number[i] & full_data$u_network == full_data$u_network[i],]
-    if (nrow(models) <= 1) {
-      full_data$copied_prestigious[i] <- NA
-    } else {
-      if (length(unique(models$c_copies)) == 1) {
-        full_data$copied_prestigious[i] <- NA
-      } else {
+    if (nrow(models) > 1) {
+      if (length(unique(models$c_copies)) != 1) {
         model <- models[as.character(models$Origin) == full_data$Contents[i],]
         full_data$copied_prestigious[i] <- (model$c_copies == max(models$c_copies))*1
       }
