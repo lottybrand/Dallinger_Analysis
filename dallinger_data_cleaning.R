@@ -37,24 +37,26 @@ full_data$u_origin <- match(full_data$u_origin, current_u_origins)
 
 #figure out cumulative asocial score
 full_data$c_a_score <- rep(-666, nrow(full_data))
-for (i in 1:nrow(full_data)) {
-  c_a_score <- sum(full_data[1:i,]$score[full_data$copying == FALSE & full_data$u_origin == full_data$u_origin[i]])
-  if (is.na(c_a_score)) {
-    c_a_score <- 0
-  }
-  full_data$c_a_score[i] <- c_a_score
+u_origins <- unique(full_data$u_origin)
+for (i in 1:length(u_origins)) {
+  u_origin <- u_origins[i]
+  relevant_rows <- c(1:nrow(full_data))[full_data$u_origin == u_origin]
+  subset <- full_data[relevant_rows,]
+  c_a_score <- cumsum(subset$score * (1-subset$copying))
+  full_data$c_a_score[relevant_rows] <- c_a_score
 }
 
 #figure out their cumulative copies:
+
 full_data$c_copies <- rep(-666, nrow(full_data))
 all_node_ids <- unique(full_data$Origin)
 full_data$is_model_id <- (full_data$copying == TRUE & full_data$Contents %in% all_node_ids)
+copying_decisions <- full_data[full_data$is_model_id == TRUE,]
 for (i in 1:nrow(full_data)) {
-  full_data$c_copies[i] <- nrow(full_data[
-    full_data$uid < full_data$uid[i] & 
-    full_data$is_model_id == TRUE &
-    full_data$u_network == full_data$u_network[i] &
-    full_data$Contents == as.character(full_data$Origin[i])
+  full_data$c_copies[i] <- nrow(copying_decisions[
+    copying_decisions$u_network == full_data$u_network[i] &
+    copying_decisions$uid < full_data$uid[i] & 
+    copying_decisions$Contents == as.character(full_data$Origin[i])
   ,])
 }
 
