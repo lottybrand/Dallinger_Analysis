@@ -30,7 +30,7 @@ load_file <- function(file, condition) {
   # using the second option (non-tidyverse): 
 
   # delete when the origin is the source (we only want participants' data):
-  infos<- infos[infos$type=="lotty_info" & infos$failed %in% c(FALSE, "f"),]
+  infos<- infos[infos$type=="lotty_info" & infos$property1 != "",]
 
   # 2) apply it via mapply 
   json_dfs <- 
