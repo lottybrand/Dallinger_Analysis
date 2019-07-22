@@ -27,11 +27,22 @@ for (i in 2:length(loaded_files)) {
   full_data <- bind_rows(full_data, this_table)
 }
 
-#not sure why this is necessary but must be ... 
-full_data$number <- as.integer(full_data$number)
 
-# I wanted to reorder to read the tables easier myself... is this no longer a good idea? 
-# full_data <- full_data[order(condition,Network,number),]
+#we now want to make all the u_origins contiguous integers now:
+#does this work?!?! is it too dangerous?
+#seems to be working... need to try with multiple datasets...
+NewOrigin <- array(0,length(full_data$u_origin))
+for (index in 1:length(unique(full_data$u_origin))){
+  NewOrigin[full_data$u_origin == unique(full_data$u_origin)[index]] = index
+}
+full_data$u_origin <- NewOrigin
+
+
+#don't think this is necessary anymore ...try without for now
+#full_data$number <- as.integer(full_data$number)
+
+#don't think this is necessary anymore (and might have messed stuff up?)
+#full_data <- full_data[order(uid,u_network,number),]
 
 
 #####

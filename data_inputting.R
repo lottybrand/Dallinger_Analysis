@@ -2,12 +2,12 @@
 #### inputting the data from Dallinger per Condition ####
 #### should really use a loop to do all of this for each condition.... 
 
-setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
+#setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
 
 # libraries
-library(jsonlite)
-library(data.table)
-library(dplyr)
+#library(jsonlite)
+#library(data.table)
+#library(dplyr)
 
 # 1) First, make a transformation function that works for a single entry
 f <- function(json, id){
@@ -24,7 +24,7 @@ f <- function(json, id){
 
 load_file <- function(file) {
   infos <- read.csv(file, stringsAsFactors = FALSE)
-  infos <- infos[order(infos$id),]
+  #infos <- infos[order(infos$id),]
 
   # parse the JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
   # using the second option (non-tidyverse): 
@@ -54,9 +54,11 @@ load_file <- function(file) {
   return(my_data)
 }
 
-file_names <- c("info.csv", "info_19.csv")
+file_names <- c("info_18_b.csv", "info_19_b.csv", "info_20_b.csv", "info_21_b.csv", "info_24_B.csv", "info_24_A.csv", "info_25_A.csv", "info_26_C.csv")
 loaded_files <- list()
 for (i in 1:length(file_names)) {
   loaded_files[[i]] <- load_file(file_names[i])
 }
 
+
+# Condition, n_copies, asoc_Score etc are all in the node files..... UGH
