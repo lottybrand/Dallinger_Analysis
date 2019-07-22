@@ -20,18 +20,18 @@ source('dallinger_data_cleaning.R')
 scoreChoice<- as.data.frame(scoreChoice)
 
 #make index contiguous for participant varying effect:
-Nppts = length(unique(scoreChoice$ppt))
-Oldppt <- scoreChoice$ppt
-pptIndex <- array(0,length(scoreChoice$ppt))
+Nppts = length(unique(scoreChoice$u_origin))
+Oldppt <- scoreChoice$u_origin
+pptIndex <- array(0,length(scoreChoice$u_origin))
 for (index in 1:Nppts){
   pptIndex[Oldppt == unique(Oldppt)[index]] = index
 }
 scoreChoice$pptIndex <- pptIndex
 
 #make index contiguous for group varying effect:
-Ngroups = length(unique(scoreChoice$group))
-Oldgroup <- scoreChoice$group
-groupIndex <- array(0,length(scoreChoice$group))
+Ngroups = length(unique(scoreChoice$u_network))
+Oldgroup <- scoreChoice$u_network
+groupIndex <- array(0,length(scoreChoice$u_network))
 for (index in 1:Ngroups){
   groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
 }

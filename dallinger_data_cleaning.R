@@ -49,6 +49,7 @@ full_data$u_origin <- NewOrigin
 ##### Calculating the cumulative score, cumulative copies, and if they copied the top scorer and most copied : 
 #####
 
+#figure out cumulative asocial score
 full_data$c_a_score <- rep(-666, nrow(full_data))
 for (i in 1:nrow(full_data)) {
   c_a_score <- sum(full_data[1:i,]$score[full_data$copying == FALSE & full_data$u_origin == full_data$u_origin[i]])
@@ -58,6 +59,7 @@ for (i in 1:nrow(full_data)) {
   full_data$c_a_score[i] <- c_a_score
 }
 
+#figure out their cumulative copies:
 full_data$c_copies <- rep(-666, nrow(full_data))
 all_node_ids <- unique(full_data$Origin)
 full_data$is_model_id <- (full_data$copying == TRUE & full_data$Contents %in% all_node_ids)
@@ -70,7 +72,7 @@ for (i in 1:nrow(full_data)) {
   ,])
 }
 
-#how does 'max' here deal with multiple/tied maximums? 
+#figure out if they copied the highest scorer: 
 full_data$copied_successful <- rep("-666", nrow(full_data))
 for (i in 1:nrow(full_data)) {
   if (full_data$is_model_id[i] == FALSE) {
@@ -90,7 +92,7 @@ for (i in 1:nrow(full_data)) {
   }
 }
 
-#how does 'max' here deal with multiple/tied maximums? 
+#figure out if they copied the most copied:
 full_data$copied_prestigious <- rep("-666", nrow(full_data))
 for (i in 1:nrow(full_data)) {
   if (full_data$is_model_id[i] == FALSE) {
@@ -129,7 +131,7 @@ copyOnly <-full_data[full_data$copying=="TRUE",]
 
 # need to subset only copying instances and only when score info is visible (i.e. round 1 of condition B&C, and when chosen in round 2...)
 model_ids <- full_data[full_data$is_model_id==TRUE,]
-scoreChoice <- model_ids[((!model_ids$condition=="A")&(model_ids$round==1))|(model_ids$info_chosen=="Total Score in Round 1"),]                                     
+scoreChoice <- model_ids[((!model_ids$condition=="a")&(model_ids$round==1))|(model_ids$info_chosen=="Total Score in Round 1"),]                                     
 
 
 #####
@@ -152,8 +154,8 @@ infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Roun
 
 # make Condition B the baseline:
 
-infoChosen$CondA <- ifelse(infoChosen$condition =="A", 1, 0)
-infoChosen$CondC <- ifelse(infoChosen$condition =="C", 1, 0)
+infoChosen$CondA <- ifelse(infoChosen$condition =="a", 1, 0)
+infoChosen$CondC <- ifelse(infoChosen$condition =="c", 1, 0)
 
 ##### 
 ##### Prediction 4: 
@@ -164,8 +166,8 @@ infoChosen$CondC <- ifelse(infoChosen$condition =="C", 1, 0)
 asocialOnly$copied <- ifelse(asocialOnly$Contents=="Ask Someone Else",1,0)
 
 #change baseline to condition to A:
-asocialOnly$condB <- ifelse(asocialOnly$condition=="B",1,0)
-asocialOnly$condC <- ifelse(asocialOnly$condition=="C",1,0)
+asocialOnly$condB <- ifelse(asocialOnly$condition=="b",1,0)
+asocialOnly$condC <- ifelse(asocialOnly$condition=="c",1,0)
 
 #####
 ##### Prediction 5:
