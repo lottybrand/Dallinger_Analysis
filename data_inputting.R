@@ -30,7 +30,7 @@ load_file <- function(file, condition) {
   # using the second option (non-tidyverse): 
 
   # delete when the origin is the source (we only want participants' data):
-  infos<- infos[infos$type=="lotty_info",]
+  infos<- infos[infos$type=="lotty_info" & infos$failed %in% c(FALSE, "f"),]
 
   # 2) apply it via mapply 
   json_dfs <- 
@@ -55,7 +55,7 @@ load_file <- function(file, condition) {
   return(my_data)
 }
 
-file_names <- c("info_18_b.csv", "info_19_b.csv","info_21_b.csv", "info_24_B.csv", "info_24_A.csv", "info_25_A.csv", "info_26_C.csv")
+file_names <- c("info_18_b.csv", "info_19_b.csv","info_20_b.csv","info_21_b.csv", "info_24_B.csv", "info_24_A.csv", "info_25_A.csv", "info_26_C.csv")
 condition <- c("b","b","b","b","b","a","a","c")
 loaded_files <- list()
 for (i in 1:length(file_names)) {
