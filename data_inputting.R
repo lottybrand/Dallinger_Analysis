@@ -12,7 +12,7 @@
 # 1) First, make a transformation function that works for a single entry
 f <- function(json, id){
   # transform json to list
-  tmp    <- jsonlite::fromJSON(json)
+  tmp    <- jsonlite::fromJSON(paste(x, collapse=""))
   # transform list to data.frame
   tmp    <- as.data.frame(tmp)
   # add id
@@ -22,7 +22,7 @@ f <- function(json, id){
 }
 
 
-load_file <- function(file) {
+load_file <- function(file, condition) {
   infos <- read.csv(file, stringsAsFactors = FALSE)
   #infos <- infos[order(infos$id),]
 
@@ -51,6 +51,7 @@ load_file <- function(file) {
 
   # delete practice round data
   my_data <- my_data[!my_data$round==0,]
+  my_data$condition <- rep(condition, nrow(my_data))
   return(my_data)
 }
 
