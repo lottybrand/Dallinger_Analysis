@@ -24,6 +24,7 @@ f <- function(json, id){
 
 load_file <- function(file, condition) {
   infos <- read.csv(file, stringsAsFactors = FALSE)
+  infos <- infos[order(infos$id),]
   #infos <- infos[order(infos$id),]
 
   # parse the JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
