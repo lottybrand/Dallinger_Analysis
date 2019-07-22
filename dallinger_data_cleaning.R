@@ -6,17 +6,10 @@ source('data_inputting.R')
 #assign first dataset to full_data:
 full_data <- loaded_files[[1]]
 
-#assign first dataset unique origin ids as continguous integers 
-NewOrigin <- array(0,length(full_data$Origin))
-for (index in 1:length(unique(full_data$Origin))){
-  NewOrigin[full_data$Origin == unique(full_data$Origin)[index]] = index
-}
-full_data$u_origin <- NewOrigin
-
 #assign first dataset unique info ids and network ids
 full_data$uid <- full_data$id
 full_data$u_network <- full_data$Network
-
+full_data$u_origin <- full_data$Origin
 
 #give unique ids to each subsequent datasets by adding the max of the previous id's 
 for (i in 2:length(loaded_files)) {
@@ -27,15 +20,8 @@ for (i in 2:length(loaded_files)) {
   full_data <- bind_rows(full_data, this_table)
 }
 
-
-#we now want to make all the u_origins contiguous integers now:
-#does this work?!?! is it too dangerous?
-#seems to be working... need to try with multiple datasets...
-NewOrigin <- array(0,length(full_data$u_origin))
-for (index in 1:length(unique(full_data$u_origin))){
-  NewOrigin[full_data$u_origin == unique(full_data$u_origin)[index]] = index
-}
-full_data$u_origin <- NewOrigin
+current_u_origins <- unique(full_data$u_origin)
+full_data$u_origin <- match(full_data$u_origin, current_u_origins)
 
 
 #don't think this is necessary anymore ...try without for now
