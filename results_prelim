@@ -1,0 +1,57 @@
+Results so far with 1000 iter and 1 chain: 
+
+Model 1
+
+mean   sd 5.5% 94.5% n_eff Rhat
+a       1.95 0.35 1.42  2.49   292 1.00
+sigma_p 1.19 0.20 0.90  1.54   301 1.01
+sigma_g 1.16 0.30 0.75  1.66   326 1.00
+
+Model 2 (probably need to reparameterise for group)
+
+mean   sd  5.5% 94.5% n_eff Rhat
+a        3.49 0.61  2.60  4.50   686 1.00
+sigma_p  1.94 0.59  1.11  2.98   305 1.00
+sigma_g -0.10 1.52 -2.22  2.11    18 1.03
+
+Model 2.1
+
+mean   sd 5.5% 94.5% n_eff Rhat
+a       0.96 0.52 0.20  1.82   544 1.00
+sigma_p 1.51 0.56 0.70  2.44   243 1.01
+sigma_g 0.78 0.64 0.06  1.76   175 1.00
+
+Model 3.0 
+(should probably make a the baseline.. (control? ) or use ulam as planned ...)
+
+mean   sd  5.5% 94.5% n_eff Rhat
+a        1.85 0.67  0.79  2.86   319    1
+b_a      0.12 0.72 -1.05  1.25   513    1
+b_c     -3.16 0.98 -4.72 -1.55   300    1
+sigma_p  2.04 0.32  1.56  2.60   387    1
+sigma_g  2.07 0.69  1.00  3.24   211    1
+
+Descriptives for chose prestige:
+> mean(infoChosen$chosePrestige[infoChosen$condition=="a"])
+[1] 0.6967593
+> mean(infoChosen$chosePrestige[infoChosen$condition=="b"])
+[1] 0.9509804
+> mean(infoChosen$chosePrestige[infoChosen$condition=="c"])
+[1] 0.1506849
+
+Descriptives for copied most copied:
+> mean(prestigeChoice$copied_prestigious[prestigeChoice$condition=="b"])
+[1] 0.9278351
+> mean(prestigeChoice$copied_prestigious[prestigeChoice$condition=="c"])
+[1] 0.959596
+mean(prestigeChoiceA$copied_prestigious)
+[1] 0.5847176
+
+Descriptives for copied most successful: 
+> mean(scoreChoice$copied_successful[scoreChoice$condition=="c"])
+[1] 0.867619
+> mean(scoreChoice$copied_successful[scoreChoice$condition=="b"])
+[1] 0.8412017
+> mean(scoreChoice$copied_successful[scoreChoice$condition=="a"])
+[1] NaN
+

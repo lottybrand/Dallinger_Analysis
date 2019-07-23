@@ -42,13 +42,13 @@ model1 <- map2stan(
   alist(
     copied_successful ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
-    a ~ dnorm(0,1.5),
+    a ~ dnorm(0,4),
     a_p[pptIndex] ~ dnorm(0,1),
     a_g[groupIndex] ~ dnorm(0,1),
     sigma_p ~ dcauchy(0,1),
     sigma_g ~ dcauchy(0,1)
   ),
-  data=scoreChoice, constraints=list(sigma_p="lower=0"), 
+  data=scoreChoice, constraints=list(sigma_p="lower=0", sigma_g="lower=0"), 
   warmup=1000, iter=1000, chains=1, cores=1 )
 
 precis(model1)
@@ -65,33 +65,31 @@ precis(model1)
 ## A separate, identical model will be run for any prestige-based copying that occurs in Condition A, as prestige cues in Condition A are not based on success information (see pre-reg file), so we have no a priori predictions for this behaviour
 
 prestigeChoice<- as.data.frame(prestigeChoice)
+prestigeChoice <- prestigeChoice[!prestigeChoice$condition=="a",]
 
 #make ppt index contiguous:
-Nppts = length(unique(prestigeChoice$ppt))
-Oldppt <- prestigeChoice$ppt
-pptIndex <- array(0,length(prestigeChoice$ppt))
+Nppts = length(unique(prestigeChoice$u_origin))
+Oldppt <- prestigeChoice$u_origin
+pptIndex <- array(0,length(prestigeChoice$u_origin))
 for (index in 1:Nppts){
   pptIndex[Oldppt == unique(Oldppt)[index]] = index
 }
 prestigeChoice$pptIndex <- pptIndex
 
 #make group index contiguous:
-Ngroups = length(unique(prestigeChoice$group))
-Oldgroup <- prestigeChoice$group
-groupIndex <- array(0,length(prestigeChoice$group))
+Ngroups = length(unique(prestigeChoice$u_network))
+Oldgroup <- prestigeChoice$u_network
+groupIndex <- array(0,length(prestigeChoice$u_network))
 for (index in 1:Ngroups){
   groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
 }
 prestigeChoice$groupIndex <- groupIndex
 
-prestigeChoiceA <- prestigeChoice[prestigeChoice$condition=="A",]
-prestigeChoice <- prestigeChoice[!prestigeChoice$condition=="A",]
-
 model2 <- map2stan(
   alist(
     copied_prestigious ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
-    a ~ dnorm(0,10),
+    a ~ dnorm(0,4),
     a_p[pptIndex] ~ dnorm(0,1),
     a_g[groupIndex] ~ dnorm(0,1),
     sigma_p ~ dcauchy(0,1),
@@ -102,20 +100,44 @@ model2 <- map2stan(
 
 precis(model2)
 
+#now just for condition A prestige copying:
+prestigeChoiceA <- model_ids[model_ids$info_chosen =="Times chosen in Round 1" & model_ids$condition=="a",]
+prestigeChoiceA<- as.data.frame(prestigeChoiceA)
+
+#need to reindex again
+Nppts = length(unique(prestigeChoiceA$u_origin))
+Oldppt <- prestigeChoiceA$u_origin
+pptIndex <- array(0,length(prestigeChoiceA$u_origin))
+for (index in 1:Nppts){
+  pptIndex[Oldppt == unique(Oldppt)[index]] = index
+}
+prestigeChoiceA$pptIndex <- pptIndex
+
+#make group index contiguous:
+Ngroups = length(unique(prestigeChoiceA$u_network))
+Oldgroup <- prestigeChoiceA$u_network
+groupIndex <- array(0,length(prestigeChoiceA$u_network))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+prestigeChoiceA$groupIndex <- groupIndex
+
+
 #for Condition A prestige-copying only, if any occurs:
 model2.1 <- map2stan(
   alist(
     copied_prestigious ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
-    a ~ dnorm(0,10),
+    a ~ dnorm(0,4),
     a_p[pptIndex] ~ dnorm(0,1),
     a_g[groupIndex] ~ dnorm(0,1),
     sigma_p ~ dcauchy(0,1),
     sigma_g ~ dcauchy(0,1)
   ),
-  data=prestigeChoiceA, constraints=list(sigma_p="lower=0"), 
+  data=prestigeChoiceA, constraints=list(sigma_p="lower=0", sigma_g="lower=0"), 
   warmup=1000, iter=1000, chains=1, cores=1 )
 
+precis(model2.1)
 #####
 #####
 ##### Prediction 3: Participants choose to view “most copied” info more in Condition B than the other two conditions, 
@@ -132,22 +154,39 @@ model2.1 <- map2stan(
 
 infoChosen <- as.data.frame(infoChosen)
 
-Nppts = length(unique(infoChosen$ppt))
-Oldppt <- infoChosen$ppt
-pptIndex <- array(0,length(infoChosen$ppt))
+Nppts = length(unique(infoChosen$u_origin))
+Oldppt <- infoChosen$u_origin
+pptIndex <- array(0,length(infoChosen$u_origin))
 for (index in 1:Nppts){
   pptIndex[Oldppt == unique(Oldppt)[index]] = index
 }
 infoChosen$pptIndex <- pptIndex
 
-Ngroups = length(unique(infoChosen$group))
-Oldgroup <- infoChosen$group
-groupIndex <- array(0,length(infoChosen$group))
+Ngroups = length(unique(infoChosen$u_network))
+Oldgroup <- infoChosen$u_network
+groupIndex <- array(0,length(infoChosen$u_network))
 for (index in 1:Ngroups){
   groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
 }
 infoChosen$groupIndex <- groupIndex
 
+model3.0 <- map2stan(
+  alist(
+    chosePrestige ~ dbinom(1, p),
+    logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g + b_a*CondA + b_c*CondC,
+    a ~ dnorm(0,4),
+    a_p[pptIndex] ~ dnorm(0,1),
+    a_g[groupIndex] ~ dnorm(0,1),
+    b_a ~ dnorm(0,1),
+    b_c ~ dnorm(0,1),
+    sigma_p ~ dcauchy(0,1),
+    sigma_g ~ dcauchy(0,1)
+  ),
+  data=infoChosen, constraints=list(sigma_p="lower=0", sigma_g="lower=0"), 
+  warmup=1000, iter=1000, chains=1, cores=1 )
+
+precis(model3.0)
+plot(precis(model3.0), pars=c("a","b_a","b_c"), labels=c("Condition C","Condition A","Condition B"))
 
 #the ulam version using Statistical Rethinking 2nd Edition
 # make condition an index rather than using dummy variables (pp 328 Statistical Rethinking 2nd Edition )
@@ -182,7 +221,7 @@ model3 <- ulam(
     sigma_a ~ dexp(1),
     sigma_g ~ dexp(1),
     sigma_b ~ dexp(1)
-  ) , data=infoChosen_list , chains=4 , cores=4 , log_lik=TRUE )
+  ) , data=infoChosen_list , chains=1 , cores=1 , log_lik=TRUE )
 
 precis(model3)
 
