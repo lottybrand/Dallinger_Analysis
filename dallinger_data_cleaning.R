@@ -35,15 +35,26 @@ full_data$u_origin <- match(full_data$u_origin, current_u_origins)
 ##### Calculating the cumulative score, cumulative copies, and if they copied the top scorer and most copied : 
 #####
 
-#figure out cumulative asocial score
-full_data$c_a_score <- rep(-666, nrow(full_data))
+#figure out cumulative ASOCIAL score in Round 1
+full_data$c_a_score_r1 <- rep(-666, nrow(full_data))
 u_origins <- unique(full_data$u_origin)
 for (i in 1:length(u_origins)) {
   u_origin <- u_origins[i]
   relevant_rows <- c(1:nrow(full_data))[full_data$u_origin == u_origin]
   subset <- full_data[relevant_rows,]
-  c_a_score <- cumsum(subset$score * (1-subset$copying))
-  full_data$c_a_score[relevant_rows] <- c_a_score
+  c_a_score_r1 <- cumsum(subset$score * (1-subset$copying) * (subset$round==1))
+  full_data$c_a_score_r1[relevant_rows] <- c_a_score_r1
+}
+
+#figure out total score including copies 
+full_data$t_score <- rep(-666, nrow(full_data))
+u_origins <- unique(full_data$u_origin)
+for (i in 1:length(u_origins)) {
+  u_origin <- u_origins[i]
+  relevant_rows <- c(1:nrow(full_data))[full_data$u_origin == u_origin]
+  subset <- full_data[relevant_rows,]
+  t_score <- cumsum(subset$score)
+  full_data$t_score[relevant_rows] <- t_score
 }
 
 #figure out their cumulative copies:
@@ -54,6 +65,7 @@ full_data$is_model_id <- (full_data$copying == TRUE & full_data$Contents %in% al
 copying_decisions <- full_data[full_data$is_model_id == TRUE,]
 for (i in 1:nrow(full_data)) {
   full_data$c_copies[i] <- nrow(copying_decisions[
+    copying_decisions$round == 1 &
     copying_decisions$u_network == full_data$u_network[i] &
     copying_decisions$uid < full_data$uid[i] & 
     copying_decisions$Contents == as.character(full_data$Origin[i])
@@ -67,9 +79,9 @@ for (i in 1:nrow(full_data)) {
   if (full_data$is_model_id[i] == TRUE) {
     models <- potential_models[potential_models$number == full_data$number[i] & potential_models$u_network == full_data$u_network[i],]
     if (nrow(models) > 1) {
-      if (length(unique(models$c_a_score)) != 1) {
+      if (length(unique(models$c_a_score_r1)) != 1) {
         model <- models[as.character(models$Origin) == full_data$Contents[i],]
-        full_data$copied_successful[i] <- (model$c_a_score == max(models$c_a_score))*1
+        full_data$copied_successful[i] <- (model$c_a_score_r1 == max(models$c_a_score_r1))*1
       }
     }
   }
@@ -108,7 +120,9 @@ copyOnly <-full_data[full_data$copying=="TRUE",]
 #####
 
 # need to subset only copying instances and only when score info is visible (i.e. round 1 of condition B&C, and when chosen in round 2...)
+# first is it a copying decision rather than a copied answer:
 model_ids <- full_data[full_data$is_model_id==TRUE,]
+# then is it not condition a, and is it in round 1 (of B & C) OR  was info chosen score in R2... 
 scoreChoice <- model_ids[((!model_ids$condition=="a")&(model_ids$round==1))|(model_ids$info_chosen=="Total Score in Round 1"),]                                     
 
 
