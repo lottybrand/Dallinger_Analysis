@@ -49,7 +49,7 @@ for (i in 1:length(u_origins)) {
 #figure out total score including copies 
 full_data$t_score <- rep(-666, nrow(full_data))
 u_origins <- unique(full_data$u_origin)
-for (i in 1:length(u_origins)) {
+for (i in 1:length(u_origins)) {  
   u_origin <- u_origins[i]
   relevant_rows <- c(1:nrow(full_data))[full_data$u_origin == u_origin]
   subset <- full_data[relevant_rows,]

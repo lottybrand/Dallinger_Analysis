@@ -39,6 +39,17 @@ Descriptives for chose prestige:
 > mean(infoChosen$chosePrestige[infoChosen$condition=="c"])
 [1] 0.1506849
 
+Copying decisions altogether:
+a    b    c 
+ 746 1078 1149
+ 
+Copying decisions R2: 
+> r2copying<-copying_decisions[copying_decisions$round==2,]
+> table(r2copying$condition)
+
+  a   b   c 
+432 612 657
+
 Descriptives for copied most copied:
 > mean(prestigeChoice$copied_prestigious[prestigeChoice$condition=="b"])
 [1] 0.9278351
@@ -54,4 +65,14 @@ Descriptives for copied most successful:
 [1] 0.8412017
 > mean(scoreChoice$copied_successful[scoreChoice$condition=="a"])
 [1] NaN
+
+
+
+ 
+> mean(finalScore$t_score[finalScore$condition=="a"])
+[1] 66.40506
+> mean(finalScore$t_score[finalScore$condition=="b"])
+[1] 69.74324
+> mean(finalScore$t_score[finalScore$condition=="c"])
+[1] 69.51389 
 
