@@ -2,7 +2,7 @@
 #### inputting the data from Dallinger per Condition ####
 #### should really use a loop to do all of this for each condition.... 
 
-#setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
+setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
 
 # libraries
 library(jsonlite)

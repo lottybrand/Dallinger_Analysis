@@ -2,9 +2,12 @@
 #### Analyses for preregistration #####
 #### Run dallinger_data_cleaning.R script first"
 
+install.packages(c("coda","mvtnorm","devtools","loo","dagitty"))
+library(devtools)
+devtools::install_github("rmcelreath/rethinking",ref="Experimental")
 library(rethinking)
 
-source('dallinger_data_cleaning.R') 
+#source('dallinger_data_cleaning.R') 
 
 #####
 #####
@@ -49,7 +52,7 @@ model1 <- map2stan(
     sigma_g ~ dcauchy(0,1)
   ),
   data=scoreChoice, constraints=list(sigma_p="lower=0", sigma_g="lower=0"), 
-  warmup=1000, iter=1000, chains=1, cores=1 )
+  warmup=1000, iter=4000, chains=3, cores=3)
 
 precis(model1)
 
@@ -95,8 +98,8 @@ model2 <- map2stan(
     sigma_p ~ dcauchy(0,1),
     sigma_g ~ dcauchy(0,1)
   ),
-  data=prestigeChoice, constraints=list(sigma_p="lower=0"), 
-  warmup=1000, iter=1000, chains=1, cores=1 )
+  data=prestigeChoice, constraints=list(sigma_p="lower=0", sigma_g="lower=0"), 
+  warmup=1000, iter=4000, chains=3, cores=3 )
 
 precis(model2)
 
@@ -170,6 +173,8 @@ for (index in 1:Ngroups){
 }
 infoChosen$groupIndex <- groupIndex
 
+### version with CondB as baseline:
+
 model3.0 <- map2stan(
   alist(
     chosePrestige ~ dbinom(1, p),
@@ -188,8 +193,8 @@ model3.0 <- map2stan(
 precis(model3.0)
 plot(precis(model3.0), pars=c("a","b_a","b_c"), labels=c("Condition C","Condition A","Condition B"))
 
-#the ulam version using Statistical Rethinking 2nd Edition
-# make condition an index rather than using dummy variables (pp 328 Statistical Rethinking 2nd Edition )
+### the ulam version using Statistical Rethinking 2nd Edition
+### make condition an index rather than using dummy variables (pp 328 Statistical Rethinking 2nd Edition )
 
 Nconds = length(unique(infoChosen$condition))
 Oldconds <- infoChosen$condition
@@ -221,7 +226,8 @@ model3 <- ulam(
     sigma_a ~ dexp(1),
     sigma_g ~ dexp(1),
     sigma_b ~ dexp(1)
-  ) , data=infoChosen_list , chains=1 , cores=1 , log_lik=TRUE )
+  ) , data=infoChosen_list, constraints=list(sigma_a="lower=0", sigma_g="lower=0", sigma_b="lower=0"), 
+  warmup=1000, iter=4000, chains=3 , cores=3 , log_lik=TRUE )
 
 precis(model3)
 
@@ -233,7 +239,7 @@ plot( precis( as.data.frame(p_conds) ) , xlim=c(0,1) )
 #plotting condition effects, (pp 333 in 2nd edition)
 plot( precis( model3 , depth=2 , pars="b" ))
 
-#let's try condition as varying intercepts too, pp. 423 in Statistical Rethinking 2nd Edition:
+#now implementing condition as varying intercepts too, pp. 423 in Statistical Rethinking 2nd Edition:
 model3.1 <- ulam(
   alist(
     chosePrestige ~ dbinom( 1 , p ) ,
@@ -245,13 +251,15 @@ model3.1 <- ulam(
     sigma_a ~ dexp(1),
     sigma_g ~ dexp(1),
     sigma_b ~ dexp(1)
-  ) , data=infoChosen_list , chains=4 , cores=4 , log_lik=TRUE )
+  ) , data=infoChosen_list, constraints=list(sigma_a="lower=0", sigma_g="lower=0", sigma_b="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
+  warmup=1000, iter=5000, chains=3 , cores=3 , log_lik=TRUE )
 
 precis(model3.1, depth = 2)
+precis(model3.1, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
 
 #plotting condition effects, (pp 333 in 2nd edition)
-plot( precis( model3.1 , depth=2 , pars="b" ))
-
+mainFig <- plot(precis(model3.1, depth = 2), pars=c("b[2]","b[1]","b[3]"), labels=c("Control \n(Condition A)","Prestige \n(Condition B)","Success \n(Condition C)"), xlab="Model estimate")
+title("Participants Chose Prestige")
 
 #####
 #####

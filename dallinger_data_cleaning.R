@@ -144,10 +144,9 @@ copyOnlyContents <- copyOnly[!copyOnly$is_model_id==TRUE,]
 infoChosen <- copyOnlyContents[copyOnlyContents$round==2,]
 infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Round 1",1,0)
 
-# make Condition B the baseline:
-
-infoChosen$CondA <- ifelse(infoChosen$condition =="a", 1, 0)
-infoChosen$CondC <- ifelse(infoChosen$condition =="c", 1, 0)
+# make Condition B the baseline for old approach:
+#infoChosen$CondA <- ifelse(infoChosen$condition =="a", 1, 0)
+#infoChosen$CondC <- ifelse(infoChosen$condition =="c", 1, 0)
 
 ##### 
 ##### Prediction 4: 
