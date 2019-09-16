@@ -105,6 +105,7 @@ for (i in 1:nrow(full_data)) {
 #### So we can skip to here in future and not reload: 
 write.csv(full_data, file="full_data.csv", row.names = FALSE)
 full_data <- read.csv("full_data.csv")
+saveRDS(full_data, "full_data")
 
 #####
 ##### SUBSET OF ASOCIAL ONLY: 
@@ -116,7 +117,6 @@ asocialOnly <- full_data[full_data$copying=="FALSE",]
 #####
 
 copyOnly <-full_data[full_data$copying=="TRUE",]
-
 
 #####
 ##### Subset for seeing score info (Prediction 1)
@@ -134,7 +134,6 @@ scoreChoice <- model_ids[((!model_ids$condition=="a")&(model_ids$round==1))|(mod
 #####
 
 prestigeChoice <- model_ids[model_ids$info_chosen =="Times chosen in Round 1",]
-
 
 
 #####

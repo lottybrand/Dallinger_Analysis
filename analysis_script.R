@@ -2,10 +2,10 @@
 #### Analyses for preregistration #####
 #### Run dallinger_data_cleaning.R script first"
 
-install.packages(c("coda","mvtnorm","devtools","loo","dagitty"))
-library(devtools)
-devtools::install_github("rmcelreath/rethinking",ref="Experimental")
-library(rethinking)
+#install.packages(c("coda","mvtnorm","devtools","loo","dagitty"))
+#library(devtools)
+#devtools::install_github("rmcelreath/rethinking",ref="Experimental")
+#library(rethinking)
 
 #source('dallinger_data_cleaning.R') 
 
@@ -275,17 +275,17 @@ title("Participants Chose Prestige")
 
 asocialOnly <- as.data.frame(asocialOnly)
 
-Nppts = length(unique(asocialOnly$ppt))
-Oldppt <- asocialOnly$ppt
-pptIndex <- array(0,length(asocialOnly$ppt))
+Nppts = length(unique(asocialOnly$u_origin))
+Oldppt <- asocialOnly$u_origin
+pptIndex <- array(0,length(asocialOnly$u_origin))
 for (index in 1:Nppts){
   pptIndex[Oldppt == unique(Oldppt)[index]] = index
 }
 asocialOnly$pptIndex <- pptIndex
 
-Ngroups = length(unique(asocialOnly$group))
-Oldgroup <- asocialOnly$group
-groupIndex <- array(0,length(asocialOnly$group))
+Ngroups = length(unique(asocialOnly$u_network))
+Oldgroup <- asocialOnly$u_network
+groupIndex <- array(0,length(asocialOnly$u_network))
 for (index in 1:Ngroups){
   groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
 }
@@ -322,10 +322,13 @@ model4 <- ulam(
     sigma_a ~ dexp(1),
     sigma_g ~ dexp(1),
     sigma_b ~ dexp(1)
-  ) , data=asocialOnly_list , chains=4 , cores=4 , log_lik=TRUE )
+  ) , data=asocialOnly_list , constraints=list(sigma_a="lower=0", sigma_g="lower=0", sigma_b="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
+  warmup=1000, iter=9000, chains=3 , cores=3 , log_lik=TRUE )
 
 precis(model4)
-
+precis(model4, depth = 2)
+precis(model4, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+traceplot(model4)
 
 #####
 #####
