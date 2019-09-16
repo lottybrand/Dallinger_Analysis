@@ -252,10 +252,11 @@ model3.1 <- ulam(
     sigma_g ~ dexp(1),
     sigma_b ~ dexp(1)
   ) , data=infoChosen_list, constraints=list(sigma_a="lower=0", sigma_g="lower=0", sigma_b="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
-  warmup=1000, iter=5000, chains=3 , cores=3 , log_lik=TRUE )
+  warmup=1000, iter=9000, chains=3 , cores=3 , log_lik=TRUE )
 
 precis(model3.1, depth = 2)
 precis(model3.1, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+traceplot(model3.1)
 
 #plotting condition effects, (pp 333 in 2nd edition)
 mainFig <- plot(precis(model3.1, depth = 2), pars=c("b[2]","b[1]","b[3]"), labels=c("Control \n(Condition A)","Prestige \n(Condition B)","Success \n(Condition C)"), xlab="Model estimate")

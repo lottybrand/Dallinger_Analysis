@@ -102,6 +102,9 @@ for (i in 1:nrow(full_data)) {
   }
 }
 
+#### So we can skip to here in future and not reload: 
+write.csv(full_data, file="full_data.csv", row.names = FALSE)
+full_data <- read.csv("full_data.csv")
 
 #####
 ##### SUBSET OF ASOCIAL ONLY: 
@@ -156,9 +159,9 @@ infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Roun
 
 asocialOnly$copied <- ifelse(asocialOnly$Contents=="Ask Someone Else",1,0)
 
-#change baseline to condition to A:
-asocialOnly$condB <- ifelse(asocialOnly$condition=="b",1,0)
-asocialOnly$condC <- ifelse(asocialOnly$condition=="c",1,0)
+#change baseline to condition to A if not using ulam method:
+#asocialOnly$condB <- ifelse(asocialOnly$condition=="b",1,0)
+#asocialOnly$condC <- ifelse(asocialOnly$condition=="c",1,0)
 
 #####
 ##### Prediction 5:
