@@ -35,4 +35,31 @@ b[3] -3.62 1.15 -5.47 -1.81   262 1.01
 
 see main fig 
 
-WARNING: need to run more iterations/increase alpha, bad rhat and low n_effs here. 
+Prediction 4: 
+mean   sd  5.5% 94.5% n_eff Rhat
+b[1] -0.14 0.66 -1.40  0.69   154 1.03
+b[2] -1.01 0.82 -2.61 -0.02   143 1.03
+b[3] -0.08 0.66 -1.32  0.79   160 1.03
+
+tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
+  a   b   c 
+432 612 657 
+table(asocialOnly_2$copied)
+    0     1 
+12008  1701 
+657/1701
+[1] 0.3862434
+612/1701
+[1] 0.3597884
+432/1701
+[1] 0.2539683
+
+Prediction 5: 
+mean   sd  5.5% 94.5% n_eff Rhat
+b[1]  0.20 0.48 -0.58  0.96  1245    1
+b[2] -0.33 0.47 -1.05  0.42  1606    1
+b[3]  0.15 0.49 -0.65  0.91  1336    1
+
+tapply(finalScore_list$t_score, list(finalScore_list$condsIndex),mean)
+       1        2        3 
+69.74324 66.40506 69.51389 

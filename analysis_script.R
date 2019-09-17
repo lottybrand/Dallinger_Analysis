@@ -273,43 +273,43 @@ title("Participants Chose Prestige")
 
 #let's try ulam from 2nd edition again: 
 
-asocialOnly <- as.data.frame(asocialOnly)
+asocialOnly_2 <- as.data.frame(asocialOnly_2)
 
-Nppts = length(unique(asocialOnly$u_origin))
-Oldppt <- asocialOnly$u_origin
-pptIndex <- array(0,length(asocialOnly$u_origin))
+Nppts = length(unique(asocialOnly_2$u_origin))
+Oldppt <- asocialOnly_2$u_origin
+pptIndex <- array(0,length(asocialOnly_2$u_origin))
 for (index in 1:Nppts){
   pptIndex[Oldppt == unique(Oldppt)[index]] = index
 }
-asocialOnly$pptIndex <- pptIndex
+asocialOnly_2$pptIndex <- pptIndex
 
-Ngroups = length(unique(asocialOnly$u_network))
-Oldgroup <- asocialOnly$u_network
-groupIndex <- array(0,length(asocialOnly$u_network))
+Ngroups = length(unique(asocialOnly_2$u_network))
+Oldgroup <- asocialOnly_2$u_network
+groupIndex <- array(0,length(asocialOnly_2$u_network))
 for (index in 1:Ngroups){
   groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
 }
-asocialOnly$groupIndex <- groupIndex
+asocialOnly_2$groupIndex <- groupIndex
 
-Nconds = length(unique(asocialOnly$condition))
-Oldconds <- asocialOnly$condition
-condsIndex <- array(0,length(asocialOnly$condition))
+Nconds = length(unique(asocialOnly_2$condition))
+Oldconds <- asocialOnly_2$condition
+condsIndex <- array(0,length(asocialOnly_2$condition))
 for (index in 1:Nconds){
   condsIndex[Oldconds == unique(Oldconds)[index]] = index
 }
-asocialOnly$condsIndex <- condsIndex
+asocialOnly_2$condsIndex <- condsIndex
 
 
-asocialOnly$copied <-as.integer(asocialOnly$copied)
-asocialOnly$condsIndex <- as.integer(asocialOnly$condsIndex)
-asocialOnly$pptIndex <- as.integer(asocialOnly$pptIndex)
-asocialOnly$groupIndex <- as.integer(asocialOnly$groupIndex)
+asocialOnly_2$copied <-as.integer(asocialOnly_2$copied)
+asocialOnly_2$condsIndex <- as.integer(asocialOnly_2$condsIndex)
+asocialOnly_2$pptIndex <- as.integer(asocialOnly_2$pptIndex)
+asocialOnly_2$groupIndex <- as.integer(asocialOnly_2$groupIndex)
 
-asocialOnly_list <- list(
-  copied = asocialOnly$copied,
-  pptIndex = asocialOnly$pptIndex,
-  groupIndex = asocialOnly$groupIndex,
-  condsIndex = asocialOnly$condsIndex )
+asocialOnly_list_2 <- list(
+  copied = asocialOnly_2$copied,
+  pptIndex = asocialOnly_2$pptIndex,
+  groupIndex = asocialOnly_2$groupIndex,
+  condsIndex = asocialOnly_2$condsIndex )
 
 model4 <- ulam(
   alist(
@@ -322,13 +322,16 @@ model4 <- ulam(
     sigma_a ~ dexp(1),
     sigma_g ~ dexp(1),
     sigma_b ~ dexp(1)
-  ) , data=asocialOnly_list , constraints=list(sigma_a="lower=0", sigma_g="lower=0", sigma_b="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
-  warmup=1000, iter=9000, chains=3 , cores=3 , log_lik=TRUE )
+  ) , data=asocialOnly_list_2 , constraints=list(sigma_a="lower=0", sigma_g="lower=0", sigma_b="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
+  warmup=1000, iter=5000, chains=3 , cores=3 , log_lik=TRUE )
 
 precis(model4)
 precis(model4, depth = 2)
 precis(model4, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
 traceplot(model4)
+
+table(asocialOnly_2$copied)
+tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),mean)
 
 #####
 #####
@@ -342,18 +345,10 @@ traceplot(model4)
 
 finalScore <- as.data.frame(finalScore)
 
-Nppts = length(unique(finalScore$ppt))
-Oldppt <- finalScore$ppt
-pptIndex <- array(0,length(finalScore$ppt))
-for (index in 1:Nppts){
-  pptIndex[Oldppt == unique(Oldppt)[index]] = index
-}
-finalScore$pptIndex <- pptIndex
-finalScore$pptIndex <- as.integer(finalScore$pptIndex)
 
-Ngroups = length(unique(finalScore$group))
-Oldgroup <- finalScore$group
-groupIndex <- array(0,length(finalScore$group))
+Ngroups = length(unique(finalScore$u_network))
+Oldgroup <- finalScore$u_network
+groupIndex <- array(0,length(finalScore$u_network))
 for (index in 1:Ngroups){
   groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
 }
@@ -369,27 +364,70 @@ for (index in 1:Nconds){
 finalScore$condsIndex <- condsIndex
 finalScore$condsIndex <- as.integer(finalScore$condsIndex)
 
+finalScore$t_score <- as.integer(finalScore$t_score)
+
 finalScore_list <- list(
-  c_a_score = finalScore$c_a_score,
-  pptIndex = finalScore$pptIndex,
+  t_score = finalScore$t_score,
   groupIndex = finalScore$groupIndex,
   condsIndex = finalScore$condsIndex
 )
 
-#the below model can't run yet as this dataset only has one condition and group in the final question
-#possibly need to parameterise this based on how many divergent interations there are etc
-model5 <- ulam(
+#want to control for group here, figure out why ulam doesn't work, and 
+
+model5 <- map2stan(
   alist(
-    c_a_score ~ dnorm(mu, sigma),
-    mu <- a + a_p[pptIndex] + a_g[groupIndex] + b[condsIndex],
-    a ~ dnorm(0,10),
-    b[condsIndex] ~ dnorm(0,1),
-    a_p[pptIndex] ~ dnorm(a_bar,sigma_a),
-    a_g[groupIndex] ~ dnorm(0, sigma_g),
-    a_bar ~ dnorm(0,10),
-    sigma ~ dunif(0,10),
-    sigma_a ~ dexp(1),
-    sigma_g ~ dexp(1)
-  ),
-  data=finalScore_list, chains=4 , cores=4 , log_lik=TRUE )
+    t_score ~ dnorm(mu, sigma),
+    mu <- a + b[condsIndex],
+    a ~ dnorm(50,10),
+    b[condsIndex] ~ dnorm(0,0.5),
+    sigma ~ dexp(1)
+  ), data = finalScore_list, chains=1)
+
+precis(model5)
+precis(model5, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+tapply(finalScore_list$t_score, list(finalScore_list$condsIndex),mean)
+
+#Round 2 score: 
+
+finalScore_R2 <- as.data.frame(finalScore_R2)
+
+Ngroups = length(unique(finalScore_R2$u_network))
+Oldgroup <- finalScore_R2$u_network
+groupIndex <- array(0,length(finalScore_R2$u_network))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+finalScore_R2$groupIndex <- groupIndex
+finalScore_R2$groupIndex <- as.integer(finalScore_R2$groupIndex)
+
+Nconds = length(unique(finalScore_R2$condition))
+Oldconds <- finalScore_R2$condition
+condsIndex <- array(0,length(finalScore_R2$condition))
+for (index in 1:Nconds){
+  condsIndex[Oldconds == unique(Oldconds)[index]] = index
+}
+finalScore_R2$condsIndex <- condsIndex
+finalScore_R2$condsIndex <- as.integer(finalScore_R2$condsIndex)
+
+finalScore_R2$t_score_r2 <- as.integer(finalScore_R2$t_score_r2)
+
+finalScore_R2_list <- list(
+  t_score_r2 = finalScore_R2$t_score_r2,
+  groupIndex = finalScore_R2$groupIndex,
+  condsIndex = finalScore_R2$condsIndex
+)
+
+#something very strange going on here. Very divergent iterations 
+model5.1 <- map2stan(
+  alist(
+    t_score ~ dnorm(mu, sigma),
+    mu <- a + b[condsIndex],
+    a ~ dnorm(40,10),
+    b[condsIndex] ~ dnorm(0,10),
+    sigma ~ dexp(1)
+  ), data = finalScore_R2_list, chains=3)
+
+precis(model5.1)
+precis(model5.1, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+tapply(finalScore_R2_list$t_score, list(finalScore_R2_list$condsIndex),mean)
 
