@@ -63,3 +63,9 @@ b[3]  0.16 0.47 -0.60  0.92  6922    1
 tapply(finalScore_list$t_score, list(finalScore_list$condsIndex),mean)
        1        2        3 
 69.74324 66.40506 69.51389 
+
+TOP SCORERS:
+Condition A: u_origin 93, 107, 120. 
+93 copied 6 times, was copied 3 times. 
+107 copied 0 times, was copied 5 times. 
+120 copied 0 times, was copied 2 times. 
