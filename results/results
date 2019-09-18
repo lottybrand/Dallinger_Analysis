@@ -1,5 +1,5 @@
 Results
-Prediction one: 
+Prediction 1: 
 
 table(scoreChoice$copied_successful)
 
@@ -13,7 +13,7 @@ a       1.97 0.31 1.49  2.47  3931    1
 sigma_p 1.19 0.20 0.89  1.53  3375    1
 sigma_g 1.14 0.30 0.72  1.65  3587    1
 
-two:
+Prediction 2:
 
 table(prestigeChoice$copied_prestigious)
  0   1 
@@ -26,7 +26,7 @@ a       3.45 0.59 2.57  4.42  3522    1
 sigma_p 1.90 0.60 1.08  2.97  1605    1
 sigma_g 1.36 0.64 0.35  2.40  1381    1
 
-Prediction 3: 
+Prediction 3,4,5: 
 model3.1: 
 mean   sd  5.5% 94.5% n_eff Rhat
 b[1]  3.15 1.17  1.32  5.09   301 1.01
@@ -35,30 +35,30 @@ b[3] -3.62 1.15 -5.47 -1.81   262 1.01
 
 see main fig 
 
-Prediction 4: 
+Prediction 6: 
 mean   sd  5.5% 94.5% n_eff Rhat
 b[1] -0.14 0.66 -1.40  0.69   154 1.03
 b[2] -1.01 0.82 -2.61 -0.02   143 1.03
 b[3] -0.08 0.66 -1.32  0.79   160 1.03
 
-tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
-  a   b   c 
-432 612 657 
-table(asocialOnly_2$copied)
+> table(asocialOnly_2$copied)
     0     1 
 12008  1701 
-657/1701
-[1] 0.3862434
-612/1701
-[1] 0.3597884
-432/1701
-[1] 0.2539683
+> tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),mean)
+        a         b         c 
+0.0900000 0.1351292 0.1500000 
+> tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
+  a   b   c 
+432 612 657 
+> table(asocialOnly_2$condition)
+   a    b    c 
+4800 4529 4380 
 
-Prediction 5: 
+Prediction 7: 
 mean   sd  5.5% 94.5% n_eff Rhat
-b[1]  0.20 0.48 -0.58  0.96  1245    1
-b[2] -0.33 0.47 -1.05  0.42  1606    1
-b[3]  0.15 0.49 -0.65  0.91  1336    1
+b[1]  0.18 0.47 -0.60  0.92 10023    1
+b[2] -0.31 0.48 -1.07  0.43  6779    1
+b[3]  0.16 0.47 -0.60  0.92  6922    1
 
 tapply(finalScore_list$t_score, list(finalScore_list$condsIndex),mean)
        1        2        3 

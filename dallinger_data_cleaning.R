@@ -137,7 +137,7 @@ prestigeChoice <- model_ids[model_ids$info_chosen =="Times chosen in Round 1",]
 
 
 #####
-##### Subset of info chosen for Prediction 3:
+##### Subset of info chosen for Predictions 3,4,5 (models 3 and 3.1):
 #####
 
 #just the contets of the copying decision (not the nodeIDS) 
@@ -151,7 +151,7 @@ infoChosen$chosePrestige <- ifelse(infoChosen$info_chosen=="Times chosen in Roun
 #infoChosen$CondC <- ifelse(infoChosen$condition =="c", 1, 0)
 
 ##### 
-##### Prediction 4: 
+##### Prediction 6 (model4): 
 #####
 
 # have copied or not be 0/1 for asocial choices (this includes any 'ask someone else's)
@@ -164,7 +164,7 @@ asocialOnly_2 <- asocialOnly[asocialOnly$round==2,]
 #asocialOnly$condC <- ifelse(asocialOnly$condition=="c",1,0)
 
 #####
-##### Prediction 5:
+##### Prediction 7 (model 5):
 #####
 
 #taking just the accumulated score for the final question for each participant
@@ -182,6 +182,6 @@ for (i in 1:length(u_origins)) {
   full_data_R2$t_score_r2[relevant_rows] <- t_score_r2
 }
 
-asocialOnlyR2 <- full_data_R2[full_data_R2$copying=="FALSE",]
+asocialOnly_2 <- full_data_R2[full_data_R2$copying=="FALSE",]
 
-finalScore_R2 <- asocialOnlyR2[asocialOnlyR2$number==100,]
+finalScore_R2 <- asocialOnly_2[asocialOnly_2$number==100,]

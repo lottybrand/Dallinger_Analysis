@@ -143,7 +143,7 @@ model2.1 <- map2stan(
 precis(model2.1)
 #####
 #####
-##### Prediction 3: Participants choose to view “most copied” info more in Condition B than the other two conditions, 
+##### Prediction 3,4 and 5: Participants choose to view “most copied” info more in Condition B than the other two conditions, 
 ##### because (i) in Condition B copiers can access success info, unlike Condition A where copiers only have access to irrelevant info,
 ##### and (ii) in Condition B copying info is the only relevant cue available, unlike Condition C where direct success info is available and just as easily accessible
 #####
@@ -264,7 +264,7 @@ title("Participants Chose Prestige")
 
 #####
 #####
-##### Prediction 4: Copying rate is higher in Conditions B & C compared to Condition A because copying is only based on success in Conditions B & C
+##### Prediction 6 (model4): Copying rate is higher in Conditions B & C compared to Condition A because copying is only based on success in Conditions B & C
 #####
 #####
 
@@ -333,9 +333,11 @@ traceplot(model4)
 table(asocialOnly_2$copied)
 tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),mean)
 
+table(asocialOnly_2$)
+
 #####
 #####
-##### Prediction 5: Participants perform best on the quiz in Condition B & C compared to Condition A because copying is only based on success in Conditions B & C
+##### Prediction 7 (model5): Participants perform best on the quiz in Condition B & C compared to Condition A because copying is only based on success in Conditions B & C
 #####
 
 ## Data frame consists of accumulated scores (including copied score) on final question
@@ -372,16 +374,17 @@ finalScore_list <- list(
   condsIndex = finalScore$condsIndex
 )
 
-#want to control for group here, figure out why ulam doesn't work, and 
+#want to control for group here, and figure out why ulam doesn't work
 
 model5 <- map2stan(
   alist(
     t_score ~ dnorm(mu, sigma),
-    mu <- a + b[condsIndex],
+    mu <- a + b[condsIndex] + g[groupIndex],
     a ~ dnorm(50,10),
     b[condsIndex] ~ dnorm(0,0.5),
+    g[groupIndex] ~ dnorm(0,0.5),
     sigma ~ dexp(1)
-  ), data = finalScore_list, chains=1)
+  ), data = finalScore_list, chains=3)
 
 precis(model5)
 precis(model5, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
@@ -417,13 +420,14 @@ finalScore_R2_list <- list(
   condsIndex = finalScore_R2$condsIndex
 )
 
-#something very strange going on here. Very divergent iterations 
+#still not sure why ulam won't work here
 model5.1 <- map2stan(
   alist(
-    t_score ~ dnorm(mu, sigma),
-    mu <- a + b[condsIndex],
+    t_score_r2 ~ dnorm(mu, sigma),
+    mu <- a + b[condsIndex] + g[groupIndex],
     a ~ dnorm(40,10),
-    b[condsIndex] ~ dnorm(0,10),
+    b[condsIndex] ~ dnorm(0,0.5),
+    g[groupIndex] ~ dnorm(0,0.5),
     sigma ~ dexp(1)
   ), data = finalScore_R2_list, chains=3)
 
