@@ -331,9 +331,9 @@ precis(model4, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
 traceplot(model4)
 
 table(asocialOnly_2$copied)
-tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),mean)
+tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
 
-table(asocialOnly_2$)
+table(asocialOnly_2$condition)
 
 #####
 #####
