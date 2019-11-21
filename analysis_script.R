@@ -327,13 +327,115 @@ model4 <- ulam(
 
 precis(model4)
 precis(model4, depth = 2)
-precis(model4, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+precis(model4, pars = c('a_bar','b[1]', 'b[2]', 'b[3]'), depth=2)
 traceplot(model4)
 
 table(asocialOnly_2$copied)
 tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
 
 table(asocialOnly_2$condition)
+
+#model4 reparameterised (from the book!)
+model4.2 <- ulam(
+  alist(
+    copied ~ dbinom( 1 , p ) ,
+    logit(p) <- a_bar + a[pptIndex]*sigma_a + g[groupIndex]*sigma_g + b[condsIndex] ,
+    b[condsIndex] ~ dnorm( 0 , 0.5 ),
+    a[pptIndex] ~ dnorm( 0 , 1 ),
+    g[groupIndex] ~ dnorm( 0 , 1 ),
+    a_bar ~ dnorm( 0 , 1.5 ),
+    sigma_a ~ dexp(1),
+    sigma_g ~ dexp(1)
+  ) , data=asocialOnly_list_2 , constraints=list(sigma_a="lower=0", sigma_g="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
+  warmup=1000, iter=5000, chains=3 , cores=3 , log_lik=TRUE )
+print(Sys.time())
+
+precis(model4.2)
+precis(model4.2, depth = 2)
+precis(model4.2, pars = c('a_bar','b[1]', 'b[2]', 'b[3]'), depth=2)
+traceplot(model4)
+
+post <- extract.samples(model4.2)
+diff_ab <- post$b[,1] - post$b[,2]
+diff_ac <- post$b[,3] - post$b[,2]
+diff_bc <- post$b[,1] - post$b[,3]
+precis(list(diff_ab=diff_ab, diff_ac=diff_ac, diff_bc=diff_bc))
+
+
+### without a_bar
+model4.3 <- ulam(
+  alist(
+    copied ~ dbinom( 1 , p ) ,
+    logit(p) <- a[pptIndex]*sigma_a + g[groupIndex]*sigma_g + b[condsIndex] ,
+    b[condsIndex] ~ dnorm( 0 , 1 ),
+    a[pptIndex] ~ dnorm( 0 , 1 ),
+    g[groupIndex] ~ dnorm( 0 , 1 ),
+    sigma_a ~ dexp(1),
+    sigma_g ~ dexp(1)
+  ) , data=asocialOnly_list_2 , constraints=list(sigma_a="lower=0", sigma_g="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
+  warmup=1000, iter=5000, chains=3 , cores=3 , log_lik=TRUE )
+print(Sys.time())
+
+precis(model4.3, depth = 2)
+precis(model4.3, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+
+
+post4.3 <- extract.samples(model4.3)
+diff_ab_4.3 <- post4.3$b[,1] - post4.3$b[,2]
+diff_ac_4.3 <- post4.3$b[,3] - post4.3$b[,2]
+diff_bc_4.3 <- post4.3$b[,1] - post4.3$b[,3]
+precis(list(diff_ab_4.3=diff_ab_4.3, diff_ac_4.3=diff_ac_4.3, diff_bc_4.3=diff_bc_4.3))
+
+
+#change dem priors
+model4.4 <- ulam(
+  alist(
+    copied ~ dbinom( 1 , p ) ,
+    logit(p) <- a_bar + a[pptIndex]*sigma_a + g[groupIndex]*sigma_g + b[condsIndex],
+    b[condsIndex] ~ dnorm( 0 , 1 ),
+    a[pptIndex] ~ dnorm( 0 , 1 ),
+    g[groupIndex] ~ dnorm( 0 , 1 ),
+    a_bar ~ dnorm ( 0, 1 ),
+    sigma_a ~ dexp(1),
+    sigma_g ~ dexp(1)
+  ) , data=asocialOnly_list_2 , constraints=list(sigma_a="lower=0", sigma_g="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
+  warmup=1000, iter=5000, chains=3 , cores=3 , log_lik=TRUE )
+print(Sys.time())
+
+precis(model4.4, depth = 2)
+precis(model4.4, pars = c('a_bar','b[1]', 'b[2]', 'b[3]'), depth=2)
+
+post4.4 <- extract.samples(model4.4)
+diff_ab_4.4 <- post4.4$b[,1] - post4.4$b[,2]
+diff_ac_4.4 <- post4.4$b[,3] - post4.4$b[,2]
+diff_bc_4.4 <- post4.4$b[,1] - post4.4$b[,3]
+precis(list(diff_ab_4.4=diff_ab_4.4, diff_ac_4.4=diff_ac_4.4, diff_bc_4.4=diff_bc_4.4))
+
+#another prior shift?
+model4.5 <- ulam(
+  alist(
+    copied ~ dbinom( 1 , p ) ,
+    logit(p) <- a_bar + a[pptIndex]*sigma_a + g[groupIndex]*sigma_g + b[condsIndex],
+    b[condsIndex] ~ dnorm( 0 , 0.5 ),
+    a[pptIndex] ~ dnorm( 0 , 0.5 ),
+    g[groupIndex] ~ dnorm( 0 , 0.5 ),
+    a_bar ~ dnorm ( 0, 1.5 ),
+    sigma_a ~ dexp(1),
+    sigma_g ~ dexp(1)
+  ) , data=asocialOnly_list_2 , constraints=list(sigma_a="lower=0", sigma_g="lower=0"), control=list( adapt_delta=0.99, max_treedepth=13), 
+  warmup=1000, iter=5000, chains=3 , cores=3 , log_lik=TRUE )
+print(Sys.time())
+
+precis(model4.5, depth = 2)
+precis(model4.5, pars = c('a_bar','b[1]', 'b[2]', 'b[3]'), depth=2)
+
+post4.5 <- extract.samples(model4.5)
+diff_ab_4.5 <- post4.5$b[,1] - post4.5$b[,2]
+diff_ac_4.5 <- post4.5$b[,3] - post4.5$b[,2]
+diff_bc_4.5 <- post4.5$b[,1] - post4.5$b[,3]
+precis(list(diff_ab_4.5=diff_ab_4.5, diff_ac_4.5=diff_ac_4.5, diff_bc_4.5=diff_bc_4.5))
+
+
 
 #####
 #####

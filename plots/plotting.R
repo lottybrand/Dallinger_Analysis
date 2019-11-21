@@ -1,4 +1,5 @@
-#plotting
+#plotting 
+# run relevant sections of analysis_script first
 hist(finalScore$c_copies)
 
 prestigePlot <- ggplot(data = finalScore) + 
@@ -29,8 +30,10 @@ scorePresPlot
 finalScoreBC <- finalScore[!finalScore$condition=="a",]
 
 scorePresPlotBC <- ggplot(data = finalScoreBC, mapping = aes(x = t_score, y = c_copies)) + 
-  geom_point() + 
-  geom_smooth() + theme_bw() + xlab("Total Score") + ylab("Prestige Score")
-scorePresPlotBC
+  geom_point(size=3) 
+scorePresPlotBC + theme_bw() +
+  theme(text = element_text(size=12), axis.title.y=element_text(margin=margin(0,12,0,0))) +
+  xlab("Total Score") + ylab("Prestige Score (Total times Copied)")
+
 
 cor.test(finalScoreBC$c_copies, finalScoreBC$t_score)

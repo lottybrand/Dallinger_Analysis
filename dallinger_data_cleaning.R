@@ -1,8 +1,8 @@
 
 # Data prep for Dallinger analysis
-
-source('data_inputting.R')
-
+# SKIP TO LINE 108 <<- ONLY NEED TO RUN THIS
+# source('data_inputting.R')
+#####
 #assign first dataset to full_data:
 full_data <- loaded_files[[1]]
 
@@ -102,10 +102,11 @@ for (i in 1:nrow(full_data)) {
   }
 }
 
-#### So we can skip to here in future and not reload: 
-write.csv(full_data, file="full_data.csv", row.names = FALSE)
+#####
+# So we can skip to here in future and not reload: 
+# write.csv(full_data, file="full_data.csv", row.names = FALSE)
 full_data <- read.csv("full_data.csv")
-saveRDS(full_data, "full_data")
+# saveRDS(full_data, "full_data")
 
 #####
 ##### SUBSET OF ASOCIAL ONLY: 
