@@ -1,6 +1,8 @@
 #plotting 
 # run relevant sections of analysis_script first
 hist(finalScore$c_copies)
+hist(finalScore$t_copied)
+
 
 prestigePlot <- ggplot(data = finalScore) + 
   stat_count(mapping = aes(x = c_copies), )

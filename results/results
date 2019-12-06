@@ -60,9 +60,23 @@ b[1]  0.18 0.47 -0.60  0.92 10023    1
 b[2] -0.31 0.48 -1.07  0.43  6779    1
 b[3]  0.16 0.47 -0.60  0.92  6922    1
 
+Prediction 7 contrasts (model 5 contrasts)
+'data.frame': 3000 obs. of 3 variables:
+          mean   sd  5.5% 94.5%  histogram
+diff_ab_5 0.51 0.66 -0.53  1.56 ▁▁▁▅▇▇▅▁▁▁
+diff_ac_5 0.47 0.64 -0.56  1.46 ▁▁▁▃▇▇▃▁▁▁
+diff_bc_5 0.04 0.65 -1.00  1.05 ▁▁▁▃▇▇▅▁▁▁
+
 tapply(finalScore_list$t_score, list(finalScore_list$condsIndex),mean)
        1        2        3 
 69.74324 66.40506 69.51389 
+
+Exploratory 7: 
+Control Condition: 
+      mean   sd  5.5% 94.5% n_eff Rhat
+a     65.29 1.29 63.18 67.39  2666    1
+b      0.10 0.06  0.00  0.19  2596    1
+sigma 10.53 0.80  9.29 11.89  3362    1
 
 TOP SCORERS:
 Condition A: u_origin 93, 107, 120. 

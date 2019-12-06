@@ -1,0 +1,30 @@
+> precis(model4.2)
+265 vector or matrix parameters hidden. Use depth=2 to show them.
+         mean   sd  5.5% 94.5% n_eff Rhat
+a_bar   -3.56 0.35 -4.13 -2.99  3610    1
+sigma_a  2.62 0.18  2.34  2.93  2106    1
+sigma_g  0.33 0.26  0.03  0.81   519    1
+> precis(model4.2, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+      mean   sd  5.5% 94.5% n_eff Rhat
+b[1]  0.12 0.37 -0.47  0.71  3739    1
+b[2] -0.67 0.36 -1.25 -0.09  4782    1
+b[3]  0.15 0.37 -0.43  0.73  4366    1
+
+'data.frame': 12000 obs. of 3 variables:
+         mean   sd  5.5% 94.5% histogram
+diff_ab  0.79 0.41  0.11  1.43   ▁▁▃▇▃▁▁
+diff_ac  0.82 0.40  0.18  1.45   ▁▁▃▇▃▁▁
+diff_bc -0.03 0.41 -0.68  0.63   ▁▁▂▇▇▂▁
+
+model4.4 (priors all 0,1)
+mean   sd  5.5% 94.5% n_eff Rhat
+a_bar -2.73 0.52 -3.56 -1.90  5999    1
+b[1]  -0.59 0.57 -1.49  0.31  4502    1
+b[2]  -1.63 0.57 -2.55 -0.71  5051    1
+b[3]  -0.52 0.57 -1.44  0.39  4619    1
+
+'data.frame': 12000 obs. of 3 variables:
+             mean   sd  5.5% 94.5% histogram
+diff_ab_4.4  1.04 0.48  0.27  1.79  ▁▁▂▇▇▃▁▁
+diff_ac_4.4  1.11 0.48  0.35  1.87 ▁▁▂▅▇▃▁▁▁
+diff_bc_4.4 -0.07 0.47 -0.82  0.67 ▁▁▁▂▇▇▂▁▁

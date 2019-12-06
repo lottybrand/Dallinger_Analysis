@@ -259,7 +259,7 @@ precis(model3.1, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
 traceplot(model3.1)
 
 #plotting condition effects, (pp 333 in 2nd edition)
-mainFig <- plot(precis(model3.1, depth = 2), pars=c("b[2]","b[1]","b[3]"), labels=c("Control \n(Condition A)","Prestige \n(Condition B)","Success \n(Condition C)"), xlab="Model estimate")
+mainFig <- plot(precis(model3.1, depth = 2), pars=c("b[2]","b[1]","b[3]"), labels=c("Control \nCondition","Prestige \nCondition","Success \nCondition"), xlab="Model estimate")
 title("Participants Chose Prestige")
 
 #####
@@ -492,6 +492,14 @@ precis(model5)
 precis(model5, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
 tapply(finalScore_list$t_score, list(finalScore_list$condsIndex),mean)
 
+post5 <- extract.samples(model5)
+diff_ab_5 <- post5$b[,1] - post5$b[,2]
+diff_ac_5 <- post5$b[,3] - post5$b[,2]
+diff_bc_5 <- post5$b[,1] - post5$b[,3]
+precis(list(diff_ab_5=diff_ab_5, diff_ac_5=diff_ac_5, diff_bc_5=diff_bc_5))
+
+
+
 #Round 2 score: 
 
 finalScore_R2 <- as.data.frame(finalScore_R2)
@@ -527,7 +535,7 @@ model5.1 <- map2stan(
   alist(
     t_score_r2 ~ dnorm(mu, sigma),
     mu <- a + b[condsIndex] + g[groupIndex],
-    a ~ dnorm(40,10),
+    a ~ dnorm(30,10),
     b[condsIndex] ~ dnorm(0,0.5),
     g[groupIndex] ~ dnorm(0,0.5),
     sigma ~ dexp(1)
@@ -536,4 +544,128 @@ model5.1 <- map2stan(
 precis(model5.1)
 precis(model5.1, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
 tapply(finalScore_R2_list$t_score, list(finalScore_R2_list$condsIndex),mean)
+
+
+post5.1 <- extract.samples(model5.1)
+diff_ab_5.1 <- post5.1$b[,1] - post5.1$b[,2]
+diff_ac_5.1 <- post5.1$b[,3] - post5.1$b[,2]
+diff_bc_5.1 <- post5.1$b[,1] - post5.1$b[,3]
+precis(list(diff_ab_5.1=diff_ab_5.1, diff_ac_5.1=diff_ac_5.1, diff_bc_5.1=diff_bc_5.1))
+
+
+# EXPLORATORY: 
+# model 5.2 , t_score <- t_copied
+
+finalScoreBC <- as.data.frame(finalScoreBC)
+
+Ngroups = length(unique(finalScoreBC$u_network))
+Oldgroup <- finalScoreBC$u_network
+groupIndex <- array(0,length(finalScoreBC$u_network))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+finalScoreBC$groupIndex <- groupIndex
+finalScoreBC$groupIndex <- as.integer(finalScoreBC$groupIndex)
+
+finalScoreBC$t_score <- as.integer(finalScoreBC$t_score)
+
+finalScoreBC_list <- list(
+  t_score = finalScoreBC$t_score,
+  groupIndex = finalScoreBC$groupIndex,
+  t_copied = finalScoreBC$t_copied
+)
+
+
+model5.2 <- map2stan(
+  alist(
+    t_score ~ dnorm(mu, sigma),
+    mu <- a + b*t_copied + g[groupIndex],
+    a ~ dnorm(50,10),
+    b ~ dnorm(0,1),
+    g[groupIndex] ~ dnorm(0,1),
+    sigma ~ dexp(1)
+  ), data = finalScoreBC_list, chains=3)
+
+precis(model5.2)
+
+# control condition: 
+
+finalScoreA <- as.data.frame(finalScoreA)
+
+Ngroups = length(unique(finalScoreA$u_network))
+Oldgroup <- finalScoreA$u_network
+groupIndex <- array(0,length(finalScoreA$u_network))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+finalScoreA$groupIndex <- groupIndex
+finalScoreA$groupIndex <- as.integer(finalScoreA$groupIndex)
+
+finalScoreA$t_score <- as.integer(finalScoreA$t_score)
+
+finalScoreA_list <- list(
+  t_score = finalScoreA$t_score,
+  groupIndex = finalScoreA$groupIndex,
+  t_copied = finalScoreA$t_copied
+)
+
+model5.2.1 <- map2stan(
+  alist(
+    t_score ~ dnorm(mu, sigma),
+    mu <- a + b*t_copied + g[groupIndex],
+    a ~ dnorm(50,10),
+    b ~ dnorm(0,1),
+    g[groupIndex] ~ dnorm(0,1),
+    sigma ~ dexp(1)
+  ), data = finalScoreA_list, chains=3)
+
+precis(model5.2.1)
+
+# EXPLORATORY: 
+# model 5.3 , c_copies <- t_score
+
+
+finalScoreBC <- as.data.frame(finalScoreBC)
+
+
+Ngroups = length(unique(finalScoreBC$u_network))
+Oldgroup <- finalScoreBC$u_network
+groupIndex <- array(0,length(finalScoreBC$u_network))
+for (index in 1:Ngroups){
+  groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
+}
+finalScoreBC$groupIndex <- groupIndex
+finalScoreBC$groupIndex <- as.integer(finalScoreBC$groupIndex)
+
+Nconds = length(unique(finalScoreBC$condition))
+Oldconds <- finalScoreBC$condition
+condsIndex <- array(0,length(finalScoreBC$condition))
+for (index in 1:Nconds){
+  condsIndex[Oldconds == unique(Oldconds)[index]] = index
+}
+finalScoreBC$condsIndex <- condsIndex
+finalScoreBC$condsIndex <- as.integer(finalScoreBC$condsIndex)
+
+finalScoreBC$t_score <- as.integer(finalScoreBC$t_score)
+finalScoreBC$c_copies <- as.integer(finalScoreBC$c_copies)
+
+finalScoreBC_list <- list(
+  t_score = finalScoreBC$t_score,
+  groupIndex = finalScoreBC$groupIndex,
+  condsIndex = finalScoreBC$condsIndex,
+  c_copies = finalScoreBC$c_copies
+)
+
+
+model5.3 <- map2stan(
+  alist(
+    c_copies ~ dnorm(mu, sigma),
+    mu <- a + b*t_score + g[groupIndex],
+    a ~ dnorm(6,10),
+    b ~ dnorm(0,0.5),
+    g[groupIndex] ~ dnorm(0,0.5),
+    sigma ~ dexp(1)
+  ), data = finalScoreBC_list, chains=3)
+
+precis(model5.3)
 

@@ -57,6 +57,17 @@ for (i in 1:length(u_origins)) {
   full_data$t_score[relevant_rows] <- t_score
 }
 
+#figure out total copied
+full_data$t_copied <- rep(-666, nrow(full_data))
+u_origins <- unique(full_data$u_origin)
+for (i in 1:length(u_origins)) {  
+  u_origin <- u_origins[i]
+  relevant_rows <- c(1:nrow(full_data))[full_data$u_origin == u_origin & full_data$is_model_id == FALSE]
+  subset <- full_data[relevant_rows,]
+  t_copied <- cumsum(subset$copying)
+  full_data$t_copied[relevant_rows] <- t_copied
+}
+
 #figure out their cumulative copies:
 
 full_data$c_copies <- rep(-666, nrow(full_data))
@@ -104,7 +115,7 @@ for (i in 1:nrow(full_data)) {
 
 #####
 # So we can skip to here in future and not reload: 
-# write.csv(full_data, file="full_data.csv", row.names = FALSE)
+#write.csv(full_data, file="full_data.csv", row.names = FALSE)
 full_data <- read.csv("full_data.csv")
 # saveRDS(full_data, "full_data")
 
@@ -170,6 +181,8 @@ asocialOnly_2 <- asocialOnly[asocialOnly$round==2,]
 
 #taking just the accumulated score for the final question for each participant
 finalScore <- asocialOnly[asocialOnly$number==100,]
+finalScoreBC <- finalScore[!finalScore$condition=="a",]
+finalScoreA <- finalScore[finalScore$condition=="a",]
 
 #what about just round 2's total scores:
 full_data_R2 <- full_data[full_data$round==2,]
