@@ -2,27 +2,13 @@
 #### inputting the data from Dallinger per Condition ####
 #### should really use a loop to do all of this for each condition.... 
 
-#setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
+setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
 
 # libraries
 library(jsonlite)
 library(data.table)
 library(dplyr)
 
-#####
-##### Condition B First (just because this was the full pilot data) ####
-##### Should only need to do this once in the full run with multiple conditions
-
-
-infos<- read.csv("info.csv", stringsAsFactors = FALSE)
-infos <- infos[order(infos$id),]
-
-# parse the JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
-# using the second option (non-tidyverse): 
-
-# delete when the origin is the source (we only want participants' data):
-infos<- infos[infos$type=="lotty_info",]
-
 # 1) First, make a transformation function that works for a single entry
 f <- function(json, id){
   # transform json to list
@@ -34,111 +20,49 @@ f <- function(json, id){
   # return
   return(tmp)
 }
-# 2) apply it via mapply 
-json_dfs <- 
-  mapply(f, infos$property1, infos$id, SIMPLIFY = FALSE)
-# 3) combine the fragments via rbindlist
-clean_df <- 
-  data.table::rbindlist(json_dfs)
-
-#cleanup
-my_data <- clean_df
-clean_df <- NULL
-rm(json_dfs)
-
-# use match to add in the other useful variables from the info table
-my_data$Contents <- infos$contents[match(my_data$id, infos$id)]
-my_data$Origin <- infos$origin_id[match(my_data$id, infos$id)]
-my_data$Network <- infos$network_id[match(my_data$id, infos$id)]
-
-# delete practice round data
-my_data <- my_data[!my_data$round==0,]
-my_data$condition <- "B"
-
-#####
-##### REPEAT FOR CONDITION A DATA ####
-#####
 
 
-infosA<- read.csv("infoA_twoNetwork.csv", stringsAsFactors = FALSE)
-infosA <- infosA[order(infosA$id),]
+load_file <- function(file, condition) {
+  infos <- read.csv(file, stringsAsFactors = FALSE)
+  infos <- infos[order(infos$id),]
+  #infos <- infos[order(infos$id),]
 
-# trying to parse JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
-# second option (non-tidyverse): 
+  # parse the JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
+  # using the second option (non-tidyverse): 
 
-# delete when the origin is the source (we only want participants' data):
-infosA<- infosA[infosA$type=="lotty_info",]
+  # delete when the origin is the source (we only want participants' data):
+  infos<- infos[infos$type=="lotty_info",]
 
-# 1) First, make a transformation function that works for a single entry
-f <- function(json, id){
-  # transform json to list
-  tmp    <- jsonlite::fromJSON(json)
-  # transform list to data.frame
-  tmp    <- as.data.frame(tmp)
-  # add id
-  tmp$id <- id
-  # return
-  return(tmp)
+  # 2) apply it via mapply 
+  json_dfs <- 
+    mapply(f, infos$property1, infos$id, SIMPLIFY = FALSE)
+  # 3) combine the fragments via rbindlist
+  clean_df <- 
+    data.table::rbindlist(json_dfs)
+
+  #cleanup
+  my_data <- clean_df
+  clean_df <- NULL
+  rm(json_dfs)
+
+  # use match to add in the other useful variables from the info table
+  my_data$Contents <- infos$contents[match(my_data$id, infos$id)]
+  my_data$Origin <- infos$origin_id[match(my_data$id, infos$id)]
+  my_data$Network <- infos$network_id[match(my_data$id, infos$id)]
+
+  # delete practice round data
+  my_data <- my_data[!my_data$round==0,]
+  my_data$condition <- rep(condition, nrow(my_data))
+  return(my_data)
 }
-# 2) apply it via mapply 
-json_dfs <- 
-  mapply(f, infosA$property1, infosA$id, SIMPLIFY = FALSE)
-# 3) combine the fragments via rbindlist
-my_data_a <- 
-  data.table::rbindlist(json_dfs)
 
-#cleanup
-rm(json_dfs)
-
-# use match to add in the other useful variables from the info table
-my_data_a$Contents <- infosA$contents[match(my_data_a$id, infosA$id)]
-my_data_a$Origin <- infosA$origin_id[match(my_data_a$id, infosA$id)]
-my_data_a$Network <- infosA$network_id[match(my_data_a$id, infosA$id)]
-# delete practice round data
-my_data_a <- my_data_a[!my_data_a$round==0,]
-my_data_a$condition <- "A"
-
-#####
-##### Finally repeat for condition c ####
-#####
-
-
-infosC<- read.csv("infoC_twoNetwork.csv", stringsAsFactors = FALSE)
-infosC <- infosC[order(infosC$id),]
-
-# trying to parse JSON using: https://stackoverflow.com/questions/41988928/how-to-parse-json-in-a-dataframe-column-using-r 
-# second option (non-tidyverse): 
-
-# delete when the origin is the source (we only want participants' data):
-infosC<- infosC[infosC$type=="lotty_info",]
-
-# 1) First, make a transformation function that works for a single entry
-f <- function(json, id){
-  # transform json to list
-  tmp    <- jsonlite::fromJSON(json)
-  # transform list to data.frame
-  tmp    <- as.data.frame(tmp)
-  # add id
-  tmp$id <- id
-  # return
-  return(tmp)
+file_names <- c("info_18_b.csv", "info_19_b.csv","info_20_b.csv","info_21_b.csv", "info_24_B.csv", "info_24_A.csv", "info_25_A.csv", "info_26_C.csv")
+condition <- c("b","b","b","b","b","a","a","c")
+loaded_files <- list()
+for (i in 1:length(file_names)) {
+  loaded_files[[i]] <- load_file(file_names[i], condition[i])
 }
-# 2) apply it via mapply 
-json_dfs <- 
-  mapply(f, infosC$property1, infosC$id, SIMPLIFY = FALSE)
-# 3) combine the fragments via rbindlist
-my_data_c <- 
-  data.table::rbindlist(json_dfs)
 
-#cleanup
-rm(json_dfs)
 
-# use match to add in the other useful variables frmo the info table
-my_data_c$Contents <- infosC$contents[match(my_data_c$id, infosC$id)]
-my_data_c$Origin <- infosC$origin_id[match(my_data_c$id, infosC$id)]
-my_data_c$Network <- infosC$network_id[match(my_data_c$id, infosC$id)]
-
-# delete practice round data
-my_data_c <- my_data_c[!my_data_c$round==0,]
-my_data_c$condition <- "C"
-
+# Condition, n_copies, asoc_Score etc are all in the node files..... UGH
+#"info_20_b.csv","info_21_b.csv", "info_24_B.csv", "info_24_A.csv", "info_25_A.csv", "info_26_C.csv"
