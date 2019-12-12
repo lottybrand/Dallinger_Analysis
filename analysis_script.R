@@ -1,6 +1,6 @@
 
 #### Analyses for preregistration #####
-#### Run dallinger_data_cleaning.R script first"
+#### Run dallinger_data_cleaning.R script first #####
 
 #install.packages(c("coda","mvtnorm","devtools","loo","dagitty"))
 #library(devtools)

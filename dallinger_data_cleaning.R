@@ -1,7 +1,8 @@
 
 # Data prep for Dallinger analysis
-# SKIP TO LINE 108 <<- ONLY NEED TO RUN THIS
+# SKIP TO LINE 113 <<- ONLY NEED TO RUN THIS
 # source('data_inputting.R')
+
 #####
 #assign first dataset to full_data:
 full_data <- loaded_files[[1]]
@@ -22,13 +23,6 @@ for (i in 2:length(loaded_files)) {
 
 current_u_origins <- unique(full_data$u_origin)
 full_data$u_origin <- match(full_data$u_origin, current_u_origins)
-
-
-#don't think this is necessary anymore ...try without for now
-#full_data$number <- as.integer(full_data$number)
-
-#don't think this is necessary anymore (and might have messed stuff up?)
-#full_data <- full_data[order(uid,u_network,number),]
 
 
 #####
@@ -114,7 +108,7 @@ for (i in 1:nrow(full_data)) {
 }
 
 #####
-# So we can skip to here in future and not reload: 
+##### SKIP TO HERE IN FUTURE
 #write.csv(full_data, file="full_data.csv", row.names = FALSE)
 full_data <- read.csv("full_data.csv")
 # saveRDS(full_data, "full_data")
