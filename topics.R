@@ -1,4 +1,5 @@
-
+library(reshape2)
+library(ggplot2)
 # topic specific scores
 
 # we want this to be asocial, and not give them a score if they chose to copy. If they chose to copy this will be treated as  getting it wrong/ not knowing. 
@@ -138,3 +139,67 @@ cor.test(topicTable$Art, topicTable$Weight)
 cor.test(topicTable$Art, topicTable$Language)
 cor.test(topicTable$Weight, topicTable$Language)
 
+cor.test(topicTable$Total, topicTable$Language)
+cor.test(topicTable$Total, topicTable$Weight)
+cor.test(topicTable$Total, topicTable$Geog)
+cor.test(topicTable$Total, topicTable$Art)
+
+var(topicTable$Total)
+var(topicTable$Language)
+var(topicTable$Art)
+var(topicTable$Weight)
+var(topicTable$Geography)
+sd(topicTable$Total)
+sd(topicTable$Art)
+sd(topicTable$Geography)
+sd(topicTable$Weight)
+sd(topicTable$Language)
+
+Geog <- asocialOnly[asocialOnly$topic==1,]
+Weight <- asocialOnly[asocialOnly$topic==2,]
+Lang <- asocialOnly[asocialOnly$topic==3,]
+Art <- asocialOnly[asocialOnly$topic==4,]
+
+sd(Geog$score)
+sd(Weight$score)
+sd(Lang$score)
+sd(Art$score)
+
+rand <- asocialOnly[sample(nrow(asocialOnly), 6000), ]
+sd(rand$score)
+
+# Rounds 1 and 2 correlations
+
+R1Score <- asocialOnly[asocialOnly$number==40,]
+
+# match R1scores to finalScores, using match? 
+
+finalScore$R1_art <- R1Score$c_a_score_art[match(finalScore$u_origin, R1Score$u_origin)]
+finalScore$R1_lang <- R1Score$c_a_score_lang[match(finalScore$u_origin, R1Score$u_origin)]
+finalScore$R1_weight <- R1Score$c_a_score_wght[match(finalScore$u_origin, R1Score$u_origin)]
+finalScore$R1_geog <- R1Score$c_a_score_geog[match(finalScore$u_origin, R1Score$u_origin)]
+
+finalScore$R2_art <- (finalScore$c_a_score_art-finalScore$R1_art)
+finalScore$R2_lang <- (finalScore$c_a_score_lang-finalScore$R1_lang)
+finalScore$R2_weight <- (finalScore$c_a_score_wght-finalScore$R1_weight)
+finalScore$R2_geog <- (finalScore$c_a_score_geog-finalScore$R1_geog)
+
+cor.test(finalScore$R1_art, finalScore$R2_art)
+cor.test(finalScore$R1_art, finalScore$R2_geog)
+cor.test(finalScore$R1_art, finalScore$R2_lang)
+cor.test(finalScore$R1_art, finalScore$R2_weight)
+
+cor.test(finalScore$R1_geog, finalScore$R2_geog)
+cor.test(finalScore$R1_geog, finalScore$R2_art)
+cor.test(finalScore$R1_geog, finalScore$R2_lang)
+cor.test(finalScore$R1_geog, finalScore$R2_weight)
+
+cor.test(finalScore$R1_lang, finalScore$R2_lang)
+cor.test(finalScore$R1_lang, finalScore$R2_weight)
+cor.test(finalScore$R1_lang, finalScore$R2_art)
+cor.test(finalScore$R1_lang, finalScore$R2_geog)
+
+cor.test(finalScore$R1_weight, finalScore$R2_weight)
+cor.test(finalScore$R1_weight, finalScore$R2_geog)
+cor.test(finalScore$R1_weight, finalScore$R2_art)
+cor.test(finalScore$R1_weight, finalScore$R2_lang)
