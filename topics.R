@@ -191,6 +191,7 @@ finalScore$R2_lang <- (finalScore$c_a_score_lang-finalScore$R1_lang)
 finalScore$R2_weight <- (finalScore$c_a_score_wght-finalScore$R1_weight)
 finalScore$R2_geog <- (finalScore$c_a_score_geog-finalScore$R1_geog)
 
+
 cor.test(finalScore$R1_art, finalScore$R2_art)$estimate[[1]]^2
 cor.test(finalScore$R1_art, finalScore$R2_geog)$estimate[[1]]^2
 cor.test(finalScore$R1_art, finalScore$R2_lang)$estimate[[1]]^2
@@ -210,3 +211,9 @@ cor.test(finalScore$R1_weight, finalScore$R2_weight)$estimate[[1]]^2
 cor.test(finalScore$R1_weight, finalScore$R2_geog)$estimate[[1]]^2
 cor.test(finalScore$R1_weight, finalScore$R2_art)$estimate[[1]]^2
 cor.test(finalScore$R1_weight, finalScore$R2_lang)$estimate[[1]]^2
+
+cor.test(finalScore$c_a_score_r1, finalScore$R2_weight)$estimate[[1]]^2
+cor.test(finalScore$c_a_score_r1, finalScore$R2_geog)$estimate[[1]]^2
+cor.test(finalScore$c_a_score_r1, finalScore$R2_art)$estimate[[1]]^2
+cor.test(finalScore$c_a_score_r1, finalScore$R2_lang)$estimate[[1]]^2
+
