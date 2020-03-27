@@ -17,6 +17,7 @@ diff_ac  0.82 0.40  0.18  1.45   ▁▁▃▇▃▁▁
 diff_bc -0.03 0.41 -0.68  0.63   ▁▁▂▇▇▂▁
 
 model4.4 (priors all 0,1)
+This model used for inference
 mean   sd  5.5% 94.5% n_eff Rhat
 a_bar -2.73 0.52 -3.56 -1.90  5999    1
 b[1]  -0.59 0.57 -1.49  0.31  4502    1

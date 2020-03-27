@@ -316,7 +316,8 @@ tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
 
 table(asocialOnly_2$condition)
 
-#model4 trouble with convergence, reparameterised (from the book!)
+#model4 trouble with convergence above, so reparameterised (from the book!)
+#see model4.2 results, model4.4 used for contrasts. 
 model4.2 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
@@ -343,7 +344,7 @@ diff_bc <- post$b[,1] - post$b[,3]
 precis(list(diff_ab=diff_ab, diff_ac=diff_ac, diff_bc=diff_bc))
 
 
-### without a_bar (discussions with Tom on Slack over a_bar)
+### without a_bar (a_bar is an overparameterisation, see here https://twitter.com/LottyBrand/status/1195482057931153408)
 model4.3 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
@@ -368,7 +369,7 @@ diff_bc_4.3 <- post4.3$b[,1] - post4.3$b[,3]
 precis(list(diff_ab_4.3=diff_ab_4.3, diff_ac_4.3=diff_ac_4.3, diff_bc_4.3=diff_bc_4.3))
 
 
-#put a_bar back in, check it's not the priors...
+#put a_bar back in, make all priors the same
 model4.4 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
@@ -386,13 +387,14 @@ print(Sys.time())
 precis(model4.4, depth = 2)
 precis(model4.4, pars = c('a_bar','b[1]', 'b[2]', 'b[3]'), depth=2)
 
+#computing contrasts between conditions
 post4.4 <- extract.samples(model4.4)
 diff_ab_4.4 <- post4.4$b[,1] - post4.4$b[,2]
 diff_ac_4.4 <- post4.4$b[,3] - post4.4$b[,2]
 diff_bc_4.4 <- post4.4$b[,1] - post4.4$b[,3]
 precis(list(diff_ab_4.4=diff_ab_4.4, diff_ac_4.4=diff_ac_4.4, diff_bc_4.4=diff_bc_4.4))
 
-#Altering priors with a_bar (after discussions with Tom on Slack and McElreath on Twitter...)
+#Altering priors to get to the bottom of a_bar (after discussions with Tom on Slack and McElreath on Twitter...see https://twitter.com/LottyBrand/status/1195482057931153408)
 model4.5 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
