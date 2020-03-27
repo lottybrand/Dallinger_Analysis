@@ -32,6 +32,24 @@ Network: 	Network id is effectively group ID. Multiple networks (groups of 10 pl
 
 (variables I computed myself): 
 
-Condition: Added manually (for now)
+Condition: Recorded in property2 of the node table. This is entered manually in data_inputting, as we ran the conditions sequentially.
 
-ppt: 	Origin ID re-indexed to be unique across every network and condition. 
+u_origin: 	Origin ID re-indexed to be unique across every network and condition. 
+
+u_network: network ID r-indexed to be unique across every run
+
+u_id: info id reindexed to be unique across networks and conditions
+
+c_a_score_r1: cumulative ASOCIAL score in Round 1
+
+t_score: total score including copies
+
+t_copied: total times ppt chose to copy, across both rounds
+
+c_copies: times participant was copied themself, in round 1
+
+copied_successful: binary 1, 0 did they copy the highest scoring demonstrator of those available (not including when it was a tie, or if there was only one demonstrator to choose from)
+
+copied_prestigious: binary 1, 0 did they copy the most copied demonstrator of those available (not including when it was a tie, or if there was only one demonstrator to choose from)
+
+is_model_id: the experiment infos records two infos per copy: their choice to copy, and the model id of the person they chose to copy. This is a way of filtering only the information of who was chosen to copy. 
