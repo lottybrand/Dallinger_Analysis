@@ -45,7 +45,7 @@ model1 <- map2stan(
   alist(
     copied_successful ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
-    a ~ dnorm(0,4),
+    a ~ dnorm(0,2),
     a_p[pptIndex] ~ dnorm(0,1),
     a_g[groupIndex] ~ dnorm(0,1),
     sigma_p ~ dcauchy(0,1),
@@ -92,7 +92,7 @@ model2 <- map2stan(
   alist(
     copied_prestigious ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
-    a ~ dnorm(0,4),
+    a ~ dnorm(0,2),
     a_p[pptIndex] ~ dnorm(0,1),
     a_g[groupIndex] ~ dnorm(0,1),
     sigma_p ~ dcauchy(0,1),
@@ -131,7 +131,7 @@ model2.1 <- map2stan(
   alist(
     copied_prestigious ~ dbinom(1, p),
     logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g,
-    a ~ dnorm(0,4),
+    a ~ dnorm(0,2),
     a_p[pptIndex] ~ dnorm(0,1),
     a_g[groupIndex] ~ dnorm(0,1),
     sigma_p ~ dcauchy(0,1),
@@ -172,26 +172,6 @@ for (index in 1:Ngroups){
   groupIndex[Oldgroup == unique(Oldgroup)[index]] = index
 }
 infoChosen$groupIndex <- groupIndex
-
-### version with CondB as baseline:
-
-model3.0 <- map2stan(
-  alist(
-    chosePrestige ~ dbinom(1, p),
-    logit(p) <- a + a_p[pptIndex]*sigma_p + a_g[groupIndex]*sigma_g + b_a*CondA + b_c*CondC,
-    a ~ dnorm(0,4),
-    a_p[pptIndex] ~ dnorm(0,1),
-    a_g[groupIndex] ~ dnorm(0,1),
-    b_a ~ dnorm(0,1),
-    b_c ~ dnorm(0,1),
-    sigma_p ~ dcauchy(0,1),
-    sigma_g ~ dcauchy(0,1)
-  ),
-  data=infoChosen, constraints=list(sigma_p="lower=0", sigma_g="lower=0"), 
-  warmup=1000, iter=1000, chains=1, cores=1 )
-
-precis(model3.0)
-plot(precis(model3.0), pars=c("a","b_a","b_c"), labels=c("Condition C","Condition A","Condition B"))
 
 ### the ulam version using Statistical Rethinking 2nd Edition
 ### make condition an index rather than using dummy variables (pp 328 Statistical Rethinking 2nd Edition )
@@ -240,6 +220,7 @@ plot( precis( as.data.frame(p_conds) ) , xlim=c(0,1) )
 plot( precis( model3 , depth=2 , pars="b" ))
 
 #now implementing condition as varying intercepts too, pp. 423 in Statistical Rethinking 2nd Edition:
+#this version was used for inference (see results file)
 model3.1 <- ulam(
   alist(
     chosePrestige ~ dbinom( 1 , p ) ,
@@ -335,7 +316,7 @@ tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
 
 table(asocialOnly_2$condition)
 
-#model4 reparameterised (from the book!)
+#model4 trouble with convergence, reparameterised (from the book!)
 model4.2 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
@@ -362,7 +343,7 @@ diff_bc <- post$b[,1] - post$b[,3]
 precis(list(diff_ab=diff_ab, diff_ac=diff_ac, diff_bc=diff_bc))
 
 
-### without a_bar
+### without a_bar (discussions with Tom on Slack over a_bar)
 model4.3 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
@@ -387,7 +368,7 @@ diff_bc_4.3 <- post4.3$b[,1] - post4.3$b[,3]
 precis(list(diff_ab_4.3=diff_ab_4.3, diff_ac_4.3=diff_ac_4.3, diff_bc_4.3=diff_bc_4.3))
 
 
-#change dem priors
+#put a_bar back in, check it's not the priors...
 model4.4 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
@@ -411,7 +392,7 @@ diff_ac_4.4 <- post4.4$b[,3] - post4.4$b[,2]
 diff_bc_4.4 <- post4.4$b[,1] - post4.4$b[,3]
 precis(list(diff_ab_4.4=diff_ab_4.4, diff_ac_4.4=diff_ac_4.4, diff_bc_4.4=diff_bc_4.4))
 
-#another prior shift?
+#Altering priors with a_bar (after discussions with Tom on Slack and McElreath on Twitter...)
 model4.5 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
