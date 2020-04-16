@@ -2,7 +2,7 @@
 #### inputting the data from Dallinger per Condition ####
 #### should really use a loop to do all of this for each condition.... 
 
-setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis")
+setwd("~/Desktop/Postdoc/Lottys_dallinger/Dallinger_Analysis/raw_data")
 
 # libraries
 library(jsonlite)
@@ -63,6 +63,3 @@ for (i in 1:length(file_names)) {
   loaded_files[[i]] <- load_file(file_names[i], condition[i])
 }
 
-
-# Condition, n_copies, asoc_Score etc are all in the node files..... UGH
-#"info_20_b.csv","info_21_b.csv", "info_24_B.csv", "info_24_A.csv", "info_25_A.csv", "info_26_C.csv"
