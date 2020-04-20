@@ -19,8 +19,11 @@ finalScore$groupIndex <- as.factor(finalScore$groupIndex)
 presPlot2<- ggplot(data = finalScore, mapping = aes(x = u_origin, y = c_copies, color = groupIndex)) + 
   geom_point(size=3)
 presPlot2 + theme_bw() + 
-  theme(text = element_text(size=12), axis.title.y=element_text(margin=margin(0,12,0,0))) +
-  xlab("Participant ID") + ylab("Prestige Score (Total times Copied)")
+  geom_vline(aes(xintercept=87), linetype="dashed", show.legend=FALSE) + 
+  geom_vline(aes(xintercept=178), linetype="dashed", show.legend=FALSE) +
+  theme(text = element_text(size=12), axis.title.y=element_text(margin=margin(0,12,0,0)), plot.title = element_text(hjust=0.5)) +
+  labs(title = "Final Prestige Score per Participant and Group", color = "Group Number") +
+  xlab("Participant Number") + ylab("Prestige Score (total times copied by others)")
 
 plot(finalScore$c_copies ~ finalScore$t_score)
 
@@ -31,7 +34,7 @@ scorePresPlot
 
 finalScoreBC <- finalScore[!finalScore$condition=="a",]
 
-scorePresPlotBC <- ggplot(data = finalScoreBC, mapping = aes(x = t_score, y = c_copies)) + 
+scorePresPlotBC <- ggplot(data = finalScoreBC, mapping = aes(x = t_score, y = c_copies, color = groupIndex)) + 
   geom_point(size=3) 
 scorePresPlotBC + theme_bw() +
   theme(text = element_text(size=12), axis.title.y=element_text(margin=margin(0,12,0,0))) +
