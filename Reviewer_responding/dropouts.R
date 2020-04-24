@@ -10,6 +10,23 @@ dropOuts <- question1[question1$dropOuts==FALSE,]
 dropOuts <- unique(dropOuts$u_origin)
 list(dropOuts)
 
+dropOut_subset <- full_data[full_data$u_origin %in% dropOuts,]
+not_dropOuts <- full_data[!full_data$u_origin %in% dropOuts,]
+
+mean(dropOut_subset$is_model_id)
+mean(not_dropOuts$is_model_id)
+
+mean(dropOut_subset$score)
+mean(not_dropOuts$score)
+
+#check when human tag is false
+mean(dropOut_subset$human)
+mean(not_dropOuts$human)
+
+
+lastQuestion <- tapply(dropOut_subset$number, list(dropOut_subset$u_origin),max)
+lastQuestion
+
 # how do we find the point at which they left (e.g. which question?) except manually of course.
 
 # look at their data up to the point they left and compare to all others? 

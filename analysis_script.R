@@ -236,12 +236,35 @@ model3.1 <- ulam(
   warmup=1000, iter=9000, chains=3 , cores=3 , log_lik=TRUE )
 
 precis(model3.1, depth = 2)
-precis(model3.1, pars = c('b[1]', 'b[2]', 'b[3]'), depth=2)
+precis(model3.1, pars = c('a_bar','b[1]', 'b[2]', 'b[3]'), depth=2)
 traceplot(model3.1)
 
 #plotting condition effects, (pp 333 in 2nd edition)
-mainFig <- plot(precis(model3.1, depth = 2), pars=c("b[2]","b[1]","b[3]"), labels=c("Control \nCondition","Prestige \nCondition","Success \nCondition"), xlab="Model estimate")
+mainFig <- plot(precis(model3.1, depth = 2), pars=c("b[1]","b[2]","b[3]"), labels=c("Prestige \nCondition","Control \nCondition","Success \nCondition"), xlab="Model estimate")
 title("Participants Chose Prestige")
+
+#looking at absolute effects compared to intercept
+precis(model3.1, pars = c('a_bar','b[1]', 'b[2]', 'b[3]'), depth=2)
+#mean   sd  5.5% 94.5% n_eff Rhat
+#a_bar  0.45 1.10 -1.32  2.18   418    1
+#b[1]   3.23 1.22  1.34  5.21   547    1
+#b[2]   1.65 1.21 -0.24  3.59   522    1
+#b[3]  -3.51 1.20 -5.43 -1.62   525    1
+logistic(0.45)
+#[1] 0.6106392
+logistic(0.45 + 1.65)
+#[1] 0.8909032
+logistic(0.45+3.23)
+#[1] 0.9753976
+logistic(0.45-3.51)
+#[1] 0.0447877
+
+#computing contrasts between conditions
+post3.1 <- extract.samples(model3.1)
+diff_ab_3.1 <- post3.1$b[,1] - post3.1$b[,2]
+
+precis(list(diff_ab_3.1=diff_ab_3.1))
+
 
 #####
 #####

@@ -24,3 +24,9 @@ singleCopying <- singleCopying[ order(singleCopying$u_network, singleCopying$num
 singleCopying <- subset(singleCopying, select = c(number, u_network, Contents, u_origin ))
 #look for times when more than 4 people were copying on a single question within a single network
 table(singleCopying$number, singleCopying$u_network)
+
+question1 <- full_data[full_data$number==1,]
+ppts_starter = tapply(question1$u_origin, list(question1$u_network),unique)
+groupnum <- c(1:30)
+num <- c(10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,9, 9, 9, 9, 9, 9, 9,8, 7, 7, 7, 6, 6, 5)
+group_start <- data.frame(groupnum, num)
