@@ -340,7 +340,7 @@ tapply(asocialOnly_2$copied, list(asocialOnly_2$condition),sum)
 table(asocialOnly_2$condition)
 
 #model4 trouble with convergence above, so reparameterised (from the book!)
-#see model4.2 results, model4.4 used for contrasts. 
+#see model4.2 results, model4.4 used for inference and contrasts. 
 model4.2 <- ulam(
   alist(
     copied ~ dbinom( 1 , p ) ,
